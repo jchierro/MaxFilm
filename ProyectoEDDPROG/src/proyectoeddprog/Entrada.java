@@ -36,7 +36,7 @@ public class Entrada implements Serializable {
 
     /**
      * GET ID_ENTRADA
-     * @return 
+     * @return DEVUELVE EL VALOR ID_ENTRADA
      */
     public Integer getId_entrada() {
         return Id_entrada;
@@ -52,7 +52,7 @@ public class Entrada implements Serializable {
 
     /**
      * GET PRECIO
-     * @return 
+     * @return DEVUELVE EL VALOR PRECIO
      */
     public Double getPrecio() {
         return Precio;
@@ -68,7 +68,7 @@ public class Entrada implements Serializable {
 
     /**
      * GET TITULO_PELICULA
-     * @return 
+     * @return DEVUELVE EL VALOR TITULO_PELICULA
      */
     public String getTitulo_pelicula() {
         return Titulo_pelicula;
@@ -84,7 +84,7 @@ public class Entrada implements Serializable {
 
     /**
      * GET COD_SALA
-     * @return 
+     * @return DEVUELVE EL VALOR COD_SALA
      */
     public Integer getCod_sala() {
         return Cod_sala;
@@ -100,7 +100,7 @@ public class Entrada implements Serializable {
 
     /**
      * GET COD_CINE
-     * @return 
+     * @return DEVUELVE EL VALOR COD_CINE
      */
     public Integer getCod_cine() {
         return Cod_cine;
@@ -116,7 +116,7 @@ public class Entrada implements Serializable {
 
     /**
      * TOSTRING DE LA CLASE ENTRADA
-     * @return 
+     * @return DEVUELVE LA ENTRADA
      */
     @Override
     public String toString() {

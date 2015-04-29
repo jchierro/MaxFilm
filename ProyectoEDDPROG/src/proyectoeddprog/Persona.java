@@ -36,7 +36,7 @@ public class Persona implements Serializable {
 
     /**
      * GET DNI
-     * @return 
+     * @return DEVUELVE EL VALOR DNI
      */
     public String getDni() {
         return Dni;
@@ -52,7 +52,7 @@ public class Persona implements Serializable {
 
     /**
      * GET NOMBRE
-     * @return 
+     * @return DEVUELVE EL VALOR NOMBRE
      */
     public String getNombre() {
         return Nombre;
@@ -68,7 +68,7 @@ public class Persona implements Serializable {
 
     /**
      * GET APELLIDOS
-     * @return 
+     * @return DEVUELVE EL VALOR APELLIDOS
      */
     public String getApellidos() {
         return Apellidos;
@@ -84,7 +84,7 @@ public class Persona implements Serializable {
 
     /**
      * GET EDAD
-     * @return 
+     * @return DEVUELVE EL VALOR EDAD
      */
     public String getEdad() {
         return Edad;
@@ -100,7 +100,7 @@ public class Persona implements Serializable {
 
     /**
      * GET COD_CINE
-     * @return 
+     * @return DEVUELVE EL VALOR COD_CINE
      */
     public String getCod_cine() {
         return Cod_cine;
@@ -116,7 +116,7 @@ public class Persona implements Serializable {
 
     /**
      * TOSTRING DE LA CLASE PERSONA
-     * @return 
+     * @return DEVUELVE LA PERSONA
      */
     @Override
     public String toString() {

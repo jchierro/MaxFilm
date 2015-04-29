@@ -43,7 +43,7 @@ public class Productora implements Serializable {
 
     /**
      * GET ID_PRODUCTORA
-     * @return 
+     * @return DEVUELVE EL VALOR ID_PRODUCTORA
      */
     public Integer getId_productora() {
         return Id_productora;
@@ -59,7 +59,7 @@ public class Productora implements Serializable {
 
     /**
      * GET NOMBRE
-     * @return 
+     * @return DEVUELVE EL VALOR NOMBRE
      */
     public String getNombre() {
         return Nombre;
@@ -75,7 +75,7 @@ public class Productora implements Serializable {
 
     /**
      * GET TELEFONO
-     * @return 
+     * @return DEVUELVE EL VALOR TELEFONO
      */
     public Integer getTelefono() {
         return Telefono;
@@ -91,7 +91,7 @@ public class Productora implements Serializable {
 
     /**
      * GET FAX
-     * @return 
+     * @return DEVUELVE EL VALOR FAX
      */
     public Integer getFax() {
         return Fax;
@@ -107,7 +107,7 @@ public class Productora implements Serializable {
 
     /**
      * GET E_MAIL
-     * @return 
+     * @return DEVUELVE EL VALOR E_MAIL
      */
     public String getE_mail() {
         return E_mail;
@@ -123,7 +123,7 @@ public class Productora implements Serializable {
 
     /**
      * GET REPRESENTANTE
-     * @return 
+     * @return DEVUELVE EL VALOR REPRESENTANTE
      */
     public String getRepresentante() {
         return Representante;
@@ -139,7 +139,7 @@ public class Productora implements Serializable {
 
     /**
      * GET PELICULAS
-     * @return 
+     * @return DEVUELVE LIST PELICULAS
      */
     public List<Pelicula> getPeliculas() {
         return Peliculas;
@@ -155,7 +155,7 @@ public class Productora implements Serializable {
 
     /**
      * TOSTRING DE LA CLASE PRODUCTORA
-     * @return 
+     * @return DEVUELVE LA PRODUCTORA
      */
     @Override
     public String toString() {

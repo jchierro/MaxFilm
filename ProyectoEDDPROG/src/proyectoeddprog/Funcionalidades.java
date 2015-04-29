@@ -30,6 +30,9 @@ public class Funcionalidades implements Serializable {
     protected int idSala;
     protected int idVIP;
 
+    protected TreeSet<String> VIPDni;
+    protected TreeSet<String> EmpleadoDni;
+
     public Funcionalidades() {
         this.Cines = new ArrayList<>();
         this.Salas = new ArrayList<>();
@@ -44,6 +47,9 @@ public class Funcionalidades implements Serializable {
         this.idCine = 1;
         this.idSala = 1;
         this.idVIP = 1;
+
+        this.VIPDni = new TreeSet<>();
+        this.EmpleadoDni = new TreeSet<>();
     }
 
     //
@@ -67,6 +73,7 @@ public class Funcionalidades implements Serializable {
                 idCine = entrada.readInt();
                 idSala = entrada.readInt();
                 idVIP = entrada.readInt();
+                VIPDni = (TreeSet<String>) entrada.readObject();
             } catch (ClassNotFoundException ex) {
                 System.out.println(ex);
             }
@@ -100,6 +107,7 @@ public class Funcionalidades implements Serializable {
             salida.writeInt(idCine);
             salida.writeInt(idSala);
             salida.writeInt(idVIP);
+            salida.writeObject(VIPDni);
         } catch (FileNotFoundException ex) {
             System.out.println("Error de apertura del archivo de salida!");
             System.out.println(ex.getMessage());
@@ -342,53 +350,50 @@ public class Funcionalidades implements Serializable {
     //
     // FIN OPERACIONES CON SALAS
     //
-    
     //
-    // COMIENZO OPERACIONES VIPS
+    // COMIENZO OPERACIONES CON VIPS
     //
-    
-    public void nexoVIPId(JTextField ca) {
-        String id = "MFV-";
-        String result = id.concat(Integer.toString(this.idVIP));
-        ca.setText(result);
-        this.idVIP++;
+    public boolean nexoVIPCompruebaDni(String Dni) {
+        return this.VIPDni.add(Dni);
     }
-    
+
     public boolean insertarVIP(VIP v, DefaultTableModel d, JTable j) {
         boolean result = false;
-        Cine aux = new Cine(v.getCod_cine(), null, null, null, null, null);
-        int indice = Collections.binarySearch(this.Cines, aux);
-        if (indice >= 0) {
-            aux = this.Cines.get(indice);
-            if (!aux.VIP.contains(v)) {
-                aux.VIP.add(v);
-                cargarModeloVIP(d, j);
-                result = true;
+        boolean dni = nexoVIPCompruebaDni(v.getDni());
+        //System.out.println(dni);
+        if (dni == true) {
+            Cine aux = new Cine(v.getCod_cine(), null, null, null, null, null);
+            int indice = Collections.binarySearch(this.Cines, aux);
+            if (indice >= 0) {
+                aux = this.Cines.get(indice);
+                if (!aux.VIP.contains(v)) {
+                    aux.VIP.add(v);
+                    cargarModeloVIP(d, j);
+                    result = true;
+                }
+            } else {
+                result = false;
             }
-        } else {
-            result = false;
         }
         return result;
     }
-    
+
     public void borrarVIP(String x, String y, DefaultTableModel d, JTable j) {
         Cine aux = new Cine(y, null, null, null, null, null);
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
             aux = this.Cines.get(indice);
-            for (VIP i : aux.VIP) {
-                if (i.Dni.equals(x)) {
-                    VIP aux2 = new VIP(i.getDni(), i.getNombre(),
-                            i.getApellidos(), i.getEdad(), i.getTelefono(),
-                    i.getCodigo_Postal(),i.getCod_cine());
-                    aux.VIP.remove(aux2);
-                    break;
+            for (Iterator<VIP> it = aux.VIP.iterator(); it.hasNext();) {
+                VIP aux2 = it.next();
+                if (aux2.getDni().equals(x)) {
+                    this.VIPDni.remove(aux2.getDni());
+                    it.remove();
                 }
             }
             cargarModeloVIP(d, j);
         }
     }
-    
+
     public void modificarVIP(String x, String y, DefaultTableModel d, JTable j,
             String nombre, String apellidos, String edad, String telefono,
             String cod_postal, String cod_cine) {
@@ -408,7 +413,7 @@ public class Funcionalidades implements Serializable {
                     }
                     if (i.Dni.equals(x) && !i.getCod_cine().equals(cod_cine)) {
                         VIP aux2 = new VIP(x, i.getNombre(), i.getApellidos(), i.getEdad(),
-                                i.getTelefono(),i.getCodigo_Postal(),i.getCod_cine());
+                                i.getTelefono(), i.getCodigo_Postal(), i.getCod_cine());
                         aux.VIP.remove(aux2);
                         aux2 = new VIP(x, nombre, apellidos, edad, telefono,
                                 cod_postal, cod_cine);
@@ -421,7 +426,7 @@ public class Funcionalidades implements Serializable {
             }
         }
     }
-    
+
     public void nexoModificarVIP(VIP v, DefaultTableModel d, JTable j) {
         Cine aux = new Cine(v.getCod_cine(), null, null, null, null, null);
         //System.out.println(s.getCod_cine());
@@ -435,7 +440,7 @@ public class Funcionalidades implements Serializable {
             }
         }
     }
-    
+
     public void cargarModeloVIP(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel();
 
@@ -474,8 +479,141 @@ public class Funcionalidades implements Serializable {
             }
         }
     }
-    
+
     //
-    // FIN OPERACIONES VIPS
+    // FIN OPERACIONES CON VIPS
+    //
+    //
+    // COMIENZO OPERACIONES CON EMPLEADOS
+    //
+    public boolean nexoEmpleadoCompruebaDni(String Dni) {
+        return this.EmpleadoDni.add(Dni);
+    }
+
+    public boolean insertarEmpleado(Empleado e, DefaultTableModel d, JTable j) {
+        boolean result = false;
+        boolean dni = nexoEmpleadoCompruebaDni(e.getDni());
+        //System.out.println(dni);
+        if (dni == true) {
+            Cine aux = new Cine(e.getCod_cine(), null, null, null, null, null);
+            int indice = Collections.binarySearch(this.Cines, aux);
+            if (indice >= 0) {
+                aux = this.Cines.get(indice);
+                if (!aux.Empleados.contains(e)) {
+                    aux.Empleados.add(e);
+                    cargarModeloEmpleados(d, j);
+                    result = true;
+                }
+            } else {
+                result = false;
+            }
+        }
+        return result;
+    }
+
+    public void borrarEmpleado(String x, String y, DefaultTableModel d, JTable j) {
+        Cine aux = new Cine(y, null, null, null, null, null);
+        int indice = Collections.binarySearch(this.Cines, aux);
+        if (indice >= 0) {
+            aux = this.Cines.get(indice);
+            for (Iterator<Empleado> it = aux.Empleados.iterator(); it.hasNext();) {
+                Empleado aux2 = it.next();
+                if (aux2.getDni().equals(x)) {
+                    this.EmpleadoDni.remove(aux2.getDni());
+                    it.remove();
+                }
+            }
+            cargarModeloEmpleados(d, j);
+        }
+    }
+
+    public void modificarEmpleado(String x, String y, DefaultTableModel d, JTable j,
+            String nombre, String apellidos, String edad, String puesto,
+            Double sueldo, String cod_cine) {
+        Cine aux = new Cine(y, null, null, null, null, null);
+        int indice = Collections.binarySearch(this.Cines, aux);
+        if (indice >= 0) {
+            aux = this.Cines.get(indice);
+            try {
+                for (Empleado i : aux.Empleados) {
+                    if (i.Dni.equals(x) && i.getCod_cine().equals(cod_cine)) {
+                        i.setNombre(nombre);
+                        i.setApellidos(apellidos);
+                        i.setEdad(edad);
+                        i.setPuesto(puesto);
+                        i.setSueldo(sueldo);
+                        i.setCod_cine(cod_cine);
+                    }
+                    if (i.Dni.equals(x) && !i.getCod_cine().equals(cod_cine)) {
+                        Empleado aux2 = new Empleado(x, i.getNombre(), i.getApellidos(), i.getEdad(),
+                                i.getPuesto(), i.getSueldo(), i.getCod_cine());
+                        aux.Empleados.remove(aux2);
+                        aux2 = new Empleado(x, nombre, apellidos, edad, puesto,
+                                sueldo, cod_cine);
+                        nexoModificarEmpleado(aux2, d, j);
+                    }
+                    cargarModeloEmpleados(d, j);
+                }
+            } catch (Exception ex) {
+                System.out.println(ex);
+            }
+        }
+    }
+
+    public void nexoModificarEmpleado(Empleado e, DefaultTableModel d, JTable j) {
+        Cine aux = new Cine(e.getCod_cine(), null, null, null, null, null);
+        //System.out.println(s.getCod_cine());
+        int indice = Collections.binarySearch(this.Cines, aux);
+        if (indice >= 0) {
+            aux = this.Cines.get(indice);
+            if (!aux.Empleados.contains(e)) {
+                aux.Empleados.add(e);
+                cargarModeloEmpleados(d, j);
+                //System.out.println(aux);
+            }
+        }
+    }
+
+    public void cargarModeloEmpleados(DefaultTableModel d, JTable j) {
+        d = new DefaultTableModel();
+
+        limpiarModelos(j);
+
+        d.addColumn("Dni");
+        d.addColumn("Nombre");
+        d.addColumn("Apellidos");
+        d.addColumn("Edad");
+        d.addColumn("Puesto");
+        d.addColumn("Sueldo");
+        d.addColumn("Cod_cine");
+        j.setModel(d);
+
+        Empleados.clear();
+
+        for (int i = 0; i < Cines.size(); i++) {
+            Empleados.addAll(Cines.get(i).getEmpleados());
+        }
+
+        Object[] filaEmpleados = new Object[d.getColumnCount()];
+        for (int i = 0; i < Empleados.size(); i++) {
+            filaEmpleados[0] = Empleados.get(i).getDni();
+            filaEmpleados[1] = Empleados.get(i).getNombre();
+            filaEmpleados[2] = Empleados.get(i).getApellidos();
+            filaEmpleados[3] = Empleados.get(i).getEdad();
+            filaEmpleados[4] = Empleados.get(i).getPuesto();
+            filaEmpleados[5] = Empleados.get(i).getSueldo();
+            filaEmpleados[6] = Empleados.get(i).getCod_cine();
+            d.addRow(filaEmpleados);
+
+            for (int k = 0; k < 7; k++) {
+                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
+                modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
+                j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+            }
+        }
+    }
+
+    //
+    // FIN OPERACIONES CON EMPLEADOS
     //
 }

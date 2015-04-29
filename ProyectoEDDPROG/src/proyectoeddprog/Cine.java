@@ -67,7 +67,7 @@ public class Cine implements Serializable, Comparable<Cine> {
     
     /**
      * GET ID_CINE
-     * @return 
+     * @return DEVUELVE EL VALOR ID_CINE
      */
     public String getId_cine() {
         return Id_cine;
@@ -83,7 +83,7 @@ public class Cine implements Serializable, Comparable<Cine> {
 
     /**
      * GET NOMBRE
-     * @return 
+     * @return DEVUELVE EL VALOR NOMBRE
      */
     public String getNombre() {
         return Nombre;
@@ -99,7 +99,7 @@ public class Cine implements Serializable, Comparable<Cine> {
 
     /**
      * GET DIRECCION
-     * @return 
+     * @return DEVUELVE EL VALOR DIRECCION
      */
     public String getDireccion() {
         return Direccion;
@@ -115,7 +115,7 @@ public class Cine implements Serializable, Comparable<Cine> {
 
     /**
      * GET TELEFONO
-     * @return 
+     * @return DEVUELVE EL VALOR TELEFONO
      */
     public String getTelefono() {
         return Telefono;
@@ -131,7 +131,7 @@ public class Cine implements Serializable, Comparable<Cine> {
 
     /**
      * GET FAX
-     * @return 
+     * @return DEVUELVE EL VALOR FAX
      */
     public String getFax() {
         return Fax;
@@ -147,7 +147,7 @@ public class Cine implements Serializable, Comparable<Cine> {
 
     /**
      * GET E_MAIL
-     * @return 
+     * @return DEVUELVE EL VALOR E_MAIL
      */
     public String getE_mail() {
         return E_mail;
@@ -163,7 +163,7 @@ public class Cine implements Serializable, Comparable<Cine> {
 
     /**
      * GET SALAS
-     * @return 
+     * @return DEVUELVE LIST SALAS
      */
     public List<Sala> getSalas() {
         return Salas;
@@ -179,7 +179,7 @@ public class Cine implements Serializable, Comparable<Cine> {
 
     /**
      * GET VIP
-     * @return 
+     * @return DEVUELVE LIST SALAS
      */
     public List<VIP> getVIP() {
         return VIP;
@@ -195,7 +195,7 @@ public class Cine implements Serializable, Comparable<Cine> {
 
     /**
      * GET EMPLEADOS
-     * @return 
+     * @return DEVUELVE LIST EMPLEADOS
      */
     public List<Empleado> getEmpleados() {
         return Empleados;
@@ -211,7 +211,7 @@ public class Cine implements Serializable, Comparable<Cine> {
 
     /**
      * TOSTRING DE LA CLASE CINE
-     * @return 
+     * @return DEVUELVE EL CINE
      */
     @Override
     public String toString() {

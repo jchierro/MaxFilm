@@ -39,7 +39,7 @@ public class Mobiliario implements Serializable {
 
     /**
      * GET ID_MOBILIARIO
-     * @return 
+     * @return DEVUELVE EL VALOR ID_MOBILIARIO
      */
     public Integer getId_mobiliario() {
         return Id_mobiliario;
@@ -55,7 +55,7 @@ public class Mobiliario implements Serializable {
 
     /**
      * GET NOMBRE
-     * @return 
+     * @return DEVUELVE EL VALOR NOMBRE
      */
     public String getNombre() {
         return nombre;
@@ -71,7 +71,7 @@ public class Mobiliario implements Serializable {
 
     /**
      * GET CANTIDAD
-     * @return 
+     * @return DEVUELVE EL VALOR CANTIDAD
      */
     public Integer getCantidad() {
         return Cantidad;
@@ -87,7 +87,7 @@ public class Mobiliario implements Serializable {
 
     /**
      * GET FECHA
-     * @return 
+     * @return DEVUELVE EL VALOR FECHA
      */
     public String getFecha() {
         return Fecha;
@@ -103,7 +103,7 @@ public class Mobiliario implements Serializable {
 
     /**
      * GET ESTADO
-     * @return 
+     * @return DEVUELVE EL VALOR ESTADO
      */
     public Boolean getEstado() {
         return Estado;
@@ -119,7 +119,7 @@ public class Mobiliario implements Serializable {
 
     /**
      * GET COD_SALA
-     * @return 
+     * @return DEVUELVE EL VALOR COD_SALA
      */
     public Integer getCod_sala() {
         return Cod_sala;
@@ -135,7 +135,7 @@ public class Mobiliario implements Serializable {
 
     /**
      * TOSTRING DE LA CLASE MOBILIARIO
-     * @return 
+     * @return DEVUELVE EL MOBILIARIO
      */
     @Override
     public String toString() {

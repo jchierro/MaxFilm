@@ -11,7 +11,7 @@ import java.io.Serializable;
  * CLASE EMPLEADO, LA CLASE EMPLEADO HEREDA DE LA CLASE PERSONA
  * @author jchierro
  */
-public class Empleado extends Persona implements Serializable {
+public class Empleado extends Persona implements Serializable, Comparable<Empleado> {
     protected String Puesto;
     protected Double Sueldo;
 
@@ -30,10 +30,20 @@ public class Empleado extends Persona implements Serializable {
         this.Puesto = Puesto;
         this.Sueldo = Sueldo;
     }
+    
+    @Override
+    public int compareTo(Empleado otro) {
+        return Dni.compareTo(otro.Dni);
+    }
+    
+    //@Override
+    public boolean equals(Empleado otro) {
+        return Dni.equals(((Empleado)otro).Dni);
+    }
 
     /**
      * GET PUESTO
-     * @return 
+     * @return DEVUELVE EL VALOR PUESTO
      */
     public String getPuesto() {
         return Puesto;
@@ -49,7 +59,7 @@ public class Empleado extends Persona implements Serializable {
 
     /**
      * GET PUESTO
-     * @return 
+     * @return DEVUELVE EL VALOR SUELDO
      */
     public Double getSueldo() {
         return Sueldo;
@@ -65,7 +75,7 @@ public class Empleado extends Persona implements Serializable {
 
     /**
      * TOSTRING DE LA CLASE EMPLEADO
-     * @return 
+     * @return DEVUELVE EL EMPLEADO
      */
     @Override
     public String toString() {

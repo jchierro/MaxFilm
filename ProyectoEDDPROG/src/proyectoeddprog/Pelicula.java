@@ -48,7 +48,7 @@ public class Pelicula implements Serializable {
 
     /**
      * GET ID_PELICULA
-     * @return 
+     * @return DEVUELVE EL VALOR ID_PELICULA
      */
     public Integer getId_pelicula() {
         return Id_pelicula;
@@ -64,7 +64,7 @@ public class Pelicula implements Serializable {
 
     /**
      * GET NOMBRE
-     * @return 
+     * @return DEVUELVE EL VALOR NOMBRE
      */
     public String getNombre() {
         return Nombre;
@@ -80,7 +80,7 @@ public class Pelicula implements Serializable {
 
     /**
      * GET DIRECTOR
-     * @return 
+     * @return DEVUELVE EL VALOR DIRECTOR
      */
     public String getDirector() {
         return Director;
@@ -96,7 +96,7 @@ public class Pelicula implements Serializable {
 
     /**
      * GET AÑO
-     * @return 
+     * @return DEVUELVE EL VALOR AÑO
      */
     public Integer getAño() {
         return Año;
@@ -112,7 +112,7 @@ public class Pelicula implements Serializable {
 
     /**
      * GET EDAD
-     * @return 
+     * @return DEVUELVE EL VALOR EDAD
      */
     public Integer getEdad() {
         return Edad;
@@ -128,7 +128,7 @@ public class Pelicula implements Serializable {
 
     /**
      * GET PAIS
-     * @return 
+     * @return DEVUELVE EL VALOR PAIS
      */
     public String getPais() {
         return Pais;
@@ -144,7 +144,7 @@ public class Pelicula implements Serializable {
 
     /**
      * GET GENERO
-     * @return 
+     * @return DEVUELVE EL VALOR GENERO
      */
     public String getGenero() {
         return Genero;
@@ -160,7 +160,7 @@ public class Pelicula implements Serializable {
 
     /**
      * GET DURACION
-     * @return 
+     * @return DEVUELVE EL VALOR DURACION
      */
     public Integer getDuracion() {
         return Duracion;
@@ -176,7 +176,7 @@ public class Pelicula implements Serializable {
 
     /**
      * GET COD_PRODUCTORA
-     * @return 
+     * @return DEVUELVE EL VALOR COD_PRODUCTORA
      */
     public Integer getCod_productora() {
         return Cod_productora;
@@ -192,7 +192,7 @@ public class Pelicula implements Serializable {
 
     /**
      * TOSTRING DE LA CLASE PELICULA
-     * @return 
+     * @return DEVUELVE LA PELICULA
      */
     @Override
     public String toString() {
