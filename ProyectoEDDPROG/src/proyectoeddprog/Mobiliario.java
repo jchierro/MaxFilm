@@ -11,13 +11,13 @@ import java.io.Serializable;
  * CLASE MOBILIARIO
  * @author jchierro
  */
-public class Mobiliario implements Serializable {
-    protected Integer Id_mobiliario;
+public class Mobiliario implements Serializable, Comparable<Mobiliario> {
+    protected String Id_mobiliario;
     protected String nombre;
-    protected Integer Cantidad;
+    protected String Cantidad;
     protected String Fecha;
     protected Boolean Estado;
-    protected Integer Cod_sala;
+    protected String Cod_sala;
 
     /**
      * CONSTRUCTOR DE LA CLASE MOBILIARIO
@@ -28,7 +28,7 @@ public class Mobiliario implements Serializable {
      * @param Estado
      * @param Cod_sala 
      */
-    public Mobiliario(Integer Id_mobiliario, String nombre, Integer Cantidad, String Fecha, Boolean Estado, Integer Cod_sala) {
+    public Mobiliario(String Id_mobiliario, String nombre, String Cantidad, String Fecha, Boolean Estado, String Cod_sala) {
         this.Id_mobiliario = Id_mobiliario;
         this.nombre = nombre;
         this.Cantidad = Cantidad;
@@ -36,12 +36,22 @@ public class Mobiliario implements Serializable {
         this.Estado = Estado;
         this.Cod_sala = Cod_sala;
     }
+    
+    @Override
+    public int compareTo(Mobiliario otro) {
+        return Id_mobiliario.compareTo(otro.Id_mobiliario);
+    }
+    
+    @Override
+    public boolean equals(Object otro) {
+        return Id_mobiliario.equals(((Mobiliario)otro).Id_mobiliario);
+    }
 
     /**
      * GET ID_MOBILIARIO
      * @return DEVUELVE EL VALOR ID_MOBILIARIO
      */
-    public Integer getId_mobiliario() {
+    public String getId_mobiliario() {
         return Id_mobiliario;
     }
 
@@ -49,7 +59,7 @@ public class Mobiliario implements Serializable {
      * SET ID_MOBILIARIO
      * @param Id_mobiliario 
      */
-    public void setId_mobiliario(Integer Id_mobiliario) {
+    public void setId_mobiliario(String Id_mobiliario) {
         this.Id_mobiliario = Id_mobiliario;
     }
 
@@ -73,7 +83,7 @@ public class Mobiliario implements Serializable {
      * GET CANTIDAD
      * @return DEVUELVE EL VALOR CANTIDAD
      */
-    public Integer getCantidad() {
+    public String getCantidad() {
         return Cantidad;
     }
 
@@ -81,7 +91,7 @@ public class Mobiliario implements Serializable {
      * SET CANTIDAD
      * @param Cantidad 
      */
-    public void setCantidad(Integer Cantidad) {
+    public void setCantidad(String Cantidad) {
         this.Cantidad = Cantidad;
     }
 
@@ -121,7 +131,7 @@ public class Mobiliario implements Serializable {
      * GET COD_SALA
      * @return DEVUELVE EL VALOR COD_SALA
      */
-    public Integer getCod_sala() {
+    public String getCod_sala() {
         return Cod_sala;
     }
 
@@ -129,7 +139,7 @@ public class Mobiliario implements Serializable {
      * SET COD_SALA
      * @param Cod_sala 
      */
-    public void setCod_sala(Integer Cod_sala) {
+    public void setCod_sala(String Cod_sala) {
         this.Cod_sala = Cod_sala;
     }
 

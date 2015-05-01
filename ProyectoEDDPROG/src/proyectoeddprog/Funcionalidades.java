@@ -29,6 +29,7 @@ public class Funcionalidades implements Serializable {
     protected int idCine;
     protected int idSala;
     protected int idVIP;
+    protected int idMobiliario;
 
     protected TreeSet<String> VIPDni;
     protected TreeSet<String> EmpleadoDni;
@@ -47,6 +48,7 @@ public class Funcionalidades implements Serializable {
         this.idCine = 1;
         this.idSala = 1;
         this.idVIP = 1;
+        this.idMobiliario = 1;
 
         this.VIPDni = new TreeSet<>();
         this.EmpleadoDni = new TreeSet<>();
@@ -73,7 +75,9 @@ public class Funcionalidades implements Serializable {
                 idCine = entrada.readInt();
                 idSala = entrada.readInt();
                 idVIP = entrada.readInt();
+                idMobiliario = entrada.readInt();
                 VIPDni = (TreeSet<String>) entrada.readObject();
+                EmpleadoDni = (TreeSet<String>) entrada.readObject();
             } catch (ClassNotFoundException ex) {
                 System.out.println(ex);
             }
@@ -107,7 +111,9 @@ public class Funcionalidades implements Serializable {
             salida.writeInt(idCine);
             salida.writeInt(idSala);
             salida.writeInt(idVIP);
+            salida.writeInt(idMobiliario);
             salida.writeObject(VIPDni);
+            salida.writeObject(EmpleadoDni);
         } catch (FileNotFoundException ex) {
             System.out.println("Error de apertura del archivo de salida!");
             System.out.println(ex.getMessage());
@@ -172,7 +178,6 @@ public class Funcionalidades implements Serializable {
     public void modificarCine(int i, DefaultTableModel d, JTable j,
             String nombre, String direccion, String telefono, String fax, String e_mail) {
         Cine aux = this.Cines.get(i);
-        //aux.setId_cine(id_cine);
         aux.setNombre(nombre);
         aux.setDireccion(direccion);
         aux.setTelefono(telefono);
@@ -181,15 +186,14 @@ public class Funcionalidades implements Serializable {
         cargarModeloCines(d, j);
     }
 
-    public Cine buscarCine(Cine c) {
-        Cine result = null;
-        int indice = Collections.binarySearch(this.Cines, c);
-        if (indice >= 0) {
-            result = this.Cines.get(indice);
-        }
-        return result;
-    }
-
+    /*public Cine buscarCine(Cine c) {
+     Cine result = null;
+     int indice = Collections.binarySearch(this.Cines, c);
+     if (indice >= 0) {
+     result = this.Cines.get(indice);
+     }
+     return result;
+     }*/
     public void cargarModeloCines(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel();
 
@@ -234,6 +238,15 @@ public class Funcionalidades implements Serializable {
         this.idSala++;
     }
 
+    public void nexoSalaCodSala(JComboBox co) {
+        co.removeAllItems();
+        for (int i = 0; i < Cines.size(); i++) {
+            for (int j = 0; j < Cines.get(i).Salas.size(); j++) {
+                co.addItem(Cines.get(i).Salas.get(j).getId_Sala());
+            }
+        }
+    }
+
     public boolean insertarSala(Sala s, DefaultTableModel d, JTable j) {
         boolean result = false;
         Cine aux = new Cine(s.getCod_cine(), null, null, null, null, null);
@@ -256,12 +269,10 @@ public class Funcionalidades implements Serializable {
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
             aux = this.Cines.get(indice);
-            for (Sala i : aux.Salas) {
-                if (i.Id_Sala.equals(x)) {
-                    Sala aux2 = new Sala(i.getId_Sala(), i.getNombre(),
-                            i.getTipo(), i.getNum_butacas(), i.getCod_cine());
-                    aux.Salas.remove(aux2);
-                    break;
+            for (Iterator<Sala> it = aux.Salas.iterator(); it.hasNext();) {
+                Sala aux2 = it.next();
+                if (aux2.getId_Sala().equals(x)) {
+                    it.remove();
                 }
             }
             cargarModeloSalas(d, j);
@@ -274,40 +285,32 @@ public class Funcionalidades implements Serializable {
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
             aux = this.Cines.get(indice);
-            try {
-                for (Sala i : aux.Salas) {
-                    if (i.Id_Sala.equals(x) && i.getCod_cine().equals(cod_cine)) {
-                        i.setNombre(nombre);
-                        i.setTipo(tipo);
-                        i.setNum_butacas(num_butacas);
-                        i.setCod_cine(cod_cine);
-                    }
-                    if (i.Id_Sala.equals(x) && !i.getCod_cine().equals(cod_cine)) {
-                        Sala aux2 = new Sala(x, i.getNombre(), i.getTipo(), i.getNum_butacas(),
-                                i.getCod_cine());
-                        aux.Salas.remove(aux2);
-                        aux2 = new Sala(x, nombre, tipo, num_butacas,
-                                cod_cine);
-                        nexoModificarSala(aux2, d, j);
-                    }
-                    cargarModeloSalas(d, j);
+            for (Iterator<Sala> it = aux.Salas.iterator(); it.hasNext();) {
+                Sala aux2 = it.next();
+                if (aux2.getId_Sala().equals(x) && aux2.getCod_cine().equals(cod_cine)) {
+                    aux2.setNombre(nombre);
+                    aux2.setTipo(tipo);
+                    aux2.setNum_butacas(num_butacas);
+                    aux2.setCod_cine(cod_cine);
                 }
-            } catch (Exception ex) {
-                System.out.println(ex);
+                if (aux2.getId_Sala().equals(x) && !aux2.getCod_cine().equals(cod_cine)) {
+                    it.remove();
+                    aux2 = new Sala(x, nombre, tipo, num_butacas, cod_cine);
+                    nexoModificarSala(aux2, d, j);
+                }
+                cargarModeloSalas(d, j);
             }
         }
     }
 
     public void nexoModificarSala(Sala s, DefaultTableModel d, JTable j) {
         Cine aux = new Cine(s.getCod_cine(), null, null, null, null, null);
-        //System.out.println(s.getCod_cine());
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
             aux = this.Cines.get(indice);
             if (!aux.Salas.contains(s)) {
                 aux.Salas.add(s);
                 cargarModeloSalas(d, j);
-                //System.out.println(aux);
             }
         }
     }
@@ -351,6 +354,92 @@ public class Funcionalidades implements Serializable {
     // FIN OPERACIONES CON SALAS
     //
     //
+    // COMIENZO OPERACIONES CON MOBILIARIOS
+    //
+    public void nexoMobiliarioId(JTextField ca) {
+        String id = "MFM-";
+        String result = id.concat(Integer.toString(this.idMobiliario));
+        ca.setText(result);
+        this.idMobiliario++;
+    }
+
+    public boolean insertarMobiliario(Mobiliario m, DefaultTableModel d, JTable j) {
+        boolean result = false;
+        for (int i = 0; i < Cines.size(); i++) {
+            for (Iterator<Sala> it = Cines.get(i).Salas.iterator(); it.hasNext();) {
+                Sala aux = it.next();
+                if (aux.getId_Sala().equals(m.getCod_sala())) {
+                    if (!aux.Mobiliarios.contains(m)) {
+                        aux.Mobiliarios.add(m);
+                        cargarModeloMobiliarios(d, j);
+                        result = true;
+                    } else {
+                        result = false;
+                    }
+                }
+            }
+
+        }
+        return result;
+    }
+
+    public void borrarMobiliario(String x, String y, DefaultTableModel d, JTable j) {
+        for (int i = 0; i < Cines.size(); i++) {
+            for (int k = 0; k < Cines.get(i).Salas.size(); k++) {
+                for (Iterator<Mobiliario> it = Cines.get(i).Salas.get(k).Mobiliarios.iterator(); it.hasNext();) {
+                    Mobiliario aux = it.next();
+                    if (aux.getId_mobiliario().equals(x)) {
+                        it.remove();
+                    }
+                }
+            }
+        }
+        cargarModeloMobiliarios(d, j);
+    }
+
+    public void cargarModeloMobiliarios(DefaultTableModel d, JTable j) {
+        d = new DefaultTableModel();
+
+        limpiarModelos(j);
+
+        d.addColumn("Id_mobiliario");
+        d.addColumn("Nombre");
+        d.addColumn("Cantidad");
+        d.addColumn("Fecha");
+        d.addColumn("Estado");
+        d.addColumn("Cod_sala");
+        j.setModel(d);
+
+        Mobiliarios.clear();
+
+        for (int i = 0; i < Cines.size(); i++) {
+            for (int k = 0; k < Cines.get(i).Salas.size(); k++) {
+                Mobiliarios.addAll(Cines.get(i).Salas.get(k).getMobiliarios());
+            }
+        }
+
+        Object[] filaMobiliarios = new Object[d.getColumnCount()];
+        for (int i = 0; i < Mobiliarios.size(); i++) {
+            filaMobiliarios[0] = Mobiliarios.get(i).getId_mobiliario();
+            filaMobiliarios[1] = Mobiliarios.get(i).getNombre();
+            filaMobiliarios[2] = Mobiliarios.get(i).getCantidad();
+            filaMobiliarios[3] = Mobiliarios.get(i).getFecha();
+            filaMobiliarios[4] = Mobiliarios.get(i).getEstado();
+            filaMobiliarios[5] = Mobiliarios.get(i).getCod_sala();
+            d.addRow(filaMobiliarios);
+
+            for (int k = 0; k < 6; k++) {
+                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
+                modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
+                j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+            }
+        }
+    }
+
+    //
+    // FIN OPERACIONES CON MOBILIARIOS
+    //
+    //
     // COMIENZO OPERACIONES CON VIPS
     //
     public boolean nexoVIPCompruebaDni(String Dni) {
@@ -360,7 +449,6 @@ public class Funcionalidades implements Serializable {
     public boolean insertarVIP(VIP v, DefaultTableModel d, JTable j) {
         boolean result = false;
         boolean dni = nexoVIPCompruebaDni(v.getDni());
-        //System.out.println(dni);
         if (dni == true) {
             Cine aux = new Cine(v.getCod_cine(), null, null, null, null, null);
             int indice = Collections.binarySearch(this.Cines, aux);
@@ -401,28 +489,23 @@ public class Funcionalidades implements Serializable {
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
             aux = this.Cines.get(indice);
-            try {
-                for (VIP i : aux.VIP) {
-                    if (i.Dni.equals(x) && i.getCod_cine().equals(cod_cine)) {
-                        i.setNombre(nombre);
-                        i.setApellidos(apellidos);
-                        i.setEdad(edad);
-                        i.setTelefono(telefono);
-                        i.setCodigo_Postal(cod_postal);
-                        i.setCod_cine(cod_cine);
-                    }
-                    if (i.Dni.equals(x) && !i.getCod_cine().equals(cod_cine)) {
-                        VIP aux2 = new VIP(x, i.getNombre(), i.getApellidos(), i.getEdad(),
-                                i.getTelefono(), i.getCodigo_Postal(), i.getCod_cine());
-                        aux.VIP.remove(aux2);
-                        aux2 = new VIP(x, nombre, apellidos, edad, telefono,
-                                cod_postal, cod_cine);
-                        nexoModificarVIP(aux2, d, j);
-                    }
-                    cargarModeloVIP(d, j);
+            for (Iterator<VIP> it = aux.VIP.iterator(); it.hasNext();) {
+                VIP aux2 = it.next();
+                if (aux2.getDni().equals(x) && aux2.getCod_cine().equals(cod_cine)) {
+                    aux2.setNombre(nombre);
+                    aux2.setApellidos(apellidos);
+                    aux2.setEdad(edad);
+                    aux2.setTelefono(telefono);
+                    aux2.setCodigo_Postal(cod_postal);
+                    aux2.setCod_cine(cod_cine);
                 }
-            } catch (Exception ex) {
-                System.out.println(ex);
+                if (aux2.getDni().equals(x) && !aux2.getCod_cine().equals(cod_cine)) {
+                    it.remove();
+                    aux2 = new VIP(x, nombre, apellidos, edad, telefono,
+                            cod_postal, cod_cine);
+                    nexoModificarVIP(aux2, d, j);
+                }
+                cargarModeloVIP(d, j);
             }
         }
     }
@@ -534,42 +617,35 @@ public class Funcionalidades implements Serializable {
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
             aux = this.Cines.get(indice);
-            try {
-                for (Empleado i : aux.Empleados) {
-                    if (i.Dni.equals(x) && i.getCod_cine().equals(cod_cine)) {
-                        i.setNombre(nombre);
-                        i.setApellidos(apellidos);
-                        i.setEdad(edad);
-                        i.setPuesto(puesto);
-                        i.setSueldo(sueldo);
-                        i.setCod_cine(cod_cine);
-                    }
-                    if (i.Dni.equals(x) && !i.getCod_cine().equals(cod_cine)) {
-                        Empleado aux2 = new Empleado(x, i.getNombre(), i.getApellidos(), i.getEdad(),
-                                i.getPuesto(), i.getSueldo(), i.getCod_cine());
-                        aux.Empleados.remove(aux2);
-                        aux2 = new Empleado(x, nombre, apellidos, edad, puesto,
-                                sueldo, cod_cine);
-                        nexoModificarEmpleado(aux2, d, j);
-                    }
-                    cargarModeloEmpleados(d, j);
+            for (Iterator<Empleado> it = aux.Empleados.iterator(); it.hasNext();) {
+                Empleado aux2 = it.next();
+                if (aux2.getDni().equals(x) && aux2.getCod_cine().equals(cod_cine)) {
+                    aux2.setNombre(nombre);
+                    aux2.setApellidos(apellidos);
+                    aux2.setEdad(edad);
+                    aux2.setPuesto(puesto);
+                    aux2.setSueldo(sueldo);
+                    aux2.setCod_cine(cod_cine);
                 }
-            } catch (Exception ex) {
-                System.out.println(ex);
+                if (aux2.getDni().equals(x) && !aux2.getCod_cine().equals(cod_cine)) {
+                    it.remove();
+                    aux2 = new Empleado(x, nombre, apellidos, edad, puesto,
+                            sueldo, cod_cine);
+                    nexoModificarEmpleado(aux2, d, j);
+                }
+                cargarModeloEmpleados(d, j);
             }
         }
     }
 
     public void nexoModificarEmpleado(Empleado e, DefaultTableModel d, JTable j) {
         Cine aux = new Cine(e.getCod_cine(), null, null, null, null, null);
-        //System.out.println(s.getCod_cine());
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
             aux = this.Cines.get(indice);
             if (!aux.Empleados.contains(e)) {
                 aux.Empleados.add(e);
                 cargarModeloEmpleados(d, j);
-                //System.out.println(aux);
             }
         }
     }
@@ -615,5 +691,5 @@ public class Funcionalidades implements Serializable {
 
     //
     // FIN OPERACIONES CON EMPLEADOS
-    //
+    //   
 }
