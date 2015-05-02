@@ -13,11 +13,11 @@ import java.util.List;
  * CLASE PRODUCTORA
  * @author jchierro
  */
-public class Productora implements Serializable {
-    protected Integer Id_productora;
+public class Productora implements Serializable, Comparable<Productora> {
+    protected String Id_productora;
     protected String Nombre;
-    protected Integer Telefono;
-    protected Integer Fax;
+    protected String Telefono;
+    protected String Fax;
     protected String E_mail;
     protected String Representante;
     protected List<Pelicula> Peliculas;
@@ -31,7 +31,7 @@ public class Productora implements Serializable {
      * @param E_mail
      * @param Representante 
      */
-    public Productora(Integer Id_productora, String Nombre, Integer Telefono, Integer Fax, String E_mail, String Representante) {
+    public Productora(String Id_productora, String Nombre, String Telefono, String Fax, String E_mail, String Representante) {
         this.Id_productora = Id_productora;
         this.Nombre = Nombre;
         this.Telefono = Telefono;
@@ -40,12 +40,22 @@ public class Productora implements Serializable {
         this.Representante = Representante;
         this.Peliculas = new ArrayList<>();
     }
+    
+    @Override
+    public int compareTo(Productora otro) {
+        return Id_productora.compareTo(otro.Id_productora);
+    }
+    
+    @Override
+    public boolean equals(Object otro) {
+        return Id_productora.equals(((Productora)otro).Id_productora);
+    }
 
     /**
      * GET ID_PRODUCTORA
      * @return DEVUELVE EL VALOR ID_PRODUCTORA
      */
-    public Integer getId_productora() {
+    public String getId_productora() {
         return Id_productora;
     }
 
@@ -53,7 +63,7 @@ public class Productora implements Serializable {
      * SET ID_PRODUCTORA
      * @param Id_productora 
      */
-    public void setId_productora(Integer Id_productora) {
+    public void setId_productora(String Id_productora) {
         this.Id_productora = Id_productora;
     }
 
@@ -77,7 +87,7 @@ public class Productora implements Serializable {
      * GET TELEFONO
      * @return DEVUELVE EL VALOR TELEFONO
      */
-    public Integer getTelefono() {
+    public String getTelefono() {
         return Telefono;
     }
 
@@ -85,7 +95,7 @@ public class Productora implements Serializable {
      * SET TELEFONO
      * @param Telefono 
      */
-    public void setTelefono(Integer Telefono) {
+    public void setTelefono(String Telefono) {
         this.Telefono = Telefono;
     }
 
@@ -93,7 +103,7 @@ public class Productora implements Serializable {
      * GET FAX
      * @return DEVUELVE EL VALOR FAX
      */
-    public Integer getFax() {
+    public String getFax() {
         return Fax;
     }
 
@@ -101,7 +111,7 @@ public class Productora implements Serializable {
      * SET FAX
      * @param Fax 
      */
-    public void setFax(Integer Fax) {
+    public void setFax(String Fax) {
         this.Fax = Fax;
     }
 

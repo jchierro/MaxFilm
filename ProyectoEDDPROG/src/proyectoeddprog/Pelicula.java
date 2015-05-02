@@ -11,16 +11,16 @@ import java.io.Serializable;
  * CLASE PELICULA
  * @author jchierro
  */
-public class Pelicula implements Serializable {
-    protected Integer Id_pelicula;
+public class Pelicula implements Serializable, Comparable<Pelicula> {
+    protected String Id_pelicula;
     protected String Nombre;
     protected String Director;
-    protected Integer Año;
-    protected Integer Edad;
+    protected String Año;
+    protected String Edad;
     protected String Pais;
     protected String Genero;
-    protected Integer Duracion;
-    protected Integer Cod_productora;
+    protected String Duracion;
+    protected String Cod_productora;
 
     /**
      * CONSTRUCTOR DE LA CASE PELICULA
@@ -34,7 +34,7 @@ public class Pelicula implements Serializable {
      * @param Duracion
      * @param Cod_productora 
      */
-    public Pelicula(Integer Id_pelicula, String Nombre, String Director, Integer Año, Integer Edad, String Pais, String Genero, Integer Duracion, Integer Cod_productora) {
+    public Pelicula(String Id_pelicula, String Nombre, String Director, String Año, String Edad, String Pais, String Genero, String Duracion, String Cod_productora) {
         this.Id_pelicula = Id_pelicula;
         this.Nombre = Nombre;
         this.Director = Director;
@@ -45,12 +45,22 @@ public class Pelicula implements Serializable {
         this.Duracion = Duracion;
         this.Cod_productora = Cod_productora;
     }
+    
+    @Override
+    public int compareTo(Pelicula otro) {
+        return Id_pelicula.compareTo(otro.Id_pelicula);
+    }
+    
+    @Override
+    public boolean equals(Object otro) {
+        return Id_pelicula.equals(((Pelicula)otro).Id_pelicula);
+    }
 
     /**
      * GET ID_PELICULA
      * @return DEVUELVE EL VALOR ID_PELICULA
      */
-    public Integer getId_pelicula() {
+    public String getId_pelicula() {
         return Id_pelicula;
     }
 
@@ -58,7 +68,7 @@ public class Pelicula implements Serializable {
      * SET ID_PELICULA
      * @param Id_pelicula 
      */
-    public void setId_pelicula(Integer Id_pelicula) {
+    public void setId_pelicula(String Id_pelicula) {
         this.Id_pelicula = Id_pelicula;
     }
 
@@ -98,7 +108,7 @@ public class Pelicula implements Serializable {
      * GET AÑO
      * @return DEVUELVE EL VALOR AÑO
      */
-    public Integer getAño() {
+    public String getAño() {
         return Año;
     }
 
@@ -106,7 +116,7 @@ public class Pelicula implements Serializable {
      * SET AÑO
      * @param Año 
      */
-    public void setAño(Integer Año) {
+    public void setAño(String Año) {
         this.Año = Año;
     }
 
@@ -114,7 +124,7 @@ public class Pelicula implements Serializable {
      * GET EDAD
      * @return DEVUELVE EL VALOR EDAD
      */
-    public Integer getEdad() {
+    public String getEdad() {
         return Edad;
     }
 
@@ -122,7 +132,7 @@ public class Pelicula implements Serializable {
      * SET EDAD
      * @param Edad 
      */
-    public void setEdad(Integer Edad) {
+    public void setEdad(String Edad) {
         this.Edad = Edad;
     }
 
@@ -162,7 +172,7 @@ public class Pelicula implements Serializable {
      * GET DURACION
      * @return DEVUELVE EL VALOR DURACION
      */
-    public Integer getDuracion() {
+    public String getDuracion() {
         return Duracion;
     }
 
@@ -170,7 +180,7 @@ public class Pelicula implements Serializable {
      * SET DURACION
      * @param Duracion 
      */
-    public void setDuracion(Integer Duracion) {
+    public void setDuracion(String Duracion) {
         this.Duracion = Duracion;
     }
 
@@ -178,7 +188,7 @@ public class Pelicula implements Serializable {
      * GET COD_PRODUCTORA
      * @return DEVUELVE EL VALOR COD_PRODUCTORA
      */
-    public Integer getCod_productora() {
+    public String getCod_productora() {
         return Cod_productora;
     }
 
@@ -186,7 +196,7 @@ public class Pelicula implements Serializable {
      * SET COD_PRODUCTORA
      * @param Cod_productora 
      */
-    public void setCod_productora(Integer Cod_productora) {
+    public void setCod_productora(String Cod_productora) {
         this.Cod_productora = Cod_productora;
     }
 

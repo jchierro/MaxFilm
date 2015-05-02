@@ -30,6 +30,9 @@ public class Funcionalidades implements Serializable {
     protected int idSala;
     protected int idVIP;
     protected int idMobiliario;
+    protected int idPr;
+    protected int idPe;
+    protected int idEn;
 
     protected TreeSet<String> VIPDni;
     protected TreeSet<String> EmpleadoDni;
@@ -49,6 +52,9 @@ public class Funcionalidades implements Serializable {
         this.idSala = 1;
         this.idVIP = 1;
         this.idMobiliario = 1;
+        this.idPr = 1;
+        this.idPe = 1;
+        this.idEn = 1;
 
         this.VIPDni = new TreeSet<>();
         this.EmpleadoDni = new TreeSet<>();
@@ -76,6 +82,9 @@ public class Funcionalidades implements Serializable {
                 idSala = entrada.readInt();
                 idVIP = entrada.readInt();
                 idMobiliario = entrada.readInt();
+                idPr = entrada.readInt();
+                idPe = entrada.readInt();
+                idEn = entrada.readInt();
                 VIPDni = (TreeSet<String>) entrada.readObject();
                 EmpleadoDni = (TreeSet<String>) entrada.readObject();
             } catch (ClassNotFoundException ex) {
@@ -112,6 +121,9 @@ public class Funcionalidades implements Serializable {
             salida.writeInt(idSala);
             salida.writeInt(idVIP);
             salida.writeInt(idMobiliario);
+            salida.writeInt(idPr);
+            salida.writeInt(idPe);
+            salida.writeInt(idEn);
             salida.writeObject(VIPDni);
             salida.writeObject(EmpleadoDni);
         } catch (FileNotFoundException ex) {
@@ -298,8 +310,8 @@ public class Funcionalidades implements Serializable {
                     aux2 = new Sala(x, nombre, tipo, num_butacas, cod_cine);
                     nexoModificarSala(aux2, d, j);
                 }
-                cargarModeloSalas(d, j);
             }
+            cargarModeloSalas(d, j);
         }
     }
 
@@ -395,6 +407,45 @@ public class Funcionalidades implements Serializable {
             }
         }
         cargarModeloMobiliarios(d, j);
+    }
+    
+    public void modificarMobiliario(String x, DefaultTableModel d, JTable j,
+            String nombre, String cantidad, String fecha, Boolean estado, String cod_sala) {
+        for (int i = 0; i < Cines.size(); i++) {
+            for (int k = 0; k < Cines.get(i).Salas.size(); k++) {
+                for (Iterator<Mobiliario> it = Cines.get(i).Salas.get(k).Mobiliarios.iterator(); it.hasNext();) {
+                    Mobiliario aux = it.next();
+                    if (aux.getId_mobiliario().equals(x) && aux.getCod_sala().equals(cod_sala)) {
+                        aux.setNombre(nombre);
+                        aux.setCantidad(cantidad);
+                        aux.setFecha(fecha);
+                        aux.setEstado(estado);
+                        aux.setCod_sala(cod_sala);
+                    }
+                    if (aux.getId_mobiliario().equals(x) && !aux.getCod_sala().equals(cod_sala)) {
+                        it.remove();
+                        aux = new Mobiliario(x, nombre, cantidad, fecha, estado, cod_sala);
+                        nexoModificarMobiliario(aux, d, j);
+                    }
+                }
+            }
+        }
+        cargarModeloMobiliarios(d, j);
+    }
+    
+    public void nexoModificarMobiliario(Mobiliario m, DefaultTableModel d, JTable j) {
+        for (int i = 0; i < Cines.size(); i++) {
+            for (Iterator<Sala> it = Cines.get(i).Salas.iterator(); it.hasNext();) {
+                Sala aux = it.next();
+                if (aux.getId_Sala().equals(m.getCod_sala())) {
+                    if (!aux.Mobiliarios.contains(m)) {
+                        aux.Mobiliarios.add(m);
+                        cargarModeloMobiliarios(d, j);
+                    } 
+                }
+            }
+
+        }
     }
 
     public void cargarModeloMobiliarios(DefaultTableModel d, JTable j) {
@@ -505,8 +556,8 @@ public class Funcionalidades implements Serializable {
                             cod_postal, cod_cine);
                     nexoModificarVIP(aux2, d, j);
                 }
-                cargarModeloVIP(d, j);
             }
+            cargarModeloVIP(d, j);
         }
     }
 
@@ -632,9 +683,9 @@ public class Funcionalidades implements Serializable {
                     aux2 = new Empleado(x, nombre, apellidos, edad, puesto,
                             sueldo, cod_cine);
                     nexoModificarEmpleado(aux2, d, j);
-                }
-                cargarModeloEmpleados(d, j);
+                } 
             }
+            cargarModeloEmpleados(d, j);
         }
     }
 
@@ -692,4 +743,298 @@ public class Funcionalidades implements Serializable {
     //
     // FIN OPERACIONES CON EMPLEADOS
     //   
+    
+    //
+    // COMIENZO OPERACIONES CON PRODUCTORAS
+    //
+    
+    public void nexoProductoraId(JTextField ca) {
+        String id = "MFPr-";
+        String result = id.concat(Integer.toString(this.idPr));
+        ca.setText(result);
+        this.idPr++;
+    }
+    
+    public void nexoProductoraCodProductora(JComboBox co) {
+        co.removeAllItems();
+        for (int i = 0; i < Productoras.size(); i++) {
+            co.addItem(Productoras.get(i).getId_productora());
+        }
+    }
+    
+    public boolean insertarProductora(Productora pr, DefaultTableModel d, JTable j) {
+        if (!this.Productoras.contains(pr)) {
+            this.Productoras.add(pr);
+            cargarModeloProductoras(d, j);
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public void borrarProductora(int i, DefaultTableModel d, JTable j) {
+        this.Productoras.remove(i);
+        cargarModeloProductoras(d, j);
+    }
+    
+    public void modificarProductora(int i, DefaultTableModel d, JTable j,
+            String nombre, String telefono, String fax, String e_mail, String representante) {
+        Productora aux = this.Productoras.get(i);
+        aux.setNombre(nombre);
+        aux.setTelefono(telefono);
+        aux.setFax(fax);
+        aux.setE_mail(e_mail);
+        aux.setRepresentante(representante);
+        cargarModeloProductoras(d, j);
+    }
+    
+    public void cargarModeloProductoras(DefaultTableModel d, JTable j) {
+        d = new DefaultTableModel();
+
+        limpiarModelos(j);
+
+        d.addColumn("Id_productora");
+        d.addColumn("Nombre");
+        d.addColumn("Teléfono");
+        d.addColumn("Fax");
+        d.addColumn("E_mail");
+        d.addColumn("Representante");
+        j.setModel(d);
+
+        Object[] filaProductoras = new Object[d.getColumnCount()];
+        for (int i = 0; i < Productoras.size(); i++) {
+            filaProductoras[0] = Productoras.get(i).getId_productora();
+            filaProductoras[1] = Productoras.get(i).getNombre();
+            filaProductoras[2] = Productoras.get(i).getTelefono();
+            filaProductoras[3] = Productoras.get(i).getFax();
+            filaProductoras[4] = Productoras.get(i).getE_mail();
+            filaProductoras[5] = Productoras.get(i).getRepresentante();
+            d.addRow(filaProductoras);
+
+            for (int k = 0; k < 6; k++) {
+                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
+                modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
+                j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+            }
+        }
+    }
+    
+    //
+    // FIN OPERACIONES CON PRODUCTORAS
+    //  
+    
+    //
+    // COMIENZO OPERACIONES CON PELÍCULAS
+    //
+    
+    public void nexoPeliculaId(JTextField ca) {
+        String id = "MFPe-";
+        String result = id.concat(Integer.toString(this.idPe));
+        ca.setText(result);
+        this.idPe++;
+    }
+    
+    public void nexoPeliculaTituloPelicula(JComboBox co) {
+        co.removeAllItems();
+        for (int i = 0; i < Peliculas.size(); i++) {
+            co.addItem(Peliculas.get(i).getNombre());
+        }
+    }
+    
+    public boolean insertarPelicula(Pelicula pe, DefaultTableModel d, JTable j) {
+        boolean result = false;
+        Productora aux = new Productora(pe.getCod_productora(), null, null, null, null, null);
+        int indice = Collections.binarySearch(this.Productoras, aux);
+        if (indice >= 0) {
+            aux = this.Productoras.get(indice);
+            if (!aux.Peliculas.contains(pe)) {
+                aux.Peliculas.add(pe);
+                cargarModeloPeliculas(d, j);
+                result = true;
+            }
+        } else {
+            result = false;
+        }
+        return result;
+    }
+    
+    public void borrarPelicula(String x, String y, DefaultTableModel d, JTable j) {
+        Productora aux = new Productora(y, null, null, null, null, null);
+        int indice = Collections.binarySearch(this.Productoras, aux);
+        if (indice >= 0) {
+            aux = this.Productoras.get(indice);
+            for (Iterator<Pelicula> it = aux.Peliculas.iterator(); it.hasNext();) {
+                Pelicula aux2 = it.next();
+                if (aux2.getId_pelicula().equals(x)) {
+                    it.remove();
+                }
+            }
+            cargarModeloPeliculas(d, j);
+        }
+    }
+    
+    public void modificarPelicula(String x, String y, DefaultTableModel d, JTable j,
+            String nombre, String director, String año, String edad, String pais, 
+            String genero, String duracion, String cod_productora) {
+        Productora aux = new Productora(y, null, null, null, null, null);
+        int indice = Collections.binarySearch(this.Productoras, aux);
+        if (indice >= 0) {
+            aux = this.Productoras.get(indice);
+            for (Iterator<Pelicula> it = aux.Peliculas.iterator(); it.hasNext();) {
+                Pelicula aux2 = it.next();
+                if (aux2.getId_pelicula().equals(x) && aux2.getCod_productora().equals(cod_productora)) {
+                    aux2.setNombre(nombre);
+                    aux2.setDirector(director);
+                    aux2.setAño(año);
+                    aux2.setEdad(edad);
+                    aux2.setPais(pais);
+                    aux2.setGenero(genero);
+                    aux2.setDuracion(duracion);
+                    aux2.setCod_productora(cod_productora);
+                }
+                if (aux2.getId_pelicula().equals(x) && !aux2.getCod_productora().equals(cod_productora)) {
+                    it.remove();
+                    aux2 = new Pelicula(x, nombre, director, año, edad, pais,
+                            genero, duracion, cod_productora);
+                    nexoModificarPelicula(aux2, d, j);
+                }
+            }
+            cargarModeloPeliculas(d, j);
+        }
+    }
+    
+    public void nexoModificarPelicula(Pelicula pe, DefaultTableModel d, JTable j) {
+        Productora aux = new Productora(pe.getCod_productora(), null, null, null, null, null);
+        int indice = Collections.binarySearch(this.Productoras, aux);
+        if (indice >= 0) {
+            aux = this.Productoras.get(indice);
+            if (!aux.Peliculas.contains(pe)) {
+                aux.Peliculas.add(pe);
+                cargarModeloPeliculas(d, j);
+            }
+        }
+    }
+    
+    public void cargarModeloPeliculas(DefaultTableModel d, JTable j) {
+        d = new DefaultTableModel();
+
+        limpiarModelos(j);
+
+        d.addColumn("Id_película");
+        d.addColumn("Nombre");
+        d.addColumn("Director");
+        d.addColumn("Año");
+        d.addColumn("Edad");
+        d.addColumn("País");
+        d.addColumn("Género");
+        d.addColumn("Duración");
+        d.addColumn("Cod_producotra");
+        j.setModel(d);
+
+        Peliculas.clear();
+
+        for (int i = 0; i < Productoras.size(); i++) {
+            Peliculas.addAll(Productoras.get(i).getPeliculas());
+        }
+
+        Object[] filaPeliculas = new Object[d.getColumnCount()];
+        for (int i = 0; i < Peliculas.size(); i++) {
+            filaPeliculas[0] = Peliculas.get(i).getId_pelicula();
+            filaPeliculas[1] = Peliculas.get(i).getNombre();
+            filaPeliculas[2] = Peliculas.get(i).getDirector();
+            filaPeliculas[3] = Peliculas.get(i).getAño();
+            filaPeliculas[4] = Peliculas.get(i).getEdad();
+            filaPeliculas[5] = Peliculas.get(i).getPais();
+            filaPeliculas[6] = Peliculas.get(i).getGenero();
+            filaPeliculas[7] = Peliculas.get(i).getDuracion();
+            filaPeliculas[8] = Peliculas.get(i).getCod_productora();
+            d.addRow(filaPeliculas);
+
+            for (int k = 0; k < 9; k++) {
+                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
+                modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
+                j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+            }
+        }
+    }
+    
+    //
+    // FIN OPERACIONES CON PELÍCULAS
+    //  
+    
+    //
+    // COMIENZO OPERACIONES CON ENTRADAS
+    //
+    
+    public void nexoEntradaId(JTextField ca) {
+        String id = "MFEn-";
+        String result = id.concat(Integer.toString(this.idEn));
+        ca.setText(result);
+        this.idEn++;
+    }
+    
+    public void nexoEntradaCodEntrada(JComboBox co) {
+        co.removeAllItems();
+        for (int i = 0; i < Entradas.size(); i++) {
+            co.addItem(Entradas.get(i).getId_entrada());
+        }
+    }
+    
+    public boolean insertarEntrada(Entrada en, DefaultTableModel d, JTable j) {
+        if (!this.Entradas.contains(en)) {
+            this.Entradas.add(en);
+            cargarModeloEntradas(d, j);
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public void borrarEntrada(int i, DefaultTableModel d, JTable j) {
+        this.Entradas.remove(i);
+        cargarModeloEntradas(d, j);
+    }
+    
+    public void modificarEntrada(int i, DefaultTableModel d, JTable j,
+            Double precio, String titulo, String cod_sala, String cod_cine) {
+        Entrada aux = this.Entradas.get(i);
+        aux.setPrecio(precio);
+        aux.setTitulo_pelicula(titulo);
+        aux.setCod_sala(cod_sala);
+        aux.setCod_cine(cod_cine);
+        cargarModeloEntradas(d, j);
+    }
+    
+    public void cargarModeloEntradas(DefaultTableModel d, JTable j) {
+        d = new DefaultTableModel();
+
+        limpiarModelos(j);
+
+        d.addColumn("Id_entradas");
+        d.addColumn("Precio");
+        d.addColumn("Título_película");
+        d.addColumn("Cod_sala");
+        d.addColumn("Cod_cine");
+        j.setModel(d);
+
+        Object[] filaEntradas = new Object[d.getColumnCount()];
+        for (int i = 0; i < Entradas.size(); i++) {
+            filaEntradas[0] = Entradas.get(i).getId_entrada();
+            filaEntradas[1] = Entradas.get(i).getPrecio();
+            filaEntradas[2] = Entradas.get(i).getTitulo_pelicula();
+            filaEntradas[3] = Entradas.get(i).getCod_sala();
+            filaEntradas[4] = Entradas.get(i).getCod_cine();
+            d.addRow(filaEntradas);
+
+            for (int k = 0; k < 5; k++) {
+                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
+                modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
+                j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+            }
+        }
+    }
+    
+    //
+    // FIN OPERACIONES CON ENTRADAS
+    //  
 }

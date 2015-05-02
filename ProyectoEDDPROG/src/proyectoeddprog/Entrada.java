@@ -11,12 +11,12 @@ import java.io.Serializable;
  * CLASE ENTRADA
  * @author jchierro
  */
-public class Entrada implements Serializable {
-    protected Integer Id_entrada;
+public class Entrada implements Serializable, Comparable<Entrada> {
+    protected String Id_entrada;
     protected Double Precio;
     protected String Titulo_pelicula;
-    protected Integer Cod_sala;
-    protected Integer Cod_cine;
+    protected String Cod_sala;
+    protected String Cod_cine;
 
     /**
      * CONSTRUCTOR DE LA CLASE ENTRADA
@@ -26,19 +26,29 @@ public class Entrada implements Serializable {
      * @param Cod_sala
      * @param Cod_cine 
      */
-    public Entrada(Integer Id_entrada, Double Precio, String Titulo_pelicula, Integer Cod_sala, Integer Cod_cine) {
+    public Entrada(String Id_entrada, Double Precio, String Titulo_pelicula, String Cod_sala, String Cod_cine) {
         this.Id_entrada = Id_entrada;
         this.Precio = Precio;
         this.Titulo_pelicula = Titulo_pelicula;
         this.Cod_sala = Cod_sala;
         this.Cod_cine = Cod_cine;
     }
+    
+    @Override
+    public int compareTo(Entrada otro) {
+        return Id_entrada.compareTo(otro.Id_entrada);
+    }
+    
+    @Override
+    public boolean equals(Object otro) {
+        return Id_entrada.equals(((Entrada)otro).Id_entrada);
+    }
 
     /**
      * GET ID_ENTRADA
      * @return DEVUELVE EL VALOR ID_ENTRADA
      */
-    public Integer getId_entrada() {
+    public String getId_entrada() {
         return Id_entrada;
     }
 
@@ -46,7 +56,7 @@ public class Entrada implements Serializable {
      * SET ID_ENTRADA
      * @param Id_entrada 
      */
-    public void setId_entrada(Integer Id_entrada) {
+    public void setId_entrada(String Id_entrada) {
         this.Id_entrada = Id_entrada;
     }
 
@@ -86,7 +96,7 @@ public class Entrada implements Serializable {
      * GET COD_SALA
      * @return DEVUELVE EL VALOR COD_SALA
      */
-    public Integer getCod_sala() {
+    public String getCod_sala() {
         return Cod_sala;
     }
 
@@ -94,7 +104,7 @@ public class Entrada implements Serializable {
      * SET COD_SALA
      * @param Cod_sala 
      */
-    public void setCod_sala(Integer Cod_sala) {
+    public void setCod_sala(String Cod_sala) {
         this.Cod_sala = Cod_sala;
     }
 
@@ -102,7 +112,7 @@ public class Entrada implements Serializable {
      * GET COD_CINE
      * @return DEVUELVE EL VALOR COD_CINE
      */
-    public Integer getCod_cine() {
+    public String getCod_cine() {
         return Cod_cine;
     }
 
@@ -110,7 +120,7 @@ public class Entrada implements Serializable {
      * SET COD_CINE
      * @param Cod_cine 
      */
-    public void setCod_cine(Integer Cod_cine) {
+    public void setCod_cine(String Cod_cine) {
         this.Cod_cine = Cod_cine;
     }
 
