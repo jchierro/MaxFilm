@@ -6,16 +6,17 @@
 package proyectoeddprog;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * CLASE PROYECCION
  * @author jchierro
  */
 public class Proyeccion implements Serializable {
-    protected Sala Id_sala;
-    protected Entrada Id_entrada;
-    protected Pelicula Id_pelicula;
-    protected String Fecha_proyeccion;
+    protected String Id_sala;
+    protected String Id_entrada;
+    protected String Id_pelicula;
+    protected Date Fecha_proyeccion;
 
     /**
      * CONSTRUCTOR DE LA CLASE PROYECCION
@@ -24,7 +25,7 @@ public class Proyeccion implements Serializable {
      * @param Id_pelicula
      * @param Fecha_proyeccion 
      */
-    public Proyeccion(Sala Id_sala, Entrada Id_entrada, Pelicula Id_pelicula, String Fecha_proyeccion) {
+    public Proyeccion(String Id_sala, String Id_entrada, String Id_pelicula, Date Fecha_proyeccion) {
         this.Id_sala = Id_sala;
         this.Id_entrada = Id_entrada;
         this.Id_pelicula = Id_pelicula;
@@ -35,7 +36,7 @@ public class Proyeccion implements Serializable {
      * GET ID_SALA
      * @return DEVUELVE EL VALOR ID_SALA
      */
-    public Sala getId_sala() {
+    public String getId_sala() {
         return Id_sala;
     }
 
@@ -43,7 +44,7 @@ public class Proyeccion implements Serializable {
      * SET ID_SALA
      * @param Id_sala 
      */
-    public void setId_sala(Sala Id_sala) {
+    public void setId_sala(String Id_sala) {
         this.Id_sala = Id_sala;
     }
 
@@ -51,7 +52,7 @@ public class Proyeccion implements Serializable {
      * GET ID_ENTRADA
      * @return DEVUELVE EL VALOR ID_ENTRADA
      */
-    public Entrada getId_entrada() {
+    public String getId_entrada() {
         return Id_entrada;
     }
 
@@ -59,7 +60,7 @@ public class Proyeccion implements Serializable {
      * SET ID_ENTRADA
      * @param Id_entrada 
      */
-    public void setId_entrada(Entrada Id_entrada) {
+    public void setId_entrada(String Id_entrada) {
         this.Id_entrada = Id_entrada;
     }
 
@@ -67,7 +68,7 @@ public class Proyeccion implements Serializable {
      * GET ID_PELICULA
      * @return DEVUELVE EL VALOR ID_PELICULA
      */
-    public Pelicula getId_pelicula() {
+    public String getId_pelicula() {
         return Id_pelicula;
     }
 
@@ -75,7 +76,7 @@ public class Proyeccion implements Serializable {
      * SET ID_PELICULA
      * @param Id_pelicula 
      */
-    public void setId_pelicula(Pelicula Id_pelicula) {
+    public void setId_pelicula(String Id_pelicula) {
         this.Id_pelicula = Id_pelicula;
     }
 
@@ -83,7 +84,7 @@ public class Proyeccion implements Serializable {
      * GET FECHA_PROYECCION
      * @return DEVUELVE EL VALOR FECHA_PROYECCION
      */
-    public String getFecha_proyeccion() {
+    public Date getFecha_proyeccion() {
         return Fecha_proyeccion;
     }
 
@@ -91,7 +92,7 @@ public class Proyeccion implements Serializable {
      * SET FECHA_PROYECCION
      * @param Fecha_proyeccion 
      */
-    public void setFecha_proyeccion(String Fecha_proyeccion) {
+    public void setFecha_proyeccion(Date Fecha_proyeccion) {
         this.Fecha_proyeccion = Fecha_proyeccion;
     }
 

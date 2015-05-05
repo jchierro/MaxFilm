@@ -841,6 +841,13 @@ public class Funcionalidades implements Serializable {
         }
     }
     
+    public void nexoPeliculaCodPelicula(JComboBox co) {
+        co.removeAllItems();
+        for (int i = 0; i < Peliculas.size(); i++) {
+            co.addItem(Peliculas.get(i).getId_pelicula());
+        }
+    }
+    
     public boolean insertarPelicula(Pelicula pe, DefaultTableModel d, JTable j) {
         boolean result = false;
         Productora aux = new Productora(pe.getCod_productora(), null, null, null, null, null);
@@ -1037,4 +1044,64 @@ public class Funcionalidades implements Serializable {
     //
     // FIN OPERACIONES CON ENTRADAS
     //  
+    
+    //
+    // COMIENZO OPERACIONES CON PROYECCIONES
+    //
+    
+    public boolean insertarProyeccion(Proyeccion pro, DefaultTableModel d, JTable j) {
+        if (!this.Proyecciones.contains(pro)) {
+            this.Proyecciones.add(pro);
+            cargarModeloProyecciones(d, j);
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public void borrarProyeccion(int i, DefaultTableModel d, JTable j) {
+        this.Proyecciones.remove(i);
+        cargarModeloProyecciones(d, j);
+    }
+    
+    public void modificarProyeccion(int i, DefaultTableModel d, JTable j,
+            String idsala, String idpelicula, String identrada, Date fecha) {
+        Proyeccion aux = this.Proyecciones.get(i);
+        aux.setId_sala(idsala);
+        aux.setId_pelicula(idpelicula);
+        aux.setId_entrada(identrada);
+        aux.setFecha_proyeccion(fecha);
+        cargarModeloProyecciones(d, j);
+    }
+    
+    public void cargarModeloProyecciones(DefaultTableModel d, JTable j) {
+        d = new DefaultTableModel();
+
+        limpiarModelos(j);
+
+        d.addColumn("Id_sala");
+        d.addColumn("Id_película");
+        d.addColumn("Id_entrada");
+        d.addColumn("Fecha_proyección");
+        j.setModel(d);
+
+        Object[] filaProyecciones = new Object[d.getColumnCount()];
+        for (int i = 0; i < Proyecciones.size(); i++) {
+            filaProyecciones[0] = Proyecciones.get(i).getId_sala();
+            filaProyecciones[1] = Proyecciones.get(i).getId_pelicula();
+            filaProyecciones[2] = Proyecciones.get(i).getId_entrada();
+            filaProyecciones[3] = Proyecciones.get(i).getFecha_proyeccion();
+            d.addRow(filaProyecciones);
+
+            for (int k = 0; k < 4; k++) {
+                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
+                modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
+                j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+            }
+        }
+    }
+    
+    //
+    // FIN OPERACIONES CON PROYECCIONES
+    //
 }
