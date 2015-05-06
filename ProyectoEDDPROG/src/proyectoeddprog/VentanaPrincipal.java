@@ -5,31 +5,23 @@
  */
 package proyectoeddprog;
 
-import com.alee.extended.breadcrumb.WebBreadcrumbToggleButton;
 import com.alee.managers.notification.NotificationIcon;
 import com.alee.managers.notification.NotificationManager;
-import com.alee.utils.SwingUtils;
 import java.awt.CardLayout;
-import java.awt.Insets;
 import java.io.IOException;
-import java.time.Instant;
 import java.util.Calendar;
 import java.util.Date;
-import javax.swing.Icon;
 import javax.swing.JOptionPane;
 import javax.swing.SpinnerDateModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
- *
+ * CLASE VENTANA PRINCIPAL
  * @author jchierro
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VentanaPrincipal
-     */
-    
+    // DECLARACIÓN DE LOS MODELOS NECESARIOS DEL PROYECTO
     protected DefaultTableModel modeloCines;
     protected DefaultTableModel modeloSalas;
     protected DefaultTableModel modeloVIPs;
@@ -40,6 +32,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     protected DefaultTableModel modeloEntradas;
     protected DefaultTableModel modeloProyecciones;
     
+    // DECLARACIÓN DE LOS OBJETOS NECESARIOS DEL PROYECTO
     protected Funcionalidades f;
     protected Cine c;
     protected Sala s;
@@ -54,9 +47,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal() {
         initComponents();
         
+        // INICIALIZO EL OBJETO F
         this.f = new Funcionalidades();
         
+        // CENTRA LA VENTANA EN EL CENTRO DEL MONITOR
         this.setLocationRelativeTo(null);
+        // ESTABLECE UN TÍTULO AL PROYECTO
         this.setTitle("MAXFILM");
     }
 
@@ -4316,13 +4312,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * ACCEDE AL PANEL CINES
+     * @param evt 
+     */
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout(); 
         c.show(this.Paneles, "CardCines");
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ INICIO, NOS SIRVE PARA CARGAR LOS DATOS 
+     * EN CUALQUIER MOMENTO
+     * @param evt 
+     */
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // LLAMAMOS AL MÉTODO CARGARDATOS
         try {
             f.cargarDatos();
         } catch (IOException ex) {
@@ -4346,6 +4352,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
+    /**
+     * ACCEDE AL PANEL SALAS
+     * @param evt 
+     */
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout(); 
@@ -4368,6 +4378,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
+    /**
+     * ACCEDE AL PANEL MOBILIARIOS
+     * @param evt 
+     */
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout(); 
@@ -4390,6 +4404,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem18ActionPerformed
 
+    /**
+     * ACCEDE AL PANEL EMPLEADOS
+     * @param evt 
+     */
     private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout(); 
@@ -4412,6 +4430,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem23ActionPerformed
 
+    /**
+     * ACCEDE AL PANEL VIP'S
+     * @param evt 
+     */
     private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout(); 
@@ -4434,6 +4456,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem28ActionPerformed
 
+    /**
+     * ACCEDE AL PANEL ENTRADAS
+     * @param evt 
+     */
     private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout(); 
@@ -4456,6 +4482,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem33ActionPerformed
 
+    /**
+     * ACCEDDE AL PANEL PROYECCIONES
+     * @param evt 
+     */
     private void jMenuItem34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem34ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout(); 
@@ -4478,6 +4508,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem38ActionPerformed
 
+    /**
+     * ACCEDE AL PANEL PELÍCULAS
+     * @param evt 
+     */
     private void jMenuItem39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem39ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout(); 
@@ -4500,6 +4534,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem43ActionPerformed
 
+    /**
+     * ACCEDE AL PANEL PRODUCTORAS
+     * @param evt 
+     */
     private void jMenuItem44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem44ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout(); 
@@ -4542,6 +4580,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem53ActionPerformed
 
+    /**
+     * ELMENTO DEL MENÚ INICIO, NOS SIRVE PARA CERRAR LA VENTANA
+     * @param evt 
+     */
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
         // PREGUNTA AL USUARIO Y SOLO CIERRA CUANDO SEA "OK"
@@ -4552,7 +4594,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ INICIO, NOS SIRVE PARA GUARDAR LOS DATOS
+     * EN CUALQUIER MOMENTO
+     * @param evt 
+     */
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // LLAMAMOS AL MÉTODO GUARDARDATOS
         try {
             f.guardarDatos();
         } catch (IOException ex) {
@@ -4560,15 +4608,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
+    /**
+     * EVENTO CREAR UN CINE
+     * @param evt 
+     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS
         c = new Cine(this.CCId.getText(),this.CCNombre.getText(),this.CCDireccion.getText(),
                 this.CCTelefono.getText(),this.CCFax.getText(),this.CCEmail.getText());
+        // LLAMAMOS AL MÉTODO INSERTARCINE
         Boolean aux = f.insertarCine(c, this.modeloCines, this.jTable1);
+        // SALTA UNA ALERTA EN CASO DE SER "FALSE"
         if (aux == false) {
             NotificationManager.showNotification("El Cine introducido ya existe en MaxFilm!", NotificationIcon.error.getIcon());
         }
         
+        // CARGAMOS LOS JCOMBOBOX CON LOS CODCINES
         f.nexoCineCodCine(this.CSCod);
         f.nexoCineCodCine(this.CSCod1);
         f.nexoCineCodCine(this.CVcod_cine);
@@ -4579,13 +4635,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         f.nexoCineCodCine(this.CEnCodCine1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    /**
+     * EVENTO QUE SE EJECUTA AL INICIAR EL PROYECTO
+     * @param evt 
+     */
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // CARGAMOS LOS DATOS DEL FICHERO BINARIO
         try {
             f.cargarDatos();
         } catch (IOException ex) {
             System.out.println(ex);
         }
         
+        // CARGAMOS LOS MODELOS NECESARIOS PARA EL PROYEXTO
         f.cargarModeloCines(modeloCines, jTable1);
         f.cargarModeloSalas(modeloSalas, jTable3);
         f.cargarModeloVIP(modeloVIPs, jTable4);
@@ -4596,6 +4658,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         f.cargarModeloEntradas(modeloEntradas, jTable9);
         f.cargarModeloProyecciones(modeloProyecciones, jTable10);
         
+        // CARGAMOS TODOS LOS JCOMBOBOX CON LOS COD'S
         f.nexoCineCodCine(this.CSCod);
         f.nexoCineCodCine(this.CSCod1);
         f.nexoCineCodCine(this.CVcod_cine);
@@ -4619,6 +4682,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         f.nexoEntradaCodEntrada(this.CProidentrada);
         f.nexoEntradaCodEntrada(this.CProidentrada1);
         
+        // CARGAMOS LOS SPINNER'S CON EL OBJETO FECHA - DATE
         SpinnerDateModel model = new SpinnerDateModel();
         model.setCalendarField(Calendar.YEAR);
         this.CEnFecha.setModel(model);
@@ -4631,7 +4695,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.CProfecha1.setValue(new Date());
     }//GEN-LAST:event_formWindowOpened
 
+    /**
+     * EVENTO QUE SE EJECUTA AL CERRAR EL PROYECTO
+     * @param evt 
+     */
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // AL CERRAR EL PROYECTO SE LLAMA AL MÉTODO GUARDARDATOS
+        // PARA QUE GUARDE LOS CAMBIOS EFECTUADOS
         try {
             f.guardarDatos();
         } catch (IOException ex) {
@@ -4639,18 +4709,25 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_formWindowClosing
 
+    /**
+     * EVENTO PARA BORRAR UN CINE
+     * @param evt 
+     */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        // LLAMAMOS AL MÉTODO BORRARCINE
         if (this.jTable1.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar un Cine de la tabla!", NotificationIcon.information.getIcon());
         } else {
             f.borrarCine(this.jTable1.getSelectedRow(), modeloCines, jTable1);
             
+            // AL BORRAR UN CINE LLAMAMOS A LOS MODELOS QUE AFECTA
             f.cargarModeloSalas(modeloSalas, jTable3);
             f.cargarModeloVIP(modeloVIPs, jTable4);
             f.cargarModeloEmpleados(modeloEmpleados, jTable5);
             f.cargarModeloMobiliarios(modeloMobiliarios, jTable6);
             
+            // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
             f.nexoCineCodCine(this.CSCod);
             f.nexoCineCodCine(this.CSCod1);
             f.nexoCineCodCine(this.CVcod_cine);
@@ -4662,8 +4739,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    /**
+     * EVENTO PARA MODIFICAR UN CINE
+     * @param evt 
+     */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        // LLAMAMOS AL MÉTODO MODIFICARCINE
         if (this.jTable1.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar un Cine de la tabla!", NotificationIcon.information.getIcon());
         } else {
@@ -4680,14 +4762,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.jTextArea1.setText(f.buscarCine(c).toString());*/
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    /**
+     * EVENTO PARA CREAR UNA SALA
+     * @param evt 
+     */
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO INSERTARSALA
         s = new Sala(this.CSId.getText(),this.CSNombre.getText(),
                 this.CSTipo.getSelectedItem().toString(),this.CSNum.getText(),this.CSCod.getSelectedItem().toString());
         boolean aux = f.insertarSala(s, modeloSalas, jTable3);
+        // SALTA UNA ALERTA EN CASO DE SER FALSE
         if (aux == false) {
             NotificationManager.showNotification("La Sala se encuentra repetida o no existe el Cine correspondiente!", NotificationIcon.error.getIcon());
         }
+        
+        // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
         f.nexoSalaCodSala(this.CMCod);
         f.nexoSalaCodSala(this.CMCod1);
         f.nexoSalaCodSala(this.CEnCodsala);
@@ -4696,8 +4786,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         f.nexoSalaCodSala(this.CProidsala1);
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    /**
+     * EVENTO PARA BORRAR UNA SALA
+     * @param evt 
+     */
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        // LLAMAMOS AL MÉTODO BORRARSALA
         if (this.jTable3.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar una Sala de la tabla!", NotificationIcon.information.getIcon());
         } else {
@@ -4706,7 +4801,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             // COD_CINE
             String y = (String) this.jTable3.getValueAt(this.jTable3.getSelectedRow(), 4);
             f.borrarSala(x, y, modeloSalas, jTable3);
+            
+            // LLAMAMOS AL MODELO AFECTADO
             f.cargarModeloMobiliarios(modeloMobiliarios, jTable6);
+            
+            // CARGAMOS LOS jCOMBOBOX CON LOS COD'S
             f.nexoSalaCodSala(this.CMCod);
             f.nexoSalaCodSala(this.CMCod1);
             f.nexoSalaCodSala(this.CEnCodsala);
@@ -4720,16 +4819,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
+    /**
+     * EVENTO QUE MUESTRA EN UN CAMPO DE TEXTO EL ID DE UN CINE
+     * @param evt 
+     */
     private void CCNombre1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CCNombre1FocusGained
         // TODO add your handling code here:
         if (this.jTable1.getSelectedRow() != -1) {
+            // ID_CINE
             String x = (String) this.jTable1.getValueAt(this.jTable1.getSelectedRow(), 0);
             this.CCId1.setText(x);
         }
     }//GEN-LAST:event_CCNombre1FocusGained
 
+    /**
+     * EVENTO PARA MODIFICAR UNA SALA
+     * @param evt 
+     */
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO MODIFICARSALA
         if (this.jTable3.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar una Sala de la tabla!", NotificationIcon.information.getIcon());
         } else {
@@ -4743,19 +4852,32 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    /**
+     * EVENTO QUE NOS GENERA EL ID_SALA
+     * @param evt 
+     */
     private void CSIdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CSIdMouseClicked
         // TODO add your handling code here:
         f.nexoSalaId(this.CSId);
     }//GEN-LAST:event_CSIdMouseClicked
 
+    /**
+     * EVENTO QUE NOS GENERA EL ID_CINE
+     * @param evt 
+     */
     private void CCIdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CCIdMouseClicked
         // TODO add your handling code here:
         f.nexoCineId(this.CCId);
     }//GEN-LAST:event_CCIdMouseClicked
 
+    /**
+     * EVENTO QUE NOS MUESTRA EN UN CAMPO DE TEXTO EL ID_SALA
+     * @param evt 
+     */
     private void CSNombre1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CSNombre1FocusGained
         // TODO add your handling code here:
         if (this.jTable3.getSelectedRow() != -1) {
+            // ID_SALA
             String x = (String) this.jTable3.getValueAt(this.jTable3.getSelectedRow(), 0);
             this.CSId1.setText(x);
         }
@@ -4765,23 +4887,34 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CVDniMouseClicked
 
+    /**
+     * EVENTO PARA CREAR UN VIP
+     * @param evt 
+     */
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO INSERTARVIP
         v = new VIP(this.CVDni.getText(),this.CVNombre.getText(),this.CVApellidos.getText(),
         this.CVEdad.getText(),this.CVTelefono.getText(),this.CVcod_postal.getText(),
                 this.CVcod_cine.getSelectedItem().toString());
         boolean aux = f.insertarVIP(v, modeloVIPs, jTable4);
+        // SALTA UNA ALERTA EN EL CASO QUE SEA FALSE
         if (aux == false) {
             NotificationManager.showNotification("El VIP se encuentra repetido o no existe el Cine correspondiente!", NotificationIcon.error.getIcon());
         }
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    /**
+     * EVENTO PARA MODIFICAR UN VIP
+     * @param evt 
+     */
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO MODIFICARVIP
         if (this.jTable4.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar un VIP de la tabla!", NotificationIcon.information.getIcon());
         } else {
-            // DNI VIP
+            // DNI_VIP
             String x = (String) this.jTable4.getValueAt(this.jTable4.getSelectedRow(), 0);
             // COD_CINE
             String y = (String) this.jTable4.getValueAt(this.jTable4.getSelectedRow(), 6);
@@ -4792,7 +4925,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
-     * 
+     * EVENTO PARA BORRAR UN VIP
      * @param evt 
      */
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -4800,7 +4933,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         if (this.jTable4.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar un VIP de la tabla!", NotificationIcon.information.getIcon());
         } else {
-            // DNI VIP
+            // DNI_VIP
             String x = (String) this.jTable4.getValueAt(this.jTable4.getSelectedRow(), 0);
             // COD_CINE
             String y = (String) this.jTable4.getValueAt(this.jTable4.getSelectedRow(), 6);
@@ -4812,6 +4945,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton12ActionPerformed
 
+    /**
+     * EVENTO QUE NOS MUESTRA EN UN CAMPO DE TEXTO EL DNI DE UN VIP
+     * @param evt 
+     */
     private void CVNombre1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CVNombre1FocusGained
         // TODO add your handling code here:
         if (this.jTable4.getSelectedRow() != -1) {
@@ -4824,19 +4961,30 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CEDniMouseClicked
 
+    /**
+     * EVENTO PARA CREAR UN EMPLEADO
+     * @param evt 
+     */
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO INSERTAREMPLEADO
         e = new Empleado(this.CEDni.getText(),this.CENombre.getText(),this.CEApellidos.getText(),
         this.CEEdad.getText(),this.CEPuesto.getText(),Double.parseDouble(this.CESueldo.getText()),
                 this.CEcod_cine.getSelectedItem().toString());
         boolean aux = f.insertarEmpleado(e, modeloEmpleados, jTable5);
+        // SALTA UNA ALERTA EN EL CASO QUE SEA FALSE
         if (aux == false) {
             NotificationManager.showNotification("El Empleado se encuentra repetido o no existe el Cine correspondiente!", NotificationIcon.error.getIcon());
         }
     }//GEN-LAST:event_jButton13ActionPerformed
 
+    /**
+     * EVENTO PARA MODIFICAR UN EMPLEADO
+     * @param evt 
+     */
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO MODIFICAREMPLEADO
         if (this.jTable5.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar un Empleado de la tabla!", NotificationIcon.information.getIcon());
         } else {
@@ -4850,15 +4998,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton14ActionPerformed
 
+    /**
+     * EVENTO QUE NOS MUESTRA EN UN CAMPO DE TEXTO EL DNI DE UN EMPLEADO
+     * @param evt 
+     */
     private void CENombre1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CENombre1FocusGained
         // TODO add your handling code here:
         if (this.jTable5.getSelectedRow() != -1) {
-            // DNI VIP
+            // DNI_VIP
             String x = (String) this.jTable5.getValueAt(this.jTable5.getSelectedRow(), 0);
             this.CEDni1.setText(x);
         }
     }//GEN-LAST:event_CENombre1FocusGained
 
+    /**
+     * EVENTO PARA BORRAR UN EMPLEADO
+     * @param evt 
+     */
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
         if (this.jTable5.getSelectedRow() == -1) {
@@ -4876,23 +5032,38 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton16ActionPerformed
 
+    /**
+     * EVENTO QUE NOS GENERA EL ID_MOBILIARIO
+     * @param evt 
+     */
     private void CMIdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMIdMouseClicked
         // TODO add your handling code here:
         f.nexoMobiliarioId(this.CMId);
     }//GEN-LAST:event_CMIdMouseClicked
 
+    /**
+     * EVENTO PARA CREAR UN MOBILIARIO
+     * @param evt 
+     */
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO INSERTARMOBILIARIO
         m = new Mobiliario(this.CMId.getText(),this.CMNombre.getText(),this.CMCantidad.getText(),
             this.CMFecha.getText(),Boolean.parseBoolean(this.CMEstado.getSelectedItem().toString()),this.CMCod.getSelectedItem().toString());
         Boolean aux = f.insertarMobiliario(m, modeloMobiliarios, jTable6);
+        // SALTA UNA ALERTA EN EL CASO QUE SEA FALSE
         if (aux == false) {
             NotificationManager.showNotification("El Mobiliario se encuentra repetida o no existe la Sala correspondiente!", NotificationIcon.error.getIcon());
         }
     }//GEN-LAST:event_jButton17ActionPerformed
 
+    /**
+     * EVENTO PARA MODIFICAR UN MOBILIARIO
+     * @param evt 
+     */
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMO LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO MODIFICARMOBILIARIO
         if (this.jTable6.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar un Mobiliario de la tabla!", NotificationIcon.information.getIcon());
         } else {
@@ -4905,6 +5076,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton18ActionPerformed
 
+    /**
+     * EVENTO PARA BORRAR UN MOBILIARIO 
+     * @param evt 
+     */
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
         if (this.jTable6.getSelectedRow() == -1) {
@@ -4922,6 +5097,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton20ActionPerformed
 
+    /**
+     * EVENTO QUE NOS MUESTRA EN UN CAMPO DE TEXTO EL ID_MOBILIARIO
+     * @param evt 
+     */
     private void CMNombre1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CMNombre1FocusGained
         // TODO add your handling code here:
         if (this.jTable6.getSelectedRow() != -1) {
@@ -4931,26 +5110,42 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_CMNombre1FocusGained
 
+    /**
+     * EVENTO QUE NOS GENERA EL ID_PRODUCTORA
+     * @param evt 
+     */
     private void CPrIdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CPrIdMouseClicked
         // TODO add your handling code here:
         f.nexoProductoraId(CPrId);
     }//GEN-LAST:event_CPrIdMouseClicked
 
+    /**
+     * EVENTO QUE NOS CREA UNA PRODUCTORA
+     * @param evt 
+     */
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO INSERTARPRODUCTORA
         pr = new Productora(this.CPrId.getText(),this.CPrNombre.getText(),this.CPrTelefono.getText(),
                 this.CPrFax.getText(),this.CPrEmail.getText(),this.CPrRepresentante.getText());
         Boolean aux = f.insertarProductora(pr, this.modeloProductoras, this.jTable7);
+        // SALTA UNA ALERTA EN EL CASO QUE SEA FALSE
         if (aux == false) {
             NotificationManager.showNotification("La Productora introducida ya existe en MaxFilm!", NotificationIcon.error.getIcon());
         }
         
+        // CARGAMOS LOS jCOMBOBOX CON LOS COD'S
         f.nexoProductoraCodProductora(CPeCod);
         f.nexoProductoraCodProductora(CPeCod1);
     }//GEN-LAST:event_jButton21ActionPerformed
 
+    /**
+     * EVENTO QUE MODIFICA UNA PRODUCTORA
+     * @param evt 
+     */
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO MODIFICARPRODUCTORA
         if (this.jTable7.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar una Productora de la tabla!", NotificationIcon.information.getIcon());
         } else {
@@ -4960,6 +5155,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton22ActionPerformed
 
+    /**
+     * EVENTO PARA BORRAR UNA PRODUCTORA
+     * @param evt 
+     */
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
         // TODO add your handling code here:
         if (this.jTable7.getSelectedRow() == -1) {
@@ -4967,8 +5166,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         } else {
             f.borrarProductora(this.jTable7.getSelectedRow(), modeloProductoras, jTable7);
             
+            // CARGAMOS EL MODELO AFECTADO AL BORRAR UNA PRODUCTORA
             f.cargarModeloPeliculas(modeloPeliculas, jTable8);
             
+            // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
             f.nexoProductoraCodProductora(CPeCod);
             f.nexoProductoraCodProductora(CPeCod1);
         }
@@ -4994,6 +5195,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CPrEmail1ActionPerformed
 
+    /**
+     * EVENTO QUE NOS MUESTRA EN UN CAMPO DE TEXTO EL ID_PRODUCTORA
+     * @param evt 
+     */
     private void CPrNombre1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CPrNombre1FocusGained
         // TODO add your handling code here:
         if (this.jTable7.getSelectedRow() != -1) {
@@ -5003,21 +5208,33 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_CPrNombre1FocusGained
 
+    /**
+     * EVENTO QUE NOS GENERA UN ID_PELÍCULA
+     * @param evt 
+     */
     private void CPeIdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CPeIdMouseClicked
         // TODO add your handling code here:
         f.nexoPeliculaId(CPeId);
     }//GEN-LAST:event_CPeIdMouseClicked
 
+    /**
+     * EVENTO PARA CREAR UNA PELÍCULA
+     * @param evt 
+     */
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO INSERTARPELÍCULA
         pe = new Pelicula(this.CPeId.getText(),this.CPeNombre.getText(),this.CPeDirector.getText(),
                 this.CPeAño.getText(),this.CPeEdad.getText(),this.CPePais.getSelectedItem().toString(),
                 this.CPeGenero.getSelectedItem().toString(),this.CPeDuracion.getText(),
                 this.CPeCod.getSelectedItem().toString());
         boolean aux = f.insertarPelicula(pe, modeloPeliculas, jTable8);
+        // SALTA UNA ALERTA EN EL CASO QUE SEA FALSE
         if (aux == false) {
             NotificationManager.showNotification("La Película se encuentra repetida o no existe la Productora correspondiente!", NotificationIcon.error.getIcon());
         }
+        
+        // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
         f.nexoPeliculaTituloPelicula(this.CEnTitulo);
         f.nexoPeliculaTituloPelicula(this.CEnTitulo1);
         f.nexoPeliculaCodPelicula(this.CProidpelicula);
@@ -5028,8 +5245,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CPeEdadActionPerformed
 
+    /**
+     * EVENTO PARA MODIFICAR UNA PELÍCULA
+     * @param evt 
+     */
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO MODIFICARPELÍCULA
         if (this.jTable8.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar una Película de la tabla!", NotificationIcon.information.getIcon());
         } else {
@@ -5044,6 +5266,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton26ActionPerformed
 
+    /**
+     * EVENTO PARA BORRAR UNA PELÍCULA
+     * @param evt 
+     */
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         // TODO add your handling code here:
         if (this.jTable8.getSelectedRow() == -1) {
@@ -5054,6 +5280,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             // COD_PRODUCTORA
             String y = (String) this.jTable8.getValueAt(this.jTable8.getSelectedRow(), 8);
             f.borrarPelicula(x, y, modeloPeliculas, jTable8);
+            
+            // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
             f.nexoPeliculaTituloPelicula(this.CEnTitulo);
             f.nexoPeliculaTituloPelicula(this.CEnTitulo1);
             f.nexoPeliculaCodPelicula(this.CProidpelicula);
@@ -5081,33 +5309,55 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CPeDuracion1ActionPerformed
 
+    /**
+     * EVENTO QUE NOS MUESTRA EN UN CAMPO DE TEXTO EL ID_PELÍCULA
+     * @param evt 
+     */
     private void CPeNombre1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CPeNombre1FocusGained
         // TODO add your handling code here:
         if (this.jTable8.getSelectedRow() != -1) {
+            // ID_PELÍCULA
             String x = (String) this.jTable8.getValueAt(this.jTable8.getSelectedRow(), 0);
             this.CPeId1.setText(x);
         }
     }//GEN-LAST:event_CPeNombre1FocusGained
 
+    /**
+     * EVENTO QUE NOS GENERA EL ID_ENTRADA
+     * @param evt 
+     */
     private void CEnIdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CEnIdMouseClicked
         // TODO add your handling code here:
         f.nexoEntradaId(CEnId);
     }//GEN-LAST:event_CEnIdMouseClicked
 
+    /**
+     * EVENTO QUE CREA UNA ENTRADA
+     * @param evt 
+     */
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO INSERTARENTRADA
         en = new Entrada(this.CEnId.getText(),Double.parseDouble(this.CEnPrecio.getText()),this.CEnTitulo.getSelectedItem().toString(),
             this.CEnCodsala.getSelectedItem().toString(),this.CEnCodCine.getSelectedItem().toString());
         Boolean aux = f.insertarEntrada(en, this.modeloEntradas, this.jTable9);
+        // SALTA UNA ALERTA EN EL CASO QUE SEA FALSE
         if (aux == false) {
             NotificationManager.showNotification("La Entrada introducida ya existe en MaxFilm!", NotificationIcon.error.getIcon());
         }
+        
+        // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
         f.nexoEntradaCodEntrada(this.CProidentrada);
         f.nexoEntradaCodEntrada(this.CProidentrada1);
     }//GEN-LAST:event_jButton29ActionPerformed
 
+    /**
+     * EVENTO PARA MODIFICAR UNA ENTRADA
+     * @param evt 
+     */
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO MODIFICARENTRADA
         if (this.jTable9.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar una Entrada de la tabla!", NotificationIcon.information.getIcon());
         } else {
@@ -5117,12 +5367,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton30ActionPerformed
 
+    /**
+     * EVENTO PARA BORRAR UNA ENTRADA
+     * @param evt 
+     */
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
         // TODO add your handling code here:
         if (this.jTable9.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar una Entrada de la tabla!", NotificationIcon.information.getIcon());
         } else {
             f.borrarEntrada(this.jTable9.getSelectedRow(), modeloEntradas, jTable9);
+            // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
             f.nexoEntradaCodEntrada(this.CProidentrada);
             f.nexoEntradaCodEntrada(this.CProidentrada1);
         }
@@ -5136,27 +5391,43 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CEnId1MouseClicked
 
+    /**
+     * EVENTO QUE NOS MUESTRA EN UN CAMPO DE TEXTO EL ID_ENTRADA
+     * @param evt 
+     */
     private void CEnPrecio1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CEnPrecio1FocusGained
         // TODO add your handling code here:
         if (this.jTable9.getSelectedRow() != -1) {
+            // ID_ENTRADA
             String x = (String) this.jTable9.getValueAt(this.jTable9.getSelectedRow(), 0);
             this.CEnId1.setText(x);
         }
     }//GEN-LAST:event_CEnPrecio1FocusGained
 
+    /**
+     * EVENTO PARA CREAR UNA PROYECCIÓN
+     * @param evt 
+     */
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO INSERTARPROYECCIÓN
         pro = new Proyeccion(this.CProidsala.getSelectedItem().toString(),
                 this.CProidpelicula.getSelectedItem().toString(),this.CProidentrada.getSelectedItem().toString(), 
                 (Date)this.CProfecha.getValue());
         Boolean aux = f.insertarProyeccion(pro, this.modeloProyecciones, this.jTable10);
+        // SALTA UNA ALERTA EN EL CASO QUE SEA FALSE
         if (aux == false) {
             NotificationManager.showNotification("La Proyección introducida ya existe en MaxFilm!", NotificationIcon.error.getIcon());
         }
     }//GEN-LAST:event_jButton33ActionPerformed
 
+    /**
+     * EVENTO PARA MODIFICAR UNA PROYECCIÓN
+     * @param evt 
+     */
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
         // TODO add your handling code here:
+        // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO MODIFICARPROYECCIÓN
         if (this.jTable10.getSelectedRow() == -1) {
             NotificationManager.showNotification("Debes seleccionar una Proyección de la tabla!", NotificationIcon.information.getIcon());
         } else {
@@ -5167,6 +5438,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton34ActionPerformed
 
+    /**
+     * EVENTO PARA BORRAR UNA PROYECCIÓN
+     * @param evt 
+     */
     private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
         // TODO add your handling code here:
         if (this.jTable10.getSelectedRow() == -1) {
