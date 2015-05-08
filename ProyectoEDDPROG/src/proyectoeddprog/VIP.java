@@ -15,7 +15,7 @@ public class VIP extends Persona implements Serializable, Comparable<VIP> {
     protected String Telefono;
     protected String Codigo_Postal;
 
-    public VIP(String Dni, String Nombre, String Apellidos, String Telefono, String Codido_Postal, String Edad, String Cod_cine) {
+    public VIP(String Dni, String Nombre, String Apellidos, String Edad, String Telefono, String Codigo_Postal, String Cod_cine) {
         super(Dni, Nombre, Apellidos, Edad, Cod_cine);
         this.Telefono = Telefono;
         this.Codigo_Postal = Codigo_Postal;

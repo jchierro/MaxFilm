@@ -5,27 +5,41 @@
  */
 package proyectoeddprog;
 
+import com.sun.javafx.tk.Toolkit;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.*;
 import java.util.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
 /**
+ * CLASE FUNCIONALIDADES
  *
  * @author jchierro
  */
 public class Funcionalidades implements Serializable {
 
+    // LIST QUE CONTIENE LOS CINES SUS SALAS Y SUS MOBILIARIOS
     protected List<Cine> Cines;
+    // LIST DE APOYO PARA MOSTRAR LAS SALAS EN UN JTABLE
     protected List<Sala> Salas;
+    // LIST DE APOYO PARA MOSTRAR LOS MOBILIARIOS EN UN JTABLE
     protected List<Mobiliario> Mobiliarios;
+    // LIST DE APOYO PARA MOSTRAR LOS EMPLEADOS EN UN JTABLE
     protected List<Empleado> Empleados;
+    // LIST DE APOYO PARA MOSTRAR LOS VIP'S EN UN JTABLE
     protected List<VIP> VIP;
+    // LIST QUE CONTIENE LAS PROYECCIONES
     protected List<Proyeccion> Proyecciones;
+    // LIST QUE CONTIENE LAS ENTRADAS
     protected List<Entrada> Entradas;
+    // LIST DE APOYO PARA MOSTRAR LAS PELÍCULAS EN UN JTABLE
     protected List<Pelicula> Peliculas;
+    // LIST QUE CONTIENE LAS PRODUCTORAS Y SUS PELÍCULAS
     protected List<Productora> Productoras;
 
+    // CONTADORES PARA GENERAR ID'S
     protected int idCine;
     protected int idSala;
     protected int idVIP;
@@ -34,10 +48,15 @@ public class Funcionalidades implements Serializable {
     protected int idPe;
     protected int idEn;
 
+    // TREESET PARA COMROBAR QUE NO SE REPITEN EMPLEADOS O VIP'S
     protected TreeSet<String> VIPDni;
     protected TreeSet<String> EmpleadoDni;
 
+    /**
+     * CONSTRUCTOR DE LA CLASE FUNCIONALIDADES
+     */
     public Funcionalidades() {
+        // INICIALIZO LAS LIST'S
         this.Cines = new ArrayList<>();
         this.Salas = new ArrayList<>();
         this.Mobiliarios = new ArrayList<>();
@@ -48,6 +67,7 @@ public class Funcionalidades implements Serializable {
         this.Peliculas = new ArrayList<>();
         this.Productoras = new ArrayList<>();
 
+        // INICIALIZO LOS CONTADORES A 1
         this.idCine = 1;
         this.idSala = 1;
         this.idVIP = 1;
@@ -56,6 +76,7 @@ public class Funcionalidades implements Serializable {
         this.idPe = 1;
         this.idEn = 1;
 
+        // INICIALIZO LOS TREESET'S
         this.VIPDni = new TreeSet<>();
         this.EmpleadoDni = new TreeSet<>();
     }
@@ -63,9 +84,16 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO FLUJOS DE DATOS
     //
+    /**
+     * MÉTODO PARA CARGAR TODOS LOS DATOS DEL PROYECTO
+     *
+     * @throws IOException
+     */
     public void cargarDatos() throws IOException {
+        // CREO EL OBJETO
         ObjectInputStream entrada = null;
 
+        // ABRO EL FICHERO Y CARGO TODOS LOS DATOS
         try {
             entrada = new ObjectInputStream(new FileInputStream("datos.dat"));
             try {
@@ -92,6 +120,7 @@ public class Funcionalidades implements Serializable {
             }
         } catch (FileNotFoundException ex) {
             System.out.println(ex);
+            // CIERRO EL FLUJO DE DATOS
         } finally {
             if (entrada != null) {
                 try {
@@ -103,9 +132,16 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * MÉTODO PARA GUARDAR TODOS LOS DATOS DEL PROYECTO
+     *
+     * @throws IOException
+     */
     public void guardarDatos() throws IOException {
+        // CREO EL OBJETO
         ObjectOutputStream salida = null;
 
+        // ABRO EL FICHERO Y GUARDO TODOS DATOS
         try {
             salida = new ObjectOutputStream(new FileOutputStream("datos.dat"));
             salida.writeObject(Cines);
@@ -129,6 +165,7 @@ public class Funcionalidades implements Serializable {
         } catch (FileNotFoundException ex) {
             System.out.println("Error de apertura del archivo de salida!");
             System.out.println(ex.getMessage());
+            // CIERRO EL FLUJO DE DATOS
         } finally {
             if (salida != null) {
                 try {
@@ -144,9 +181,67 @@ public class Funcionalidades implements Serializable {
     // FIN FLUJOS DE DATOS
     //
     //
+    // COMIENZO VARIOS
+    //
+    public void SoloPermitirLetras(JTextField campo) {
+        campo.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c)) {
+                    e.consume();
+                }
+            }
+        });
+    }
+
+    public void SoloPermitirNumeros(JTextField campo) {
+        campo.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (!Character.isDigit(c)) {
+                    e.consume();
+                }
+            }
+        });
+    }
+
+    public void limpiarCamposJTextField(JPanel jPanel) {
+        for (int i = 0; jPanel.getComponents().length > i; i++) {
+            if (jPanel.getComponents()[i] instanceof JTextField) {
+                ((JTextField) jPanel.getComponents()[i]).setText("");
+            }
+        }
+    }
+
+    public boolean comprobarCamposJTextField(JPanel jPanel) {
+        boolean result = true;
+        for (int i = 0; jPanel.getComponents().length > i; i++) {
+            if (!result) {
+                break;
+            }
+            if (jPanel.getComponents()[i] instanceof JTextField) {
+                result = !((JTextField) jPanel.getComponents()[i]).getText().equals("") ? true : false;
+            }
+        }
+        return result;
+    }
+    //
+    // FIN VARIOS
+    //
+    //
     // COMIENZO LIMPIAR MODELOS
     //
+
+    /**
+     * MÉTODO PARA LIMPIAR TODOS LOS MODELOS EXISTENTES EN EL PROYECTO
+     *
+     * @param j
+     */
     public void limpiarModelos(JTable j) {
+        // MIENTRAS EL TOTAL DE FILAS SEA DISTINTO DE 0
+        // VA BORRANDO TODAS LAS FILAS
         while (j.getRowCount() != 0) {
             ((DefaultTableModel) j.getModel()).removeRow(0);
         }
@@ -158,21 +253,43 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO OPERACIONES CON CINES
     //
+    /**
+     * MÉTODO PARA GENERAR EL ID CINE
+     *
+     * @param ca
+     */
     public void nexoCineId(JTextField ca) {
+        // CONCATENO Y AUMENTO EL ID CINE
         String id = "MFC-";
         String result = id.concat(Integer.toString(this.idCine));
         ca.setText(result);
         this.idCine++;
     }
 
+    /**
+     * MÉTODO PARA CARGAR UN JCOMBOBOX CON LOS ID'S CINES
+     *
+     * @param co
+     */
     public void nexoCineCodCine(JComboBox co) {
+        // ELIMINO TODOS LOS ELEMENTOS Y VOY INSERTANDO
         co.removeAllItems();
         for (int i = 0; i < Cines.size(); i++) {
             co.addItem(Cines.get(i).getId_cine());
         }
     }
 
+    /**
+     * MÉTODO PARA INSERTAR UN CINE
+     *
+     * @param c
+     * @param d
+     * @param j
+     * @return
+     */
     public boolean insertarCine(Cine c, DefaultTableModel d, JTable j) {
+        // COMPRUEBO QUE NO ESTE CONTENIDO EL CINE PASADO COMO PARÁMETRO
+        // INSERTO EL CINE Y RECARGO EL MODELOCINES
         if (!this.Cines.contains(c)) {
             this.Cines.add(c);
             cargarModeloCines(d, j);
@@ -182,13 +299,34 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * MÉTODO PARA BORRAR UN CINE
+     *
+     * @param i
+     * @param d
+     * @param j
+     */
     public void borrarCine(int i, DefaultTableModel d, JTable j) {
+        // BORRA EL CINE POR SU ÍNDICE Y RECARGA EL MODELOCINES
         this.Cines.remove(i);
         cargarModeloCines(d, j);
     }
 
+    /**
+     * MÉTODO PARA MODIFICAR UN CINE
+     *
+     * @param i
+     * @param d
+     * @param j
+     * @param nombre
+     * @param direccion
+     * @param telefono
+     * @param fax
+     * @param e_mail
+     */
     public void modificarCine(int i, DefaultTableModel d, JTable j,
             String nombre, String direccion, String telefono, String fax, String e_mail) {
+        // MODIFICA UN CINE POR SU ÍNDICE Y RECARGA EL MODELOCINES
         Cine aux = this.Cines.get(i);
         aux.setNombre(nombre);
         aux.setDireccion(direccion);
@@ -206,11 +344,19 @@ public class Funcionalidades implements Serializable {
      }
      return result;
      }*/
+    /**
+     * MÉTODO PARA CARGAR EL MODELO CINES
+     *
+     * @param d
+     * @param j
+     */
     public void cargarModeloCines(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel();
 
+        // LIMPIO EL MODELO
         limpiarModelos(j);
 
+        // AGREGO LAS COLUMNAS A LA TABLA
         d.addColumn("Id_cine");
         d.addColumn("Nombre");
         d.addColumn("Dirección");
@@ -219,6 +365,7 @@ public class Funcionalidades implements Serializable {
         d.addColumn("E_mail");
         j.setModel(d);
 
+        // VOY INSERTANDO FILAS AL MODELO
         Object[] filaCines = new Object[d.getColumnCount()];
         for (int i = 0; i < Cines.size(); i++) {
             filaCines[0] = Cines.get(i).getId_cine();
@@ -229,6 +376,7 @@ public class Funcionalidades implements Serializable {
             filaCines[5] = Cines.get(i).getE_mail();
             d.addRow(filaCines);
 
+            // CENTRO LOS DATOS EN LAS TABLAS
             for (int k = 0; k < 6; k++) {
                 DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
@@ -243,14 +391,26 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO OPERACIONES CON SALAS
     //
+    /**
+     * MÉTODO PARA GENERAR EL ID SALA
+     *
+     * @param ca
+     */
     public void nexoSalaId(JTextField ca) {
+        // CONCATENO Y AUMENTO EL ID SALA
         String id = "MFS-";
         String result = id.concat(Integer.toString(this.idSala));
         ca.setText(result);
         this.idSala++;
     }
 
+    /**
+     * MÉTODO PARA CARGAR EN UN JCOMBOBOX LOS COD'S SALAS
+     *
+     * @param co
+     */
     public void nexoSalaCodSala(JComboBox co) {
+        // BORRO TODOS LOS ELEMENTOS Y VOY INSERTANDO
         co.removeAllItems();
         for (int i = 0; i < Cines.size(); i++) {
             for (int j = 0; j < Cines.get(i).Salas.size(); j++) {
@@ -259,7 +419,17 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * MÉTODO PARA INSERTAR UNA SALA
+     *
+     * @param s
+     * @param d
+     * @param j
+     * @return
+     */
     public boolean insertarSala(Sala s, DefaultTableModel d, JTable j) {
+        // BUSCO EL CINE AL QUE PERTENECE LA SALSA PASADA COMO PARÁMETRO
+        // COMRPUEBO QUE NO ESTE CONTENIDA, LA INSERTO Y RECARGO EL MODELOSALAS
         boolean result = false;
         Cine aux = new Cine(s.getCod_cine(), null, null, null, null, null);
         int indice = Collections.binarySearch(this.Cines, aux);
@@ -276,7 +446,17 @@ public class Funcionalidades implements Serializable {
         return result;
     }
 
+    /**
+     * MÉTODO PARA BORRAR UNA SALA
+     *
+     * @param x
+     * @param y
+     * @param d
+     * @param j
+     */
     public void borrarSala(String x, String y, DefaultTableModel d, JTable j) {
+        // BUSCO EL CINE AL QUE PERTENECE DICHA SALA
+        // BORRO LA SALA CON EL ITERADOR Y RECARGO EL MODELOSALAS
         Cine aux = new Cine(y, null, null, null, null, null);
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
@@ -291,8 +471,22 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * MÉTODO PARA MODIFICAR SALA
+     *
+     * @param x
+     * @param y
+     * @param d
+     * @param j
+     * @param nombre
+     * @param tipo
+     * @param num_butacas
+     * @param cod_cine
+     */
     public void modificarSala(String x, String y, DefaultTableModel d, JTable j,
             String nombre, String tipo, String num_butacas, String cod_cine) {
+        // BUSCO EL CINE AL QUE PERTENECE DICHA SALA
+        // HAGO LOS CAMBIOS PERTINENTES CON EL ITERADOR Y RECARGO EL MODELOSALAS
         Cine aux = new Cine(y, null, null, null, null, null);
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
@@ -315,7 +509,15 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * NEXO NECESARIO PARA MODIFICAR UN SALA CUANDO SE CAMBIA DE CINE
+     *
+     * @param s
+     * @param d
+     * @param j
+     */
     public void nexoModificarSala(Sala s, DefaultTableModel d, JTable j) {
+        // CAMBIO LA SALA DE CINE Y RECARGO EL MODELOSALAS
         Cine aux = new Cine(s.getCod_cine(), null, null, null, null, null);
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
@@ -327,11 +529,19 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * MÉTODO PARA CARGAR EL MODELO SALAS
+     *
+     * @param d
+     * @param j
+     */
     public void cargarModeloSalas(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel();
 
+        // BORRO EL MODLEO ENTERO
         limpiarModelos(j);
 
+        // AGREGO LAS COLUMNAS A LA TABLA
         d.addColumn("Id_sala");
         d.addColumn("Nombre");
         d.addColumn("Tipo");
@@ -339,12 +549,15 @@ public class Funcionalidades implements Serializable {
         d.addColumn("Cod_cine");
         j.setModel(d);
 
+        // LIMPIO LA LIST SALAS "APOYO"
         Salas.clear();
 
+        // DE CADA CINE OBTENGO SUS SALAS
         for (int i = 0; i < Cines.size(); i++) {
             Salas.addAll(Cines.get(i).getSalas());
         }
 
+        // VOY INSERTANDO LAS FILAS A LA TABLA
         Object[] filaSalas = new Object[d.getColumnCount()];
         for (int i = 0; i < Salas.size(); i++) {
             filaSalas[0] = Salas.get(i).getId_Sala();
@@ -354,6 +567,7 @@ public class Funcionalidades implements Serializable {
             filaSalas[4] = Salas.get(i).getCod_cine();
             d.addRow(filaSalas);
 
+            // CENTRO LOS DATOS EN LA TABLA
             for (int k = 0; k < 5; k++) {
                 DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
@@ -368,14 +582,30 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO OPERACIONES CON MOBILIARIOS
     //
+    /**
+     * MÉTODO PARA GENERAR EL ID MOBILIARIO
+     *
+     * @param ca
+     */
     public void nexoMobiliarioId(JTextField ca) {
+        // CONCATENO Y AUMENTO EL ID MOBILIARIO
         String id = "MFM-";
         String result = id.concat(Integer.toString(this.idMobiliario));
         ca.setText(result);
         this.idMobiliario++;
     }
 
+    /**
+     * MÉTODO PARA INSERTAR UN MOBILIARIO
+     *
+     * @param m
+     * @param d
+     * @param j
+     * @return
+     */
     public boolean insertarMobiliario(Mobiliario m, DefaultTableModel d, JTable j) {
+        // BUSCO LA SALA A LA QUE PERTENECE DICHO MOBILIARIO
+        // COMPRUEBO QUE NO ESTE CONTENIDO, LO INSERTO Y RECARGO EL MODELOMOBILIARIOS
         boolean result = false;
         for (int i = 0; i < Cines.size(); i++) {
             for (Iterator<Sala> it = Cines.get(i).Salas.iterator(); it.hasNext();) {
@@ -395,7 +625,16 @@ public class Funcionalidades implements Serializable {
         return result;
     }
 
+    /**
+     * MÉTODO PARA BORRAR UN MOBILIARIO
+     *
+     * @param x
+     * @param y
+     * @param d
+     * @param j
+     */
     public void borrarMobiliario(String x, String y, DefaultTableModel d, JTable j) {
+        // VOY BUSCANDO CON EL ITERADOR, BORRO EL MOBILIARIO Y RECARGO EL MODELOMOBILIARIOS
         for (int i = 0; i < Cines.size(); i++) {
             for (int k = 0; k < Cines.get(i).Salas.size(); k++) {
                 for (Iterator<Mobiliario> it = Cines.get(i).Salas.get(k).Mobiliarios.iterator(); it.hasNext();) {
@@ -408,9 +647,22 @@ public class Funcionalidades implements Serializable {
         }
         cargarModeloMobiliarios(d, j);
     }
-    
+
+    /**
+     * MÉTODO PARA MODIFICAR UN MOBILIARIO
+     *
+     * @param x
+     * @param d
+     * @param j
+     * @param nombre
+     * @param cantidad
+     * @param fecha
+     * @param estado
+     * @param cod_sala
+     */
     public void modificarMobiliario(String x, DefaultTableModel d, JTable j,
             String nombre, String cantidad, String fecha, Boolean estado, String cod_sala) {
+        // VOY BUSCANDO, REALIZO LOS CAMBIOS PERTINENTES EN EL MOBILIARIO Y RECARGO EL MODELOMOBILIARIOS
         for (int i = 0; i < Cines.size(); i++) {
             for (int k = 0; k < Cines.get(i).Salas.size(); k++) {
                 for (Iterator<Mobiliario> it = Cines.get(i).Salas.get(k).Mobiliarios.iterator(); it.hasNext();) {
@@ -432,8 +684,16 @@ public class Funcionalidades implements Serializable {
         }
         cargarModeloMobiliarios(d, j);
     }
-    
+
+    /**
+     * MÉTODO NECESARIO PARA CUANDO CAMBIO UN MOBILIARIO DE SALA
+     *
+     * @param m
+     * @param d
+     * @param j
+     */
     public void nexoModificarMobiliario(Mobiliario m, DefaultTableModel d, JTable j) {
+        // VOY BUSCANDO, REALIZO EL CAMBIO Y RECARGO EL MODELOMOBILIARIOS
         for (int i = 0; i < Cines.size(); i++) {
             for (Iterator<Sala> it = Cines.get(i).Salas.iterator(); it.hasNext();) {
                 Sala aux = it.next();
@@ -441,18 +701,26 @@ public class Funcionalidades implements Serializable {
                     if (!aux.Mobiliarios.contains(m)) {
                         aux.Mobiliarios.add(m);
                         cargarModeloMobiliarios(d, j);
-                    } 
+                    }
                 }
             }
 
         }
     }
 
+    /**
+     * MÉTODO PARA CARGAR EL MODELO MOBILIARIOS
+     *
+     * @param d
+     * @param j
+     */
     public void cargarModeloMobiliarios(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel();
 
+        // LIMPIO EL MODELO ENTERO
         limpiarModelos(j);
 
+        // AGREGO LAS COLUMNAS A LA TABLA
         d.addColumn("Id_mobiliario");
         d.addColumn("Nombre");
         d.addColumn("Cantidad");
@@ -461,14 +729,17 @@ public class Funcionalidades implements Serializable {
         d.addColumn("Cod_sala");
         j.setModel(d);
 
+        // LIMPIO LA LIST MOBILIARIOS "APOYO"
         Mobiliarios.clear();
 
+        // VOY OBTENIEDO LOS MOBILIARIOS
         for (int i = 0; i < Cines.size(); i++) {
             for (int k = 0; k < Cines.get(i).Salas.size(); k++) {
                 Mobiliarios.addAll(Cines.get(i).Salas.get(k).getMobiliarios());
             }
         }
 
+        // VOY INSERTANDO LAS FILAS A LA TABLA
         Object[] filaMobiliarios = new Object[d.getColumnCount()];
         for (int i = 0; i < Mobiliarios.size(); i++) {
             filaMobiliarios[0] = Mobiliarios.get(i).getId_mobiliario();
@@ -479,6 +750,7 @@ public class Funcionalidades implements Serializable {
             filaMobiliarios[5] = Mobiliarios.get(i).getCod_sala();
             d.addRow(filaMobiliarios);
 
+            // CENTRO LOS DATOS EN LA TABLA
             for (int k = 0; k < 6; k++) {
                 DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
@@ -683,7 +955,7 @@ public class Funcionalidades implements Serializable {
                     aux2 = new Empleado(x, nombre, apellidos, edad, puesto,
                             sueldo, cod_cine);
                     nexoModificarEmpleado(aux2, d, j);
-                } 
+                }
             }
             cargarModeloEmpleados(d, j);
         }
@@ -743,25 +1015,23 @@ public class Funcionalidades implements Serializable {
     //
     // FIN OPERACIONES CON EMPLEADOS
     //   
-    
     //
     // COMIENZO OPERACIONES CON PRODUCTORAS
     //
-    
     public void nexoProductoraId(JTextField ca) {
         String id = "MFPr-";
         String result = id.concat(Integer.toString(this.idPr));
         ca.setText(result);
         this.idPr++;
     }
-    
+
     public void nexoProductoraCodProductora(JComboBox co) {
         co.removeAllItems();
         for (int i = 0; i < Productoras.size(); i++) {
             co.addItem(Productoras.get(i).getId_productora());
         }
     }
-    
+
     public boolean insertarProductora(Productora pr, DefaultTableModel d, JTable j) {
         if (!this.Productoras.contains(pr)) {
             this.Productoras.add(pr);
@@ -771,12 +1041,12 @@ public class Funcionalidades implements Serializable {
             return false;
         }
     }
-    
+
     public void borrarProductora(int i, DefaultTableModel d, JTable j) {
         this.Productoras.remove(i);
         cargarModeloProductoras(d, j);
     }
-    
+
     public void modificarProductora(int i, DefaultTableModel d, JTable j,
             String nombre, String telefono, String fax, String e_mail, String representante) {
         Productora aux = this.Productoras.get(i);
@@ -787,7 +1057,7 @@ public class Funcionalidades implements Serializable {
         aux.setRepresentante(representante);
         cargarModeloProductoras(d, j);
     }
-    
+
     public void cargarModeloProductoras(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel();
 
@@ -818,36 +1088,34 @@ public class Funcionalidades implements Serializable {
             }
         }
     }
-    
+
     //
     // FIN OPERACIONES CON PRODUCTORAS
     //  
-    
     //
     // COMIENZO OPERACIONES CON PELÍCULAS
     //
-    
     public void nexoPeliculaId(JTextField ca) {
         String id = "MFPe-";
         String result = id.concat(Integer.toString(this.idPe));
         ca.setText(result);
         this.idPe++;
     }
-    
+
     public void nexoPeliculaTituloPelicula(JComboBox co) {
         co.removeAllItems();
         for (int i = 0; i < Peliculas.size(); i++) {
             co.addItem(Peliculas.get(i).getNombre());
         }
     }
-    
+
     public void nexoPeliculaCodPelicula(JComboBox co) {
         co.removeAllItems();
         for (int i = 0; i < Peliculas.size(); i++) {
             co.addItem(Peliculas.get(i).getId_pelicula());
         }
     }
-    
+
     public boolean insertarPelicula(Pelicula pe, DefaultTableModel d, JTable j) {
         boolean result = false;
         Productora aux = new Productora(pe.getCod_productora(), null, null, null, null, null);
@@ -864,7 +1132,7 @@ public class Funcionalidades implements Serializable {
         }
         return result;
     }
-    
+
     public void borrarPelicula(String x, String y, DefaultTableModel d, JTable j) {
         Productora aux = new Productora(y, null, null, null, null, null);
         int indice = Collections.binarySearch(this.Productoras, aux);
@@ -879,9 +1147,9 @@ public class Funcionalidades implements Serializable {
             cargarModeloPeliculas(d, j);
         }
     }
-    
+
     public void modificarPelicula(String x, String y, DefaultTableModel d, JTable j,
-            String nombre, String director, String año, String edad, String pais, 
+            String nombre, String director, String año, String edad, String pais,
             String genero, String duracion, String cod_productora) {
         Productora aux = new Productora(y, null, null, null, null, null);
         int indice = Collections.binarySearch(this.Productoras, aux);
@@ -909,7 +1177,7 @@ public class Funcionalidades implements Serializable {
             cargarModeloPeliculas(d, j);
         }
     }
-    
+
     public void nexoModificarPelicula(Pelicula pe, DefaultTableModel d, JTable j) {
         Productora aux = new Productora(pe.getCod_productora(), null, null, null, null, null);
         int indice = Collections.binarySearch(this.Productoras, aux);
@@ -921,7 +1189,7 @@ public class Funcionalidades implements Serializable {
             }
         }
     }
-    
+
     public void cargarModeloPeliculas(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel();
 
@@ -964,29 +1232,27 @@ public class Funcionalidades implements Serializable {
             }
         }
     }
-    
+
     //
     // FIN OPERACIONES CON PELÍCULAS
     //  
-    
     //
     // COMIENZO OPERACIONES CON ENTRADAS
     //
-    
     public void nexoEntradaId(JTextField ca) {
         String id = "MFEn-";
         String result = id.concat(Integer.toString(this.idEn));
         ca.setText(result);
         this.idEn++;
     }
-    
+
     public void nexoEntradaCodEntrada(JComboBox co) {
         co.removeAllItems();
         for (int i = 0; i < Entradas.size(); i++) {
             co.addItem(Entradas.get(i).getId_entrada());
         }
     }
-    
+
     public boolean insertarEntrada(Entrada en, DefaultTableModel d, JTable j) {
         if (!this.Entradas.contains(en)) {
             this.Entradas.add(en);
@@ -996,12 +1262,12 @@ public class Funcionalidades implements Serializable {
             return false;
         }
     }
-    
+
     public void borrarEntrada(int i, DefaultTableModel d, JTable j) {
         this.Entradas.remove(i);
         cargarModeloEntradas(d, j);
     }
-    
+
     public void modificarEntrada(int i, DefaultTableModel d, JTable j,
             Double precio, String titulo, String cod_sala, String cod_cine) {
         Entrada aux = this.Entradas.get(i);
@@ -1011,7 +1277,7 @@ public class Funcionalidades implements Serializable {
         aux.setCod_cine(cod_cine);
         cargarModeloEntradas(d, j);
     }
-    
+
     public void cargarModeloEntradas(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel();
 
@@ -1040,15 +1306,13 @@ public class Funcionalidades implements Serializable {
             }
         }
     }
-    
+
     //
     // FIN OPERACIONES CON ENTRADAS
     //  
-    
     //
     // COMIENZO OPERACIONES CON PROYECCIONES
     //
-    
     public boolean insertarProyeccion(Proyeccion pro, DefaultTableModel d, JTable j) {
         if (!this.Proyecciones.contains(pro)) {
             this.Proyecciones.add(pro);
@@ -1058,12 +1322,12 @@ public class Funcionalidades implements Serializable {
             return false;
         }
     }
-    
+
     public void borrarProyeccion(int i, DefaultTableModel d, JTable j) {
         this.Proyecciones.remove(i);
         cargarModeloProyecciones(d, j);
     }
-    
+
     public void modificarProyeccion(int i, DefaultTableModel d, JTable j,
             String idsala, String idpelicula, String identrada, Date fecha) {
         Proyeccion aux = this.Proyecciones.get(i);
@@ -1073,7 +1337,7 @@ public class Funcionalidades implements Serializable {
         aux.setFecha_proyeccion(fecha);
         cargarModeloProyecciones(d, j);
     }
-    
+
     public void cargarModeloProyecciones(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel();
 
@@ -1100,7 +1364,7 @@ public class Funcionalidades implements Serializable {
             }
         }
     }
-    
+
     //
     // FIN OPERACIONES CON PROYECCIONES
     //
