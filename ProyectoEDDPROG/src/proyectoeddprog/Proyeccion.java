@@ -12,7 +12,7 @@ import java.util.Date;
  * CLASE PROYECCION
  * @author jchierro
  */
-public class Proyeccion implements Serializable {
+public class Proyeccion implements Serializable, Comparable<Proyeccion> {
     protected String Id_sala;
     protected String Id_entrada;
     protected String Id_pelicula;
@@ -32,6 +32,16 @@ public class Proyeccion implements Serializable {
         this.Fecha_proyeccion = Fecha_proyeccion;
     }
 
+    @Override
+    public int compareTo(Proyeccion otro) {
+        return Id_entrada.compareTo(otro.Id_entrada);
+    }
+    
+    @Override
+    public boolean equals(Object otro) {
+        return Id_entrada.equals(((Proyeccion)otro).Id_entrada);
+    }
+    
     /**
      * GET ID_SALA
      * @return DEVUELVE EL VALOR ID_SALA

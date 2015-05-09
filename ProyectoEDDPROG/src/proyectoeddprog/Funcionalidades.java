@@ -6,6 +6,8 @@
 package proyectoeddprog;
 
 import com.sun.javafx.tk.Toolkit;
+import java.awt.Color;
+import java.awt.Component;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.*;
@@ -351,7 +353,12 @@ public class Funcionalidades implements Serializable {
      * @param j
      */
     public void cargarModeloCines(DefaultTableModel d, JTable j) {
-        d = new DefaultTableModel();
+        d = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
 
         // LIMPIO EL MODELO
         limpiarModelos(j);
@@ -375,12 +382,43 @@ public class Funcionalidades implements Serializable {
             filaCines[4] = Cines.get(i).getFax();
             filaCines[5] = Cines.get(i).getE_mail();
             d.addRow(filaCines);
+            
+            // CREO UN MODELO RENDERER PARA CENTRAR LOS DATOS Y PINTAS LAS FILAS
+            DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer() {
+                @Override
+                public Component getTableCellRendererComponent(JTable table, Object value,
+                        boolean isSelected, boolean hasFocus, int row, int column) {
+                    super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                    if (row % 2 == 0) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(255, 255, 255));
+                        this.setForeground(new Color(0, 0, 0));
+                    } else {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(191, 191, 191));
+                        this.setForeground(new Color(0, 0, 0));
+                    }
+
+                    if (isSelected) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(59, 115, 175));
+                        this.setForeground(new Color(255, 255, 255));
+                    }
+                    
+                    j.setGridColor(new Color(0, 0, 0));
+
+                    return this;
+                }
+            };
+
+            modelocentrar.getTableCellRendererComponent(j, null, true, true, i, i);
 
             // CENTRO LOS DATOS EN LAS TABLAS
             for (int k = 0; k < 6; k++) {
-                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
                 j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+
+                d.isCellEditable(i, k);
             }
         }
     }
@@ -536,7 +574,12 @@ public class Funcionalidades implements Serializable {
      * @param j
      */
     public void cargarModeloSalas(DefaultTableModel d, JTable j) {
-        d = new DefaultTableModel();
+        d = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
 
         // BORRO EL MODLEO ENTERO
         limpiarModelos(j);
@@ -567,11 +610,43 @@ public class Funcionalidades implements Serializable {
             filaSalas[4] = Salas.get(i).getCod_cine();
             d.addRow(filaSalas);
 
+            // CREO UN MODELO RENDERER PARA CENTRAR LOS DATOS Y PINTAS LAS FILAS
+            DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer() {
+                @Override
+                public Component getTableCellRendererComponent(JTable table, Object value,
+                        boolean isSelected, boolean hasFocus, int row, int column) {
+                    super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                    
+                    if (row % 2 == 0) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(255, 255, 255));
+                        this.setForeground(new Color(0, 0, 0));
+                    } else {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(191, 191, 191));
+                        this.setForeground(new Color(0, 0, 0));
+                    }
+
+                    if (isSelected) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(59, 115, 175));
+                        this.setForeground(new Color(255, 255, 255));
+                    }
+                    
+                    j.setGridColor(new Color(0, 0, 0));
+
+                    return this;
+                }
+            };
+
+            modelocentrar.getTableCellRendererComponent(j, null, true, true, i, i);
+            
             // CENTRO LOS DATOS EN LA TABLA
             for (int k = 0; k < 5; k++) {
-                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
                 j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+
+                d.isCellEditable(i, k);
             }
         }
     }
@@ -715,7 +790,12 @@ public class Funcionalidades implements Serializable {
      * @param j
      */
     public void cargarModeloMobiliarios(DefaultTableModel d, JTable j) {
-        d = new DefaultTableModel();
+        d = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
 
         // LIMPIO EL MODELO ENTERO
         limpiarModelos(j);
@@ -750,11 +830,43 @@ public class Funcionalidades implements Serializable {
             filaMobiliarios[5] = Mobiliarios.get(i).getCod_sala();
             d.addRow(filaMobiliarios);
 
+            // CREO UN MODELO RENDERER PARA CENTRAR LOS DATOS Y PINTAS LAS FILAS
+            DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer() {
+                @Override
+                public Component getTableCellRendererComponent(JTable table, Object value,
+                        boolean isSelected, boolean hasFocus, int row, int column) {
+                    super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                    
+                    if (row % 2 == 0) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(255, 255, 255));
+                        this.setForeground(new Color(0, 0, 0));
+                    } else {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(191, 191, 191));
+                        this.setForeground(new Color(0, 0, 0));
+                    }
+
+                    if (isSelected) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(59, 115, 175));
+                        this.setForeground(new Color(255, 255, 255));
+                    }
+                    
+                    j.setGridColor(new Color(0, 0, 0));
+
+                    return this;
+                }
+            };
+
+            modelocentrar.getTableCellRendererComponent(j, null, true, true, i, i);
+            
             // CENTRO LOS DATOS EN LA TABLA
             for (int k = 0; k < 6; k++) {
-                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
                 j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+
+                d.isCellEditable(i, k);
             }
         }
     }
@@ -848,7 +960,12 @@ public class Funcionalidades implements Serializable {
     }
 
     public void cargarModeloVIP(DefaultTableModel d, JTable j) {
-        d = new DefaultTableModel();
+        d = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
 
         limpiarModelos(j);
 
@@ -878,10 +995,42 @@ public class Funcionalidades implements Serializable {
             filaVIP[6] = VIP.get(i).getCod_cine();
             d.addRow(filaVIP);
 
+            // CREO UN MODELO RENDERER PARA CENTRAR LOS DATOS Y PINTAS LAS FILAS
+            DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer() {
+                @Override
+                public Component getTableCellRendererComponent(JTable table, Object value,
+                        boolean isSelected, boolean hasFocus, int row, int column) {
+                    super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                    
+                    if (row % 2 == 0) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(255, 255, 255));
+                        this.setForeground(new Color(0, 0, 0));
+                    } else {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(191, 191, 191));
+                        this.setForeground(new Color(0, 0, 0));
+                    }
+
+                    if (isSelected) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(59, 115, 175));
+                        this.setForeground(new Color(255, 255, 255));
+                    }
+                    
+                    j.setGridColor(new Color(0, 0, 0));
+
+                    return this;
+                }
+            };
+
+            modelocentrar.getTableCellRendererComponent(j, null, true, true, i, i);
+            
             for (int k = 0; k < 7; k++) {
-                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
                 j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+
+                d.isCellEditable(i, k);
             }
         }
     }
@@ -974,7 +1123,12 @@ public class Funcionalidades implements Serializable {
     }
 
     public void cargarModeloEmpleados(DefaultTableModel d, JTable j) {
-        d = new DefaultTableModel();
+        d = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
 
         limpiarModelos(j);
 
@@ -1004,10 +1158,43 @@ public class Funcionalidades implements Serializable {
             filaEmpleados[6] = Empleados.get(i).getCod_cine();
             d.addRow(filaEmpleados);
 
+            
+            // CREO UN MODELO RENDERER PARA CENTRAR LOS DATOS Y PINTAS LAS FILAS
+            DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer() {
+                @Override
+                public Component getTableCellRendererComponent(JTable table, Object value,
+                        boolean isSelected, boolean hasFocus, int row, int column) {
+                    super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                    
+                    if (row % 2 == 0) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(255, 255, 255));
+                        this.setForeground(new Color(0, 0, 0));
+                    } else {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(191, 191, 191));
+                        this.setForeground(new Color(0, 0, 0));
+                    }
+
+                    if (isSelected) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(59, 115, 175));
+                        this.setForeground(new Color(255, 255, 255));
+                    }
+                    
+                    j.setGridColor(new Color(0, 0, 0));
+
+                    return this;
+                }
+            };
+
+            modelocentrar.getTableCellRendererComponent(j, null, true, true, i, i);
+            
             for (int k = 0; k < 7; k++) {
-                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
                 j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+
+                d.isCellEditable(i, k);
             }
         }
     }
@@ -1059,7 +1246,12 @@ public class Funcionalidades implements Serializable {
     }
 
     public void cargarModeloProductoras(DefaultTableModel d, JTable j) {
-        d = new DefaultTableModel();
+        d = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
 
         limpiarModelos(j);
 
@@ -1070,7 +1262,7 @@ public class Funcionalidades implements Serializable {
         d.addColumn("E_mail");
         d.addColumn("Representante");
         j.setModel(d);
-
+        
         Object[] filaProductoras = new Object[d.getColumnCount()];
         for (int i = 0; i < Productoras.size(); i++) {
             filaProductoras[0] = Productoras.get(i).getId_productora();
@@ -1081,10 +1273,42 @@ public class Funcionalidades implements Serializable {
             filaProductoras[5] = Productoras.get(i).getRepresentante();
             d.addRow(filaProductoras);
 
+            // CREO UN MODELO RENDERER PARA CENTRAR LOS DATOS Y PINTAS LAS FILAS
+            DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer() {
+                @Override
+                public Component getTableCellRendererComponent(JTable table, Object value,
+                        boolean isSelected, boolean hasFocus, int row, int column) {
+                    super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                    
+                    if (row % 2 == 0) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(255, 255, 255));
+                        this.setForeground(new Color(0, 0, 0));
+                    } else {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(191, 191, 191));
+                        this.setForeground(new Color(0, 0, 0));
+                    }
+
+                    if (isSelected) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(59, 115, 175));
+                        this.setForeground(new Color(255, 255, 255));
+                    }
+                    
+                    j.setGridColor(new Color(0, 0, 0));
+
+                    return this;
+                }
+            };
+
+            modelocentrar.getTableCellRendererComponent(j, null, true, true, i, i);
+            
             for (int k = 0; k < 6; k++) {
-                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
                 j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+
+                d.isCellEditable(i, k);
             }
         }
     }
@@ -1191,7 +1415,12 @@ public class Funcionalidades implements Serializable {
     }
 
     public void cargarModeloPeliculas(DefaultTableModel d, JTable j) {
-        d = new DefaultTableModel();
+        d = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
 
         limpiarModelos(j);
 
@@ -1225,10 +1454,42 @@ public class Funcionalidades implements Serializable {
             filaPeliculas[8] = Peliculas.get(i).getCod_productora();
             d.addRow(filaPeliculas);
 
+            // CREO UN MODELO RENDERER PARA CENTRAR LOS DATOS Y PINTAS LAS FILAS
+            DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer() {
+                @Override
+                public Component getTableCellRendererComponent(JTable table, Object value,
+                        boolean isSelected, boolean hasFocus, int row, int column) {
+                    super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                    
+                    if (row % 2 == 0) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(255, 255, 255));
+                        this.setForeground(new Color(0, 0, 0));
+                    } else {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(191, 191, 191));
+                        this.setForeground(new Color(0, 0, 0));
+                    }
+
+                    if (isSelected) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(59, 115, 175));
+                        this.setForeground(new Color(255, 255, 255));
+                    }
+                    
+                    j.setGridColor(new Color(0, 0, 0));
+
+                    return this;
+                }
+            };
+
+            modelocentrar.getTableCellRendererComponent(j, null, true, true, i, i);
+            
             for (int k = 0; k < 9; k++) {
-                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
                 j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+
+                d.isCellEditable(i, k);
             }
         }
     }
@@ -1279,7 +1540,12 @@ public class Funcionalidades implements Serializable {
     }
 
     public void cargarModeloEntradas(DefaultTableModel d, JTable j) {
-        d = new DefaultTableModel();
+        d = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
 
         limpiarModelos(j);
 
@@ -1299,10 +1565,42 @@ public class Funcionalidades implements Serializable {
             filaEntradas[4] = Entradas.get(i).getCod_cine();
             d.addRow(filaEntradas);
 
+            // CREO UN MODELO RENDERER PARA CENTRAR LOS DATOS Y PINTAS LAS FILAS
+            DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer() {
+                @Override
+                public Component getTableCellRendererComponent(JTable table, Object value,
+                        boolean isSelected, boolean hasFocus, int row, int column) {
+                    super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                    
+                    if (row % 2 == 0) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(255, 255, 255));
+                        this.setForeground(new Color(0, 0, 0));
+                    } else {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(191, 191, 191));
+                        this.setForeground(new Color(0, 0, 0));
+                    }
+
+                    if (isSelected) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(59, 115, 175));
+                        this.setForeground(new Color(255, 255, 255));
+                    }
+                    
+                    j.setGridColor(new Color(0, 0, 0));
+
+                    return this;
+                }
+            };
+
+            modelocentrar.getTableCellRendererComponent(j, null, true, true, i, i);
+            
             for (int k = 0; k < 5; k++) {
-                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
                 j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+
+                d.isCellEditable(i, k);
             }
         }
     }
@@ -1339,7 +1637,12 @@ public class Funcionalidades implements Serializable {
     }
 
     public void cargarModeloProyecciones(DefaultTableModel d, JTable j) {
-        d = new DefaultTableModel();
+        d = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
 
         limpiarModelos(j);
 
@@ -1357,10 +1660,42 @@ public class Funcionalidades implements Serializable {
             filaProyecciones[3] = Proyecciones.get(i).getFecha_proyeccion();
             d.addRow(filaProyecciones);
 
+            // CREO UN MODELO RENDERER PARA CENTRAR LOS DATOS Y PINTAS LAS FILAS
+            DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer() {
+                @Override
+                public Component getTableCellRendererComponent(JTable table, Object value,
+                        boolean isSelected, boolean hasFocus, int row, int column) {
+                    super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                    
+                    if (row % 2 == 0) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(255, 255, 255));
+                        this.setForeground(new Color(0, 0, 0));
+                    } else {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(191, 191, 191));
+                        this.setForeground(new Color(0, 0, 0));
+                    }
+
+                    if (isSelected) {
+                        this.setOpaque(true);
+                        this.setBackground(new Color(59, 115, 175));
+                        this.setForeground(new Color(255, 255, 255));
+                    }
+                    
+                    j.setGridColor(new Color(0, 0, 0));
+
+                    return this;
+                }
+            };
+
+            modelocentrar.getTableCellRendererComponent(j, null, true, true, i, i);
+            
             for (int k = 0; k < 4; k++) {
-                DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
                 modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
                 j.getColumnModel().getColumn(k).setCellRenderer(modelocentrar);
+
+                d.isCellEditable(i, k);
             }
         }
     }

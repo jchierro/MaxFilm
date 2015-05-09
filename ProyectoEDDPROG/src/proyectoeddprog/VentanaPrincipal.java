@@ -5588,7 +5588,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO INSERTARPROYECCIÓN
         pro = new Proyeccion(this.CProidsala.getSelectedItem().toString(),
-                this.CProidpelicula.getSelectedItem().toString(), this.CProidentrada.getSelectedItem().toString(),
+                this.CProidentrada.getSelectedItem().toString(), this.CProidpelicula.getSelectedItem().toString(),
                 (Date) this.CProfecha.getValue());
         Boolean aux = f.insertarProyeccion(pro, this.modeloProyecciones, this.jTable10);
         // SALTA UNA ALERTA EN EL CASO QUE SEA FALSE
@@ -5610,7 +5610,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         } else {
             f.modificarProyeccion(this.jTable10.getSelectedRow(), modeloProyecciones, jTable10,
                     this.CProidsala1.getSelectedItem().toString(),
-                    this.CProidpelicula1.getSelectedItem().toString(), this.CProidentrada1.getSelectedItem().toString(),
+                    this.CProidentrada1.getSelectedItem().toString(), this.CProidpelicula1.getSelectedItem().toString(),
                     (Date) this.CProfecha1.getValue());
         }
     }//GEN-LAST:event_jButton34ActionPerformed
