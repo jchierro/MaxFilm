@@ -5,13 +5,14 @@
  */
 package proyectoeddprog;
 
-import com.sun.javafx.tk.Toolkit;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import javax.swing.*;
 import javax.swing.table.*;
 
@@ -229,6 +230,28 @@ public class Funcionalidades implements Serializable {
         }
         return result;
     }
+    
+    public void MaxFilmEstadisticas(JLabel a1, JLabel a2, JLabel a3, JLabel a4,
+            JLabel a5, JLabel a6, JLabel a7, JLabel a8, JLabel a9, JLabel a10, JLabel a11) {
+        a1.setText(String.valueOf(Cines.stream().sorted().count()));
+        a2.setText(String.valueOf(Salas.stream().filter(s -> s.getTipo().equals("2D")).sorted().count()));
+        a3.setText(String.valueOf(Salas.stream().filter(s -> s.getTipo().equals("3D")).sorted().count()));
+        a4.setText(String.valueOf(Mobiliarios.stream().sorted().count()));
+        a5.setText(String.valueOf(Empleados.stream().sorted().count()));
+        a6.setText(String.valueOf(VIP.stream().sorted().count()));
+        a7.setText(String.valueOf(Proyecciones.stream().sorted().count()));
+        a8.setText(String.valueOf(Entradas.stream().sorted().count()));
+        
+        double cont€ = 0.0;
+        for (Entrada i : Entradas) {
+            cont€ = cont€ + i.getPrecio();
+        }
+        
+        a9.setText(String.valueOf(cont€));
+        a10.setText(String.valueOf(Peliculas.stream().sorted().count()));
+        a11.setText(String.valueOf(Productoras.stream().sorted().count()));
+    }
+    
     //
     // FIN VARIOS
     //
@@ -338,14 +361,6 @@ public class Funcionalidades implements Serializable {
         cargarModeloCines(d, j);
     }
 
-    /*public Cine buscarCine(Cine c) {
-     Cine result = null;
-     int indice = Collections.binarySearch(this.Cines, c);
-     if (indice >= 0) {
-     result = this.Cines.get(indice);
-     }
-     return result;
-     }*/
     /**
      * MÉTODO PARA CARGAR EL MODELO CINES
      *
@@ -496,6 +511,7 @@ public class Funcionalidades implements Serializable {
             for (Iterator<Sala> it = aux.Salas.iterator(); it.hasNext();) {
                 Sala aux2 = it.next();
                 if (aux2.getId_Sala().equals(x)) {
+                    nexoBorrarProyeccion(aux2.getId_Sala());
                     it.remove();
                 }
             }
@@ -1326,6 +1342,7 @@ public class Funcionalidades implements Serializable {
             for (Iterator<Pelicula> it = aux.Peliculas.iterator(); it.hasNext();) {
                 Pelicula aux2 = it.next();
                 if (aux2.getId_pelicula().equals(x)) {
+                    nexoBorrarProyeccion(aux2.getId_pelicula());
                     it.remove();
                 }
             }
@@ -1480,6 +1497,8 @@ public class Funcionalidades implements Serializable {
     }
 
     public void borrarEntrada(int i, DefaultTableModel d, JTable j) {
+        Entrada aux = Entradas.get(i);
+        nexoBorrarProyeccion(aux.getId_entrada());
         this.Entradas.remove(i);
         cargarModeloEntradas(d, j);
     }
@@ -1560,6 +1579,32 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO OPERACIONES CON PROYECCIONES
     //
+    public void nexoBorrarProyeccion(String id) {
+        for (Iterator<Proyeccion> it = Proyecciones.iterator(); it.hasNext();) {
+            Proyeccion aux = it.next();
+            if (aux.getId_entrada().equals(id) | aux.getId_pelicula().equals(id)
+                    | aux.getId_sala().equals(id)) {
+                it.remove();
+            }
+        }
+    }
+
+    public void nexoCrearProyeccion_Entrada(String idsala, String identrada,
+            String titulo_pelicula, Date fecha_proyeccion, DefaultTableModel d,
+            JTable j) {
+        Proyeccion pro = new Proyeccion(idsala, identrada, null, fecha_proyeccion);
+        for (int i = 0; i < Productoras.size(); i++) {
+            for (Iterator<Pelicula> it = Productoras.get(i).Peliculas.iterator(); it.hasNext();) {
+                Pelicula aux = it.next();
+                if (aux.getNombre().equals(titulo_pelicula)) {
+                    pro = new Proyeccion(idsala, identrada, aux.getId_pelicula(), fecha_proyeccion);
+                }
+            }
+
+        }
+        insertarProyeccion(pro, d, j);
+    }
+
     public boolean insertarProyeccion(Proyeccion pro, DefaultTableModel d, JTable j) {
         if (!this.Proyecciones.contains(pro)) {
             this.Proyecciones.add(pro);
