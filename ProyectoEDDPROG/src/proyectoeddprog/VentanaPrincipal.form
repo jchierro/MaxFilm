@@ -9,11 +9,17 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyectoeddprog/imagenes/house.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Inicio"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem54">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mostrar Inicio"/>
               </Properties>
               <Events>
@@ -24,6 +30,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/load.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cargar Datos"/>
               </Properties>
               <Events>
@@ -32,6 +41,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/save.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Guardar Datos"/>
               </Properties>
               <Events>
@@ -42,6 +54,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/cross.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cerrar"/>
               </Properties>
               <Events>
@@ -52,11 +67,17 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyectoeddprog/imagenes/cinema2.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Cines"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mostrar Cines"/>
               </Properties>
               <Events>
@@ -67,6 +88,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="A&#xf1;adir Cine"/>
               </Properties>
               <Events>
@@ -75,6 +99,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Modificar Cine"/>
               </Properties>
               <Events>
@@ -83,29 +110,30 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Borrar Cine"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem7ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem8">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Cine"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem8ActionPerformed"/>
-              </Events>
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu3">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyectoeddprog/imagenes/room.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Salas"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mostrar Salas"/>
               </Properties>
               <Events>
@@ -116,6 +144,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem10">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="A&#xf1;adir Sala"/>
               </Properties>
               <Events>
@@ -124,6 +155,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem11">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Modificar Sala"/>
               </Properties>
               <Events>
@@ -132,29 +166,30 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem12">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Borrar Sala"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem12ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem13">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Cine"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem13ActionPerformed"/>
-              </Events>
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu4">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyectoeddprog/imagenes/furniture.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Mobiliarios"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem14">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mostrar Mobiliarios"/>
               </Properties>
               <Events>
@@ -165,6 +200,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem15">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="A&#xf1;adir Mobiliario"/>
               </Properties>
               <Events>
@@ -173,6 +211,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem16">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Modificar Mobiliario"/>
               </Properties>
               <Events>
@@ -181,29 +222,30 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem17">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Borrar Mobiliario"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem17ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem18">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Cine"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem18ActionPerformed"/>
-              </Events>
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu5">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyectoeddprog/imagenes/workers.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Empleados"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem19">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mostrar Empleados"/>
               </Properties>
               <Events>
@@ -214,6 +256,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem20">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="A&#xf1;adir Empleado"/>
               </Properties>
               <Events>
@@ -222,6 +267,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem21">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Modificar Empleado"/>
               </Properties>
               <Events>
@@ -230,29 +278,30 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem22">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Borrar Empleado"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem22ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem23">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Cine"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem23ActionPerformed"/>
-              </Events>
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu6">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyectoeddprog/imagenes/vip.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="VIP&apos;s"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem24">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mostrar VIP&apos;s"/>
               </Properties>
               <Events>
@@ -263,6 +312,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem25">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="A&#xf1;adir VIP"/>
               </Properties>
               <Events>
@@ -271,6 +323,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem26">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Modificar VIP"/>
               </Properties>
               <Events>
@@ -279,29 +334,30 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem27">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Borrar VIP"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem27ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem28">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Cine"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem28ActionPerformed"/>
-              </Events>
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu7">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyectoeddprog/imagenes/ticket2.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Entradas"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem29">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mostrar Entradas"/>
               </Properties>
               <Events>
@@ -312,6 +368,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem30">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="A&#xf1;adir Entrada"/>
               </Properties>
               <Events>
@@ -320,6 +379,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem31">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Modificar Entrada"/>
               </Properties>
               <Events>
@@ -328,29 +390,30 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem32">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Borrar Entrada"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem32ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem33">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Cine"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem33ActionPerformed"/>
-              </Events>
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu8">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyectoeddprog/imagenes/projector.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Proyecciones"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem34">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mostrar Proyecciones"/>
               </Properties>
               <Events>
@@ -361,6 +424,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem35">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="A&#xf1;adir Proyecci&#xf3;n"/>
               </Properties>
               <Events>
@@ -369,6 +435,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem36">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Modificar Proyecci&#xf3;n"/>
               </Properties>
               <Events>
@@ -377,29 +446,30 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem37">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Borrar Proyecci&#xf3;n"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem37ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem38">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Cine"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem38ActionPerformed"/>
-              </Events>
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu9">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyectoeddprog/imagenes/movie.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Pel&#xed;culas"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem39">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mostrar Pel&#xed;culas"/>
               </Properties>
               <Events>
@@ -410,6 +480,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem40">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="A&#xf1;adir Pel&#xed;cula"/>
               </Properties>
               <Events>
@@ -418,6 +491,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem41">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Modificar Pel&#xed;cula"/>
               </Properties>
               <Events>
@@ -426,29 +502,30 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem42">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Borrar Pel&#xed;cula"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem42ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem43">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Cine"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem43ActionPerformed"/>
-              </Events>
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu10">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyectoeddprog/imagenes/production.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Productoras"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem44">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mostrar Productoras"/>
               </Properties>
               <Events>
@@ -459,6 +536,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem45">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="A&#xf1;adir Productora"/>
               </Properties>
               <Events>
@@ -467,6 +547,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem46">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Modificar Productora"/>
               </Properties>
               <Events>
@@ -475,24 +558,22 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem47">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Borrar Productora"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem47ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem48">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Cine"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem48ActionPerformed"/>
-              </Events>
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu11">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyectoeddprog/imagenes/help.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Ayuda"/>
           </Properties>
           <SubComponents>
@@ -603,11 +684,14 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="248" max="32767" attributes="0"/>
+                  <Component id="jLabel4" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel17" pref="222" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="223" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel33" min="-2" pref="207" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -616,7 +700,11 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel4" min="-2" pref="33" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jPanel1" max="32767" attributes="0"/>
+                          <Component id="jLabel17" max="32767" attributes="0"/>
+                          <Component id="jLabel33" alignment="1" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace pref="54" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -631,6 +719,14 @@
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="MAXFILM"/>
                 <Property name="verticalAlignment" type="int" value="3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel17">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/cinema.png"/>
+                </Property>
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="jPanel1">
@@ -1055,6 +1151,14 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JLabel" name="jLabel33">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/ticket.png"/>
+                </Property>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="PanelCines">
@@ -1067,7 +1171,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel3" alignment="0" pref="1010" max="32767" attributes="0"/>
+                  <Component id="jLabel3" alignment="0" pref="1016" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Component id="jSplitPane1" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -1170,7 +1274,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="89" max="32767" attributes="0"/>
+                                  <EmptySpace pref="92" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -1180,7 +1284,7 @@
                                       <Component id="CCNombre" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                       <Component id="CCFax" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="106" max="32767" attributes="0"/>
+                                  <EmptySpace pref="109" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
@@ -1306,6 +1410,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton1">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="A&#xf1;adir Cine"/>
                           </Properties>
                           <Events>
@@ -1341,7 +1448,7 @@
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <EmptySpace pref="89" max="32767" attributes="0"/>
+                                          <EmptySpace pref="92" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -1351,7 +1458,7 @@
                                               <Component id="CCNombre1" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                               <Component id="CCFax1" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="106" max="32767" attributes="0"/>
+                                          <EmptySpace pref="109" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
@@ -1477,6 +1584,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton3">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Modificar Cine"/>
                           </Properties>
                           <Events>
@@ -1505,7 +1615,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel9" pref="857" max="32767" attributes="0"/>
+                                  <Component id="jLabel9" pref="863" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -1530,6 +1640,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton2">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Borrar Cine"/>
                           </Properties>
                           <Events>
@@ -1560,7 +1673,11 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel18" alignment="0" pref="1010" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabel18" pref="484" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel45" min="-2" pref="514" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Component id="jSplitPane3" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -1569,7 +1686,10 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel18" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel18" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="jLabel45" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace min="0" pref="486" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -1587,9 +1707,19 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Expansiva" size="24" style="0"/>
                 </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Salas"/>
-                <Property name="verticalAlignment" type="int" value="3"/>
+                <Property name="horizontalAlignment" type="int" value="4"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectoeddprog/imagenes/path160.png"/>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[173, 15]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[173, 10]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[173, 15]"/>
+                </Property>
               </Properties>
             </Component>
             <Container class="javax.swing.JSplitPane" name="jSplitPane3">
@@ -1662,11 +1792,11 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="CSId" min="-2" pref="145" max="-2" attributes="0"/>
-                                          <EmptySpace pref="72" max="32767" attributes="0"/>
+                                          <EmptySpace pref="75" max="32767" attributes="0"/>
                                           <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                           <Component id="CSNombre" min="-2" pref="145" max="-2" attributes="0"/>
-                                          <EmptySpace pref="88" max="32767" attributes="0"/>
+                                          <EmptySpace pref="91" max="32767" attributes="0"/>
                                           <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="CSTipo" min="-2" pref="145" max="-2" attributes="0"/>
@@ -1765,6 +1895,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton5">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="A&#xf1;adir Sala"/>
                           </Properties>
                           <Events>
@@ -1838,7 +1971,7 @@
                                                           <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                                           <Component id="CSNum1" min="-2" pref="145" max="-2" attributes="0"/>
-                                                          <EmptySpace pref="219" max="32767" attributes="0"/>
+                                                          <EmptySpace pref="225" max="32767" attributes="0"/>
                                                           <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                                           <Component id="CSCod1" min="-2" pref="141" max="-2" attributes="0"/>
@@ -1960,6 +2093,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton6">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Modificar Sala"/>
                           </Properties>
                           <Events>
@@ -1982,7 +2118,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel32" pref="859" max="32767" attributes="0"/>
+                                  <Component id="jLabel32" pref="865" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -2007,6 +2143,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton7">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Borrar Sala"/>
                           </Properties>
                           <Events>
@@ -2025,6 +2164,25 @@
                 </Container>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JLabel" name="jLabel45">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Expansiva" size="24" style="0"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="2"/>
+                <Property name="text" type="java.lang.String" value="Salas"/>
+                <Property name="verticalAlignment" type="int" value="3"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[173, 15]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[173, 10]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[173, 15]"/>
+                </Property>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="PanelVIP">
@@ -2037,7 +2195,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel25" alignment="0" pref="1010" max="32767" attributes="0"/>
+                  <Component id="jLabel25" alignment="0" pref="1016" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Component id="jSplitPane4" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -2154,7 +2312,7 @@
                                               <Component id="jLabel37" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel47" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="35" max="32767" attributes="0"/>
+                                          <EmptySpace pref="38" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                                                   <Component id="CVcod_cine" max="32767" attributes="0"/>
@@ -2162,7 +2320,7 @@
                                               </Group>
                                               <Component id="CVNombre" alignment="1" min="-2" pref="145" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="78" max="32767" attributes="0"/>
+                                          <EmptySpace pref="81" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
@@ -2261,6 +2419,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton9">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="A&#xf1;adir VIP"/>
                           </Properties>
                           <Events>
@@ -2321,7 +2482,7 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="367" max="-2" attributes="0"/>
                                   <Component id="jButton10" min="-2" pref="141" max="-2" attributes="0"/>
-                                  <EmptySpace pref="379" max="32767" attributes="0"/>
+                                  <EmptySpace pref="385" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
@@ -2349,7 +2510,7 @@
                                           <Component id="jLabel43" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel49" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="35" max="32767" attributes="0"/>
+                                      <EmptySpace pref="38" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="CVcod_cine1" alignment="0" max="32767" attributes="0"/>
@@ -2357,7 +2518,7 @@
                                           </Group>
                                           <Component id="CVNombre1" alignment="1" min="-2" pref="145" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="78" max="32767" attributes="0"/>
+                                      <EmptySpace pref="81" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel48" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -2425,6 +2586,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton10">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Modificar VIP"/>
                           </Properties>
                           <Events>
@@ -2528,7 +2692,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel44" pref="863" max="32767" attributes="0"/>
+                                  <Component id="jLabel44" pref="869" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -2553,6 +2717,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton11">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Borrar VIP"/>
                           </Properties>
                           <Events>
@@ -2583,7 +2750,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel50" alignment="0" pref="1010" max="32767" attributes="0"/>
+                  <Component id="jLabel50" alignment="0" pref="1016" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Component id="jSplitPane5" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -2708,7 +2875,7 @@
                                               </Group>
                                               <Component id="CENombre" alignment="1" min="-2" pref="145" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="76" max="32767" attributes="0"/>
+                                          <EmptySpace pref="81" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel56" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel53" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -2807,6 +2974,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton13">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="A&#xf1;adir Empleado"/>
                           </Properties>
                           <Events>
@@ -2868,7 +3038,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="367" max="-2" attributes="0"/>
                                   <Component id="jButton14" min="-2" pref="141" max="-2" attributes="0"/>
-                                  <EmptySpace pref="338" max="32767" attributes="0"/>
+                                  <EmptySpace pref="344" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
@@ -2904,7 +3074,7 @@
                                           </Group>
                                           <Component id="CENombre1" alignment="1" min="-2" pref="145" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="76" max="32767" attributes="0"/>
+                                      <EmptySpace pref="81" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel64" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel61" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -2972,6 +3142,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton14">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Modificar Empleado"/>
                           </Properties>
                           <Events>
@@ -3076,7 +3249,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel66" pref="822" max="32767" attributes="0"/>
+                                  <Component id="jLabel66" pref="828" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -3101,6 +3274,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton15">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Borrar Empleado"/>
                           </Properties>
                           <Events>
@@ -3131,7 +3307,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel68" alignment="0" pref="1010" max="32767" attributes="0"/>
+                  <Component id="jLabel68" alignment="0" pref="1016" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Component id="jSplitPane6" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -3252,7 +3428,7 @@
                                               <Component id="CMEstado" min="-2" pref="145" max="-2" attributes="0"/>
                                               <Component id="CMNombre" min="-2" pref="145" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="0" pref="42" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
                                                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
@@ -3342,6 +3518,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton17">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="A&#xf1;adir Mobiliario"/>
                           </Properties>
                           <Events>
@@ -3403,7 +3582,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel76" pref="823" max="32767" attributes="0"/>
+                                          <Component id="jLabel76" pref="829" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="367" max="-2" attributes="0"/>
@@ -3438,7 +3617,7 @@
                                           <Component id="CMEstado1" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                           <Component id="CMNombre1" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="42" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
@@ -3501,6 +3680,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton18">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Modificar Mobiliario"/>
                           </Properties>
                           <Events>
@@ -3599,7 +3781,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel84" pref="823" max="32767" attributes="0"/>
+                                  <Component id="jLabel84" pref="829" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -3624,6 +3806,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton19">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Borrar Mobiliario"/>
                           </Properties>
                           <Events>
@@ -3654,7 +3839,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel74" alignment="0" pref="1010" max="32767" attributes="0"/>
+                  <Component id="jLabel74" alignment="0" pref="1016" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Component id="jSplitPane7" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -3851,6 +4036,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton21">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="A&#xf1;adir Productora"/>
                           </Properties>
                           <Events>
@@ -3913,7 +4101,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel91" pref="813" max="32767" attributes="0"/>
+                                          <Component id="jLabel91" pref="819" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="367" max="-2" attributes="0"/>
@@ -4007,6 +4195,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton22">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Modificar Productora"/>
                           </Properties>
                           <Events>
@@ -4100,7 +4291,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel98" pref="813" max="32767" attributes="0"/>
+                                  <Component id="jLabel98" pref="819" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -4125,6 +4316,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton23">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Borrar Productora"/>
                           </Properties>
                           <Events>
@@ -4155,7 +4349,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel92" alignment="0" pref="1010" max="32767" attributes="0"/>
+                  <Component id="jLabel92" alignment="0" pref="1016" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Component id="jSplitPane8" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -4265,7 +4459,7 @@
                                               <Component id="CPeId" min="-2" pref="145" max="-2" attributes="0"/>
                                               <Component id="CPeGenero" min="-2" pref="145" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="56" max="32767" attributes="0"/>
+                                          <EmptySpace pref="58" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="jLabel117" min="-2" max="-2" attributes="0"/>
@@ -4284,7 +4478,7 @@
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <EmptySpace pref="55" max="32767" attributes="0"/>
+                                          <EmptySpace pref="57" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel108" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel95" min="-2" max="-2" attributes="0"/>
@@ -4371,6 +4565,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton25">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="A&#xf1;adir Pel&#xed;cula"/>
                           </Properties>
                           <Events>
@@ -4489,7 +4686,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel96" pref="836" max="32767" attributes="0"/>
+                                          <Component id="jLabel96" pref="842" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="367" max="-2" attributes="0"/>
@@ -4513,7 +4710,7 @@
                                           <Component id="CPeId1" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                           <Component id="CPeGenero1" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="56" max="32767" attributes="0"/>
+                                      <EmptySpace pref="58" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <Component id="jLabel126" min="-2" max="-2" attributes="0"/>
@@ -4532,7 +4729,7 @@
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="55" max="32767" attributes="0"/>
+                                      <EmptySpace pref="57" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel124" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel121" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -4602,6 +4799,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton26">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Modificar Pel&#xed;cula"/>
                           </Properties>
                           <Events>
@@ -4750,7 +4950,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel114" pref="836" max="32767" attributes="0"/>
+                                  <Component id="jLabel114" pref="842" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -4775,6 +4975,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton27">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Borrar Pel&#xed;cula"/>
                           </Properties>
                           <Events>
@@ -4805,7 +5008,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel97" alignment="0" pref="1010" max="32767" attributes="0"/>
+                  <Component id="jLabel97" alignment="0" pref="1016" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Component id="jSplitPane9" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -4913,7 +5116,7 @@
                                               <Component id="CEnId" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                               <Component id="CEnCodsala" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="55" max="32767" attributes="0"/>
+                                          <EmptySpace pref="57" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel110" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel131" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -4923,7 +5126,7 @@
                                               <Component id="CEnCodCine" max="32767" attributes="0"/>
                                               <Component id="CEnPrecio" pref="145" max="32767" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="45" max="32767" attributes="0"/>
+                                          <EmptySpace pref="47" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel128" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel144" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -5000,6 +5203,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton29">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="A&#xf1;adir Entrada"/>
                           </Properties>
                           <Events>
@@ -5072,7 +5278,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel132" pref="837" max="32767" attributes="0"/>
+                                          <Component id="jLabel132" pref="843" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="367" max="-2" attributes="0"/>
@@ -5094,7 +5300,7 @@
                                           <Component id="CEnId1" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                           <Component id="CEnCodsala1" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="55" max="32767" attributes="0"/>
+                                      <EmptySpace pref="57" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel112" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel146" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -5104,7 +5310,7 @@
                                           <Component id="CEnCodCine1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="CEnPrecio1" alignment="0" pref="145" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                                      <EmptySpace pref="47" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel130" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel147" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -5163,6 +5369,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton30">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Modificar Entrada"/>
                           </Properties>
                           <Events>
@@ -5264,7 +5473,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel142" pref="837" max="32767" attributes="0"/>
+                                  <Component id="jLabel142" pref="843" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -5289,6 +5498,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton31">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Borrar Entrada"/>
                           </Properties>
                           <Events>
@@ -5319,7 +5531,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel113" alignment="0" pref="1010" max="32767" attributes="0"/>
+                  <Component id="jLabel113" alignment="0" pref="1016" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Component id="jSplitPane10" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -5434,7 +5646,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="53" max="32767" attributes="0"/>
+                                  <EmptySpace pref="59" max="32767" attributes="0"/>
                                   <Component id="jLabel155" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                   <Component id="CProidentrada" min="-2" pref="145" max="-2" attributes="0"/>
@@ -5475,6 +5687,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton33">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/add.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="A&#xf1;adir Proyecci&#xf3;n"/>
                           </Properties>
                           <Events>
@@ -5542,7 +5757,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel138" pref="813" max="32767" attributes="0"/>
+                                          <Component id="jLabel138" pref="819" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="367" max="-2" attributes="0"/>
@@ -5572,7 +5787,7 @@
                                               <Component id="CProfecha1" min="-2" pref="145" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="53" max="32767" attributes="0"/>
+                                      <EmptySpace pref="59" max="32767" attributes="0"/>
                                       <Component id="jLabel157" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                       <Component id="CProidentrada1" min="-2" pref="145" max="-2" attributes="0"/>
@@ -5627,6 +5842,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton34">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/update.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Modificar Proyecci&#xf3;n"/>
                           </Properties>
                           <Events>
@@ -5692,7 +5910,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel152" pref="813" max="32767" attributes="0"/>
+                                  <Component id="jLabel152" pref="819" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -5717,6 +5935,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton35">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/proyectoeddprog/imagenes/remove.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Borrar Proyecci&#xf3;n"/>
                           </Properties>
                           <Events>

@@ -72,6 +72,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Paneles = new javax.swing.JPanel();
         PanelInicial = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel133 = new javax.swing.JLabel();
         jLabel134 = new javax.swing.JLabel();
@@ -105,6 +106,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         a7 = new javax.swing.JLabel();
         webMemoryBar1 = new com.alee.extended.statusbar.WebMemoryBar();
         jLabel180 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
         PanelCines = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jSplitPane1 = new javax.swing.JSplitPane();
@@ -177,6 +179,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel12 = new javax.swing.JPanel();
         jButton7 = new javax.swing.JButton();
         jLabel32 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
         PanelVIP = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jSplitPane4 = new javax.swing.JSplitPane();
@@ -469,63 +472,54 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
-        jMenuItem13 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem14 = new javax.swing.JMenuItem();
         jSeparator4 = new javax.swing.JPopupMenu.Separator();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem16 = new javax.swing.JMenuItem();
         jMenuItem17 = new javax.swing.JMenuItem();
-        jMenuItem18 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem19 = new javax.swing.JMenuItem();
         jSeparator5 = new javax.swing.JPopupMenu.Separator();
         jMenuItem20 = new javax.swing.JMenuItem();
         jMenuItem21 = new javax.swing.JMenuItem();
         jMenuItem22 = new javax.swing.JMenuItem();
-        jMenuItem23 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem24 = new javax.swing.JMenuItem();
         jSeparator6 = new javax.swing.JPopupMenu.Separator();
         jMenuItem25 = new javax.swing.JMenuItem();
         jMenuItem26 = new javax.swing.JMenuItem();
         jMenuItem27 = new javax.swing.JMenuItem();
-        jMenuItem28 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem29 = new javax.swing.JMenuItem();
         jSeparator7 = new javax.swing.JPopupMenu.Separator();
         jMenuItem30 = new javax.swing.JMenuItem();
         jMenuItem31 = new javax.swing.JMenuItem();
         jMenuItem32 = new javax.swing.JMenuItem();
-        jMenuItem33 = new javax.swing.JMenuItem();
         jMenu8 = new javax.swing.JMenu();
         jMenuItem34 = new javax.swing.JMenuItem();
         jSeparator8 = new javax.swing.JPopupMenu.Separator();
         jMenuItem35 = new javax.swing.JMenuItem();
         jMenuItem36 = new javax.swing.JMenuItem();
         jMenuItem37 = new javax.swing.JMenuItem();
-        jMenuItem38 = new javax.swing.JMenuItem();
         jMenu9 = new javax.swing.JMenu();
         jMenuItem39 = new javax.swing.JMenuItem();
         jSeparator9 = new javax.swing.JPopupMenu.Separator();
         jMenuItem40 = new javax.swing.JMenuItem();
         jMenuItem41 = new javax.swing.JMenuItem();
         jMenuItem42 = new javax.swing.JMenuItem();
-        jMenuItem43 = new javax.swing.JMenuItem();
         jMenu10 = new javax.swing.JMenu();
         jMenuItem44 = new javax.swing.JMenuItem();
         jSeparator10 = new javax.swing.JPopupMenu.Separator();
         jMenuItem45 = new javax.swing.JMenuItem();
         jMenuItem46 = new javax.swing.JMenuItem();
         jMenuItem47 = new javax.swing.JMenuItem();
-        jMenuItem48 = new javax.swing.JMenuItem();
         jMenu11 = new javax.swing.JMenu();
         jMenuItem49 = new javax.swing.JMenuItem();
         jSeparator11 = new javax.swing.JPopupMenu.Separator();
@@ -551,6 +545,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("MAXFILM");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/cinema.png"))); // NOI18N
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Estadísticas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -804,22 +801,31 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/ticket.png"))); // NOI18N
+
         javax.swing.GroupLayout PanelInicialLayout = new javax.swing.GroupLayout(PanelInicial);
         PanelInicial.setLayout(PanelInicialLayout);
         PanelInicialLayout.setHorizontalGroup(
             PanelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelInicialLayout.createSequentialGroup()
-                .addContainerGap(248, Short.MAX_VALUE)
+            .addGroup(PanelInicialLayout.createSequentialGroup()
+                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(223, 223, 223))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PanelInicialLayout.setVerticalGroup(
             PanelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelInicialLayout.createSequentialGroup()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PanelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
 
@@ -880,6 +886,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel8.setText("E_mail:");
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jButton1.setText("Añadir Cine");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -901,7 +908,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CCId, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(CCTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jLabel7))
@@ -909,7 +916,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(CCNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CCFax, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel8)
@@ -986,6 +993,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel15.setText("E_mail:");
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jButton3.setText("Modificar Cine");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1012,7 +1020,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(CCId1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(CCTelefono1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
                             .addComponent(jLabel14))
@@ -1020,7 +1028,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CCNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(CCFax1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(jLabel15)
@@ -1067,6 +1075,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Modificar Cine", jPanel10);
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jButton2.setText("Borrar Cine");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1083,7 +1092,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 857, Short.MAX_VALUE)
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 863, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(354, 354, 354)
@@ -1108,7 +1117,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelCines.setLayout(PanelCinesLayout);
         PanelCinesLayout.setHorizontalGroup(
             PanelCinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
             .addGroup(PanelCinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jSplitPane1))
         );
@@ -1126,9 +1135,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Paneles.add(PanelCines, "CardCines");
 
         jLabel18.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Salas");
-        jLabel18.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/path160.png"))); // NOI18N
+        jLabel18.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel18.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel18.setPreferredSize(new java.awt.Dimension(173, 15));
 
         jSplitPane3.setDividerLocation(250);
         jSplitPane3.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
@@ -1172,6 +1183,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel23.setText("Cod_cine:");
 
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jButton5.setText("Añadir Sala");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1198,11 +1210,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(CSId, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                         .addComponent(jLabel20)
                         .addGap(26, 26, 26)
                         .addComponent(CSNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                         .addComponent(jLabel21)
                         .addGap(18, 18, 18)
                         .addComponent(CSTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1273,6 +1285,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         CSCod1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jButton6.setText("Modificar Sala");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1313,7 +1326,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                         .addComponent(jLabel35)
                                         .addGap(18, 18, 18)
                                         .addComponent(CSNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 219, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 225, Short.MAX_VALUE)
                                         .addComponent(jLabel36)
                                         .addGap(18, 18, 18)
                                         .addComponent(CSCod1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1348,6 +1361,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane3.addTab("Modificar Sala", jPanel11);
 
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jButton7.setText("Borrar Sala");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1364,7 +1378,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, 859, Short.MAX_VALUE)
+                .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, 865, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(354, 354, 354)
@@ -1385,18 +1399,31 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jSplitPane3.setRightComponent(jTabbedPane3);
 
+        jLabel45.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel45.setText("Salas");
+        jLabel45.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel45.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel45.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel45.setPreferredSize(new java.awt.Dimension(173, 15));
+
         javax.swing.GroupLayout PanelSalasLayout = new javax.swing.GroupLayout(PanelSalas);
         PanelSalas.setLayout(PanelSalasLayout);
         PanelSalasLayout.setHorizontalGroup(
             PanelSalasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
+            .addGroup(PanelSalasLayout.createSequentialGroup()
+                .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(PanelSalasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jSplitPane3))
         );
         PanelSalasLayout.setVerticalGroup(
             PanelSalasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelSalasLayout.createSequentialGroup()
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PanelSalasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 486, Short.MAX_VALUE))
             .addGroup(PanelSalasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelSalasLayout.createSequentialGroup()
@@ -1452,6 +1479,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel37.setText("Teléfono:");
 
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jButton9.setText("Añadir VIP");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1497,13 +1525,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .addComponent(jLabel28)
                             .addComponent(jLabel37)
                             .addComponent(jLabel47))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(CVcod_cine, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(CVTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
                             .addComponent(CVNombre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel46)
                             .addComponent(jLabel29))
@@ -1548,6 +1576,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel38.setText("Seleccione con el cursor de su ratón, el vip que desee modificar y pulse el botón \"Modificar VIP\".");
 
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jButton10.setText("Modificar VIP");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1596,7 +1625,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addGap(367, 367, 367)
                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(379, Short.MAX_VALUE))
+                .addContainerGap(385, Short.MAX_VALUE))
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1618,13 +1647,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addComponent(jLabel40)
                         .addComponent(jLabel43)
                         .addComponent(jLabel49))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                     .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(CVcod_cine1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(CVTelefono1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
                         .addComponent(CVNombre1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                     .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel48)
                         .addComponent(jLabel41))
@@ -1671,6 +1700,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane4.addTab("Modificar VIP", jPanel14);
 
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jButton11.setText("Borrar VIP");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1687,7 +1717,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, 863, Short.MAX_VALUE)
+                .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGap(354, 354, 354)
@@ -1712,7 +1742,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelVIP.setLayout(PanelVIPLayout);
         PanelVIPLayout.setHorizontalGroup(
             PanelVIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
+            .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
             .addGroup(PanelVIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jSplitPane4))
         );
@@ -1775,6 +1805,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel55.setText("Puesto:");
 
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jButton13.setText("Añadir Empleado");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1827,7 +1858,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                 .addComponent(CEcod_cine, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(CEPuesto, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
                             .addComponent(CENombre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel56)
                             .addComponent(jLabel53))
@@ -1872,6 +1903,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel58.setText("Seleccione con el cursor de su ratón, el empleado que desee modificar y pulse el botón \"Modificar Empleado\".");
 
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jButton14.setText("Modificar Empleado");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1921,7 +1953,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addGap(367, 367, 367)
                 .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(338, Short.MAX_VALUE))
+                .addContainerGap(344, Short.MAX_VALUE))
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1949,7 +1981,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .addComponent(CEcod_cine1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(CEPuesto1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
                         .addComponent(CENombre1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                     .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel64)
                         .addComponent(jLabel61))
@@ -1996,6 +2028,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane5.addTab("Modificar Empleado", jPanel17);
 
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jButton15.setText("Borrar Empleado");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2012,7 +2045,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel66, javax.swing.GroupLayout.DEFAULT_SIZE, 822, Short.MAX_VALUE)
+                .addComponent(jLabel66, javax.swing.GroupLayout.DEFAULT_SIZE, 828, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addGap(354, 354, 354)
@@ -2037,7 +2070,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEmpleados.setLayout(PanelEmpleadosLayout);
         PanelEmpleadosLayout.setHorizontalGroup(
             PanelEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
+            .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
             .addGroup(PanelEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jSplitPane5))
         );
@@ -2099,6 +2132,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel73.setText("Estado:");
 
+        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jButton17.setText("Añadir Mobiliario");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2145,7 +2179,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CMEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(CMNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 42, Short.MAX_VALUE)
+                        .addGap(0, 48, Short.MAX_VALUE)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(16, 16, 16)
@@ -2187,6 +2221,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel76.setText("Seleccione con el cursor de su ratón, el mobiliario que desee modificar y pulse el botón \"Modificar Mobiliario\".");
 
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jButton18.setText("Modificar Mobiliario");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2232,7 +2267,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel76, javax.swing.GroupLayout.DEFAULT_SIZE, 823, Short.MAX_VALUE))
+                        .addComponent(jLabel76, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE))
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addGap(367, 367, 367)
                         .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2258,7 +2293,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(CMEstado1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(CMNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 42, Short.MAX_VALUE)
+                    .addGap(0, 48, Short.MAX_VALUE)
                     .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel20Layout.createSequentialGroup()
                             .addGap(16, 16, 16)
@@ -2302,6 +2337,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane6.addTab("Modificar Mobiliario", jPanel20);
 
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jButton19.setText("Borrar Mobiliario");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2318,7 +2354,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel84, javax.swing.GroupLayout.DEFAULT_SIZE, 823, Short.MAX_VALUE)
+                .addComponent(jLabel84, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addGap(354, 354, 354)
@@ -2343,7 +2379,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelMobiliarios.setLayout(PanelMobiliariosLayout);
         PanelMobiliariosLayout.setHorizontalGroup(
             PanelMobiliariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
+            .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
             .addGroup(PanelMobiliariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jSplitPane6))
         );
@@ -2401,6 +2437,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel87.setText("Teléfono:");
 
+        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jButton21.setText("Añadir Productora");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2495,6 +2532,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel91.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel91.setText("Seleccione con el cursor de su ratón, la productora que desee modificar y pulse el botón \"Modificar Productora\".");
 
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jButton22.setText("Modificar Productora");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2555,7 +2593,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel91, javax.swing.GroupLayout.DEFAULT_SIZE, 813, Short.MAX_VALUE))
+                        .addComponent(jLabel91, javax.swing.GroupLayout.DEFAULT_SIZE, 819, Short.MAX_VALUE))
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addGap(367, 367, 367)
                         .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2622,6 +2660,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane7.addTab("Modificar Productora", jPanel23);
 
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jButton23.setText("Borrar Productora");
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2638,7 +2677,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel24Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel98, javax.swing.GroupLayout.DEFAULT_SIZE, 813, Short.MAX_VALUE)
+                .addComponent(jLabel98, javax.swing.GroupLayout.DEFAULT_SIZE, 819, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel24Layout.createSequentialGroup()
                 .addGap(354, 354, 354)
@@ -2663,7 +2702,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelProductoras.setLayout(PanelProductorasLayout);
         PanelProductorasLayout.setHorizontalGroup(
             PanelProductorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel74, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
+            .addComponent(jLabel74, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
             .addGroup(PanelProductorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jSplitPane7))
         );
@@ -2721,6 +2760,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel95.setText("Director:");
 
+        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jButton25.setText("Añadir Película");
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2785,7 +2825,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .addComponent(CPeAño, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(CPeId, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(CPeGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                         .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel26Layout.createSequentialGroup()
                                 .addComponent(jLabel117)
@@ -2799,7 +2839,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                 .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(CPeNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(CPeEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                         .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel108)
                             .addComponent(jLabel95)
@@ -2848,6 +2888,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel96.setText("Seleccione con el cursor de su ratón, la película que desee modificar y pulse el botón \"Modificar Película\".");
 
+        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jButton26.setText("Modificar Película");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2920,7 +2961,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel27Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel96, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE))
+                        .addComponent(jLabel96, javax.swing.GroupLayout.DEFAULT_SIZE, 842, Short.MAX_VALUE))
                     .addGroup(jPanel27Layout.createSequentialGroup()
                         .addGap(367, 367, 367)
                         .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2938,7 +2979,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addComponent(CPeAño1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(CPeId1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(CPeGenero1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                     .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
                             .addComponent(jLabel126)
@@ -2952,7 +2993,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(CPeNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(CPeEdad1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                     .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel124)
                         .addComponent(jLabel121)
@@ -3003,6 +3044,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane8.addTab("Modificar Película", jPanel27);
 
+        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jButton27.setText("Borrar Película");
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3019,7 +3061,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel28Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel114, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE)
+                .addComponent(jLabel114, javax.swing.GroupLayout.DEFAULT_SIZE, 842, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel28Layout.createSequentialGroup()
                 .addGap(354, 354, 354)
@@ -3044,7 +3086,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelPeliculas.setLayout(PanelPeliculasLayout);
         PanelPeliculasLayout.setHorizontalGroup(
             PanelPeliculasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel92, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
+            .addComponent(jLabel92, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
             .addGroup(PanelPeliculasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jSplitPane8))
         );
@@ -3102,6 +3144,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel110.setText("Precio:");
 
+        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jButton29.setText("Añadir Entrada");
         jButton29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3138,7 +3181,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CEnId, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(CEnCodsala, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                         .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel110)
                             .addComponent(jLabel131))
@@ -3146,7 +3189,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(CEnCodCine, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(CEnPrecio, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                         .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel128)
                             .addComponent(jLabel144))
@@ -3187,6 +3230,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel132.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel132.setText("Seleccione con el cursor de su ratón, la entrada que desee modificar y pulse el botón \"Modificar Entrada\".");
 
+        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jButton30.setText("Modificar Entrada");
         jButton30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3234,7 +3278,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel31Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel132, javax.swing.GroupLayout.DEFAULT_SIZE, 837, Short.MAX_VALUE))
+                        .addComponent(jLabel132, javax.swing.GroupLayout.DEFAULT_SIZE, 843, Short.MAX_VALUE))
                     .addGroup(jPanel31Layout.createSequentialGroup()
                         .addGap(367, 367, 367)
                         .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3250,7 +3294,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(CEnId1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(CEnCodsala1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                     .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel112)
                         .addComponent(jLabel146))
@@ -3258,7 +3302,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(CEnCodCine1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(CEnPrecio1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                     .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel130)
                         .addComponent(jLabel147))
@@ -3299,6 +3343,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane9.addTab("Modificar Entrada", jPanel31);
 
+        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jButton31.setText("Borrar Entrada");
         jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3315,7 +3360,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel32Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel142, javax.swing.GroupLayout.DEFAULT_SIZE, 837, Short.MAX_VALUE)
+                .addComponent(jLabel142, javax.swing.GroupLayout.DEFAULT_SIZE, 843, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel32Layout.createSequentialGroup()
                 .addGap(354, 354, 354)
@@ -3340,7 +3385,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEntradas.setLayout(PanelEntradasLayout);
         PanelEntradasLayout.setHorizontalGroup(
             PanelEntradasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel97, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
+            .addComponent(jLabel97, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
             .addGroup(PanelEntradasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jSplitPane9))
         );
@@ -3382,6 +3427,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane10.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
+        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jButton33.setText("Añadir Proyección");
         jButton33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3421,7 +3467,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addGap(18, 18, 18)
                             .addComponent(CProfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(jLabel155)
                 .addGap(28, 28, 28)
                 .addComponent(CProidentrada, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3455,6 +3501,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel138.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel138.setText("Seleccione con el cursor de su ratón, la proyección que desee modificar y pulse el botón \"Modificar Proyección\".");
 
+        jButton34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jButton34.setText("Modificar Proyección");
         jButton34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3478,7 +3525,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel35Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel138, javax.swing.GroupLayout.DEFAULT_SIZE, 813, Short.MAX_VALUE))
+                        .addComponent(jLabel138, javax.swing.GroupLayout.DEFAULT_SIZE, 819, Short.MAX_VALUE))
                     .addGroup(jPanel35Layout.createSequentialGroup()
                         .addGap(367, 367, 367)
                         .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3501,7 +3548,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .addComponent(jLabel158)
                             .addGap(18, 18, 18)
                             .addComponent(CProfecha1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                     .addComponent(jLabel157)
                     .addGap(28, 28, 28)
                     .addComponent(CProidentrada1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3537,6 +3584,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane10.addTab("Modificar Proyección", jPanel35);
 
+        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jButton35.setText("Borrar Proyección");
         jButton35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3553,7 +3601,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel36Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel152, javax.swing.GroupLayout.DEFAULT_SIZE, 813, Short.MAX_VALUE)
+                .addComponent(jLabel152, javax.swing.GroupLayout.DEFAULT_SIZE, 819, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel36Layout.createSequentialGroup()
                 .addGap(354, 354, 354)
@@ -3578,7 +3626,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelProyecciones.setLayout(PanelProyeccionesLayout);
         PanelProyeccionesLayout.setHorizontalGroup(
             PanelProyeccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel113, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
+            .addComponent(jLabel113, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
             .addGroup(PanelProyeccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jSplitPane10))
         );
@@ -3595,8 +3643,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         Paneles.add(PanelProyecciones, "CardProyecciones");
 
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/house.png"))); // NOI18N
         jMenu1.setText("Inicio");
 
+        jMenuItem54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/view.png"))); // NOI18N
         jMenuItem54.setText("Mostrar Inicio");
         jMenuItem54.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3606,6 +3656,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem54);
         jMenu1.add(jSeparator12);
 
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/load.png"))); // NOI18N
         jMenuItem2.setText("Cargar Datos");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3614,6 +3665,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem2);
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/save.png"))); // NOI18N
         jMenuItem3.setText("Guardar Datos");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3623,6 +3675,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem3);
         jMenu1.add(jSeparator3);
 
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/cross.png"))); // NOI18N
         jMenuItem4.setText("Cerrar");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3633,8 +3686,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/cinema2.png"))); // NOI18N
         jMenu2.setText("Cines");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/view.png"))); // NOI18N
         jMenuItem1.setText("Mostrar Cines");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3644,6 +3699,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu2.add(jMenuItem1);
         jMenu2.add(jSeparator1);
 
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jMenuItem5.setText("Añadir Cine");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3652,6 +3708,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem5);
 
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jMenuItem6.setText("Modificar Cine");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3660,6 +3717,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem6);
 
+        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jMenuItem7.setText("Borrar Cine");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3668,18 +3726,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem7);
 
-        jMenuItem8.setText("Añadir Cine");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem8);
-
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/room.png"))); // NOI18N
         jMenu3.setText("Salas");
 
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/view.png"))); // NOI18N
         jMenuItem9.setText("Mostrar Salas");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3689,6 +3741,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu3.add(jMenuItem9);
         jMenu3.add(jSeparator2);
 
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jMenuItem10.setText("Añadir Sala");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3697,6 +3750,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem10);
 
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jMenuItem11.setText("Modificar Sala");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3705,6 +3759,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem11);
 
+        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jMenuItem12.setText("Borrar Sala");
         jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3713,18 +3768,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem12);
 
-        jMenuItem13.setText("Añadir Cine");
-        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem13ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem13);
-
         jMenuBar1.add(jMenu3);
 
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/furniture.png"))); // NOI18N
         jMenu4.setText("Mobiliarios");
 
+        jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/view.png"))); // NOI18N
         jMenuItem14.setText("Mostrar Mobiliarios");
         jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3734,6 +3783,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu4.add(jMenuItem14);
         jMenu4.add(jSeparator4);
 
+        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jMenuItem15.setText("Añadir Mobiliario");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3742,6 +3792,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem15);
 
+        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jMenuItem16.setText("Modificar Mobiliario");
         jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3750,6 +3801,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem16);
 
+        jMenuItem17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jMenuItem17.setText("Borrar Mobiliario");
         jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3758,18 +3810,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem17);
 
-        jMenuItem18.setText("Añadir Cine");
-        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem18ActionPerformed(evt);
-            }
-        });
-        jMenu4.add(jMenuItem18);
-
         jMenuBar1.add(jMenu4);
 
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/workers.png"))); // NOI18N
         jMenu5.setText("Empleados");
 
+        jMenuItem19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/view.png"))); // NOI18N
         jMenuItem19.setText("Mostrar Empleados");
         jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3779,6 +3825,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu5.add(jMenuItem19);
         jMenu5.add(jSeparator5);
 
+        jMenuItem20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jMenuItem20.setText("Añadir Empleado");
         jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3787,6 +3834,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem20);
 
+        jMenuItem21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jMenuItem21.setText("Modificar Empleado");
         jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3795,6 +3843,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem21);
 
+        jMenuItem22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jMenuItem22.setText("Borrar Empleado");
         jMenuItem22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3803,18 +3852,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem22);
 
-        jMenuItem23.setText("Añadir Cine");
-        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem23ActionPerformed(evt);
-            }
-        });
-        jMenu5.add(jMenuItem23);
-
         jMenuBar1.add(jMenu5);
 
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/vip.png"))); // NOI18N
         jMenu6.setText("VIP's");
 
+        jMenuItem24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/view.png"))); // NOI18N
         jMenuItem24.setText("Mostrar VIP's");
         jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3824,6 +3867,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu6.add(jMenuItem24);
         jMenu6.add(jSeparator6);
 
+        jMenuItem25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jMenuItem25.setText("Añadir VIP");
         jMenuItem25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3832,6 +3876,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu6.add(jMenuItem25);
 
+        jMenuItem26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jMenuItem26.setText("Modificar VIP");
         jMenuItem26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3840,6 +3885,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu6.add(jMenuItem26);
 
+        jMenuItem27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jMenuItem27.setText("Borrar VIP");
         jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3848,18 +3894,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu6.add(jMenuItem27);
 
-        jMenuItem28.setText("Añadir Cine");
-        jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem28ActionPerformed(evt);
-            }
-        });
-        jMenu6.add(jMenuItem28);
-
         jMenuBar1.add(jMenu6);
 
+        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/ticket2.png"))); // NOI18N
         jMenu7.setText("Entradas");
 
+        jMenuItem29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/view.png"))); // NOI18N
         jMenuItem29.setText("Mostrar Entradas");
         jMenuItem29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3869,6 +3909,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu7.add(jMenuItem29);
         jMenu7.add(jSeparator7);
 
+        jMenuItem30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jMenuItem30.setText("Añadir Entrada");
         jMenuItem30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3877,6 +3918,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem30);
 
+        jMenuItem31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jMenuItem31.setText("Modificar Entrada");
         jMenuItem31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3885,6 +3927,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem31);
 
+        jMenuItem32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jMenuItem32.setText("Borrar Entrada");
         jMenuItem32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3893,18 +3936,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem32);
 
-        jMenuItem33.setText("Añadir Cine");
-        jMenuItem33.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem33ActionPerformed(evt);
-            }
-        });
-        jMenu7.add(jMenuItem33);
-
         jMenuBar1.add(jMenu7);
 
+        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/projector.png"))); // NOI18N
         jMenu8.setText("Proyecciones");
 
+        jMenuItem34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/view.png"))); // NOI18N
         jMenuItem34.setText("Mostrar Proyecciones");
         jMenuItem34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3914,6 +3951,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu8.add(jMenuItem34);
         jMenu8.add(jSeparator8);
 
+        jMenuItem35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jMenuItem35.setText("Añadir Proyección");
         jMenuItem35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3922,6 +3960,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu8.add(jMenuItem35);
 
+        jMenuItem36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jMenuItem36.setText("Modificar Proyección");
         jMenuItem36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3930,6 +3969,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu8.add(jMenuItem36);
 
+        jMenuItem37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jMenuItem37.setText("Borrar Proyección");
         jMenuItem37.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3938,18 +3978,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu8.add(jMenuItem37);
 
-        jMenuItem38.setText("Añadir Cine");
-        jMenuItem38.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem38ActionPerformed(evt);
-            }
-        });
-        jMenu8.add(jMenuItem38);
-
         jMenuBar1.add(jMenu8);
 
+        jMenu9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/movie.png"))); // NOI18N
         jMenu9.setText("Películas");
 
+        jMenuItem39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/view.png"))); // NOI18N
         jMenuItem39.setText("Mostrar Películas");
         jMenuItem39.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3959,6 +3993,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu9.add(jMenuItem39);
         jMenu9.add(jSeparator9);
 
+        jMenuItem40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jMenuItem40.setText("Añadir Película");
         jMenuItem40.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3967,6 +4002,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem40);
 
+        jMenuItem41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jMenuItem41.setText("Modificar Película");
         jMenuItem41.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3975,6 +4011,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem41);
 
+        jMenuItem42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jMenuItem42.setText("Borrar Película");
         jMenuItem42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3983,18 +4020,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem42);
 
-        jMenuItem43.setText("Añadir Cine");
-        jMenuItem43.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem43ActionPerformed(evt);
-            }
-        });
-        jMenu9.add(jMenuItem43);
-
         jMenuBar1.add(jMenu9);
 
+        jMenu10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/production.png"))); // NOI18N
         jMenu10.setText("Productoras");
 
+        jMenuItem44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/view.png"))); // NOI18N
         jMenuItem44.setText("Mostrar Productoras");
         jMenuItem44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4004,6 +4035,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu10.add(jMenuItem44);
         jMenu10.add(jSeparator10);
 
+        jMenuItem45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/add.png"))); // NOI18N
         jMenuItem45.setText("Añadir Productora");
         jMenuItem45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4012,6 +4044,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem45);
 
+        jMenuItem46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/update.png"))); // NOI18N
         jMenuItem46.setText("Modificar Productora");
         jMenuItem46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4020,6 +4053,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem46);
 
+        jMenuItem47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/remove.png"))); // NOI18N
         jMenuItem47.setText("Borrar Productora");
         jMenuItem47.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4028,16 +4062,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem47);
 
-        jMenuItem48.setText("Añadir Cine");
-        jMenuItem48.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem48ActionPerformed(evt);
-            }
-        });
-        jMenu10.add(jMenuItem48);
-
         jMenuBar1.add(jMenu10);
 
+        jMenu11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/help.png"))); // NOI18N
         jMenu11.setText("Ayuda");
 
         jMenuItem49.setText("Mostrar Cines");
@@ -4198,19 +4225,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardCines");
+        jTabbedPane1.setSelectedComponent(jPanel2);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardCines");
+        jTabbedPane1.setSelectedComponent(jPanel10);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardCines");
+        jTabbedPane1.setSelectedComponent(jPanel4);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
-
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     /**
      * ACCEDE AL PANEL SALAS
@@ -4225,19 +4257,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardSalas");
+        jTabbedPane3.setSelectedComponent(jPanel3);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardSalas");
+        jTabbedPane3.setSelectedComponent(jPanel11);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardSalas");
+        jTabbedPane3.setSelectedComponent(jPanel12);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
-
-    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     /**
      * ACCEDE AL PANEL MOBILIARIOS
@@ -4252,19 +4289,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardMobiliarios");
+        jTabbedPane6.setSelectedComponent(jPanel8);
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
     private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardMobiliarios");
+        jTabbedPane6.setSelectedComponent(jPanel20);
     }//GEN-LAST:event_jMenuItem16ActionPerformed
 
     private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardMobiliarios");
+        jTabbedPane6.setSelectedComponent(jPanel21);
     }//GEN-LAST:event_jMenuItem17ActionPerformed
-
-    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem18ActionPerformed
 
     /**
      * ACCEDE AL PANEL EMPLEADOS
@@ -4279,19 +4321,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardEmpleados");
+        jTabbedPane5.setSelectedComponent(jPanel7);
     }//GEN-LAST:event_jMenuItem20ActionPerformed
 
     private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardEmpleados");
+        jTabbedPane5.setSelectedComponent(jPanel17);
     }//GEN-LAST:event_jMenuItem21ActionPerformed
 
     private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardEmpleados");
+        jTabbedPane5.setSelectedComponent(jPanel18);
     }//GEN-LAST:event_jMenuItem22ActionPerformed
-
-    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem23ActionPerformed
 
     /**
      * ACCEDE AL PANEL VIP'S
@@ -4306,19 +4353,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem25ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardVIP");
+        jTabbedPane4.setSelectedComponent(jPanel6);
     }//GEN-LAST:event_jMenuItem25ActionPerformed
 
     private void jMenuItem26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem26ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardVIP");
+        jTabbedPane4.setSelectedComponent(jPanel14);
     }//GEN-LAST:event_jMenuItem26ActionPerformed
 
     private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardVIP");
+        jTabbedPane4.setSelectedComponent(jPanel15);
     }//GEN-LAST:event_jMenuItem27ActionPerformed
-
-    private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem28ActionPerformed
 
     /**
      * ACCEDE AL PANEL ENTRADAS
@@ -4333,19 +4385,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardEntradas");
+        jTabbedPane9.setSelectedComponent(jPanel30);
     }//GEN-LAST:event_jMenuItem30ActionPerformed
 
     private void jMenuItem31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem31ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardEntradas");
+        jTabbedPane9.setSelectedComponent(jPanel31);
     }//GEN-LAST:event_jMenuItem31ActionPerformed
 
     private void jMenuItem32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem32ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardEntradas");
+        jTabbedPane9.setSelectedComponent(jPanel32);
     }//GEN-LAST:event_jMenuItem32ActionPerformed
-
-    private void jMenuItem33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem33ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem33ActionPerformed
 
     /**
      * ACCEDDE AL PANEL PROYECCIONES
@@ -4360,19 +4417,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem35ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardProyecciones");
+        jTabbedPane10.setSelectedComponent(jPanel34);
     }//GEN-LAST:event_jMenuItem35ActionPerformed
 
     private void jMenuItem36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem36ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardProyecciones");
+        jTabbedPane10.setSelectedComponent(jPanel35);
     }//GEN-LAST:event_jMenuItem36ActionPerformed
 
     private void jMenuItem37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem37ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardProyecciones");
+        jTabbedPane10.setSelectedComponent(jPanel36);
     }//GEN-LAST:event_jMenuItem37ActionPerformed
-
-    private void jMenuItem38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem38ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem38ActionPerformed
 
     /**
      * ACCEDE AL PANEL PELÍCULAS
@@ -4387,19 +4449,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem40ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardPeliculas");
+        jTabbedPane8.setSelectedComponent(jPanel26);
     }//GEN-LAST:event_jMenuItem40ActionPerformed
 
     private void jMenuItem41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem41ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardPeliculas");
+        jTabbedPane8.setSelectedComponent(jPanel27);
     }//GEN-LAST:event_jMenuItem41ActionPerformed
 
     private void jMenuItem42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem42ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardPeliculas");
+        jTabbedPane8.setSelectedComponent(jPanel28);
     }//GEN-LAST:event_jMenuItem42ActionPerformed
-
-    private void jMenuItem43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem43ActionPerformed
 
     /**
      * ACCEDE AL PANEL PRODUCTORAS
@@ -4414,19 +4481,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem45ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardProductoras");
+        jTabbedPane7.setSelectedComponent(jPanel9);
     }//GEN-LAST:event_jMenuItem45ActionPerformed
 
     private void jMenuItem46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem46ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardProductoras");
+        jTabbedPane7.setSelectedComponent(jPanel23);
     }//GEN-LAST:event_jMenuItem46ActionPerformed
 
     private void jMenuItem47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem47ActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout) this.Paneles.getLayout();
+        c.show(this.Paneles, "CardProductoras");
+        jTabbedPane7.setSelectedComponent(jPanel24);
     }//GEN-LAST:event_jMenuItem47ActionPerformed
-
-    private void jMenuItem48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem48ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem48ActionPerformed
 
     private void jMenuItem49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem49ActionPerformed
         // TODO add your handling code here:
@@ -5722,6 +5794,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel166;
     private javax.swing.JLabel jLabel167;
     private javax.swing.JLabel jLabel168;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel180;
     private javax.swing.JLabel jLabel19;
@@ -5740,6 +5813,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
@@ -5752,6 +5826,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
@@ -5824,45 +5899,37 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
-    private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem20;
     private javax.swing.JMenuItem jMenuItem21;
     private javax.swing.JMenuItem jMenuItem22;
-    private javax.swing.JMenuItem jMenuItem23;
     private javax.swing.JMenuItem jMenuItem24;
     private javax.swing.JMenuItem jMenuItem25;
     private javax.swing.JMenuItem jMenuItem26;
     private javax.swing.JMenuItem jMenuItem27;
-    private javax.swing.JMenuItem jMenuItem28;
     private javax.swing.JMenuItem jMenuItem29;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem30;
     private javax.swing.JMenuItem jMenuItem31;
     private javax.swing.JMenuItem jMenuItem32;
-    private javax.swing.JMenuItem jMenuItem33;
     private javax.swing.JMenuItem jMenuItem34;
     private javax.swing.JMenuItem jMenuItem35;
     private javax.swing.JMenuItem jMenuItem36;
     private javax.swing.JMenuItem jMenuItem37;
-    private javax.swing.JMenuItem jMenuItem38;
     private javax.swing.JMenuItem jMenuItem39;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem40;
     private javax.swing.JMenuItem jMenuItem41;
     private javax.swing.JMenuItem jMenuItem42;
-    private javax.swing.JMenuItem jMenuItem43;
     private javax.swing.JMenuItem jMenuItem44;
     private javax.swing.JMenuItem jMenuItem45;
     private javax.swing.JMenuItem jMenuItem46;
     private javax.swing.JMenuItem jMenuItem47;
-    private javax.swing.JMenuItem jMenuItem48;
     private javax.swing.JMenuItem jMenuItem49;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem50;
@@ -5872,7 +5939,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem54;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
