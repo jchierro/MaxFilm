@@ -5,17 +5,14 @@
  */
 package proyectoeddprog;
 
-import com.alee.extended.painter.TitledBorderPainter;
 import com.alee.managers.notification.NotificationIcon;
 import com.alee.managers.notification.NotificationManager;
-import com.alee.managers.style.skin.web.WebLabelPainter;
 import java.awt.CardLayout;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.SpinnerDateModel;
-import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -4132,6 +4129,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * METODO PARA APLICAR A LOS JTEXTFIELD'S UNA MASCARA DE SOLO NUMEROS O LETRAS
+     */
     private void MascaraDeLosCampos() {
         f.SoloPermitirLetras(CCNombre);
         f.SoloPermitirLetras(CCNombre1);
@@ -4223,6 +4223,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ CINE, AÑADIR CINE
+     * @param evt 
+     */
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4230,6 +4234,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane1.setSelectedComponent(jPanel2);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ CINE, MODIFICAR CINE
+     * @param evt 
+     */
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4237,6 +4245,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane1.setSelectedComponent(jPanel10);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ CINE, BORRAR CINE
+     * @param evt 
+     */
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4255,6 +4267,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         c.show(this.Paneles, "CardSalas");
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ SALA, AÑADIR SALA
+     * @param evt 
+     */
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4262,6 +4278,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane3.setSelectedComponent(jPanel3);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ SALA, MODIFICAR SALA
+     * @param evt 
+     */
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4269,6 +4289,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane3.setSelectedComponent(jPanel11);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ SALA, BORRAR SALA
+     * @param evt 
+     */
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4287,6 +4311,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         c.show(this.Paneles, "CardMobiliarios");
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ MOBILIARIO, AÑADIR MOBILIARIO
+     * @param evt 
+     */
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4294,6 +4322,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane6.setSelectedComponent(jPanel8);
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ MOBILIARIO, MODIFICAR MOBILIARIO
+     * @param evt 
+     */
     private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4301,6 +4333,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane6.setSelectedComponent(jPanel20);
     }//GEN-LAST:event_jMenuItem16ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ MOBILIARIO, BORRAR MOBILIARIO
+     * @param evt 
+     */
     private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4319,6 +4355,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         c.show(this.Paneles, "CardEmpleados");
     }//GEN-LAST:event_jMenuItem19ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ EMPLEADO, AÑADIR EMPLEADO
+     * @param evt 
+     */
     private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4326,6 +4366,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane5.setSelectedComponent(jPanel7);
     }//GEN-LAST:event_jMenuItem20ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ EMPLEADO, MODIFICAR EMPLEADO
+     * @param evt 
+     */
     private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4333,6 +4377,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane5.setSelectedComponent(jPanel17);
     }//GEN-LAST:event_jMenuItem21ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ EMPLEADO, BORRAR EMPLEADO
+     * @param evt 
+     */
     private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4351,6 +4399,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         c.show(this.Paneles, "CardVIP");
     }//GEN-LAST:event_jMenuItem24ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ VIP, AÑADIR VIP
+     * @param evt 
+     */
     private void jMenuItem25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem25ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4358,6 +4410,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane4.setSelectedComponent(jPanel6);
     }//GEN-LAST:event_jMenuItem25ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ VIP, MODIFICAR VIP
+     * @param evt 
+     */
     private void jMenuItem26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem26ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4365,6 +4421,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane4.setSelectedComponent(jPanel14);
     }//GEN-LAST:event_jMenuItem26ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ VIP, BORRAR VIP
+     * @param evt 
+     */
     private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4383,6 +4443,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         c.show(this.Paneles, "CardEntradas");
     }//GEN-LAST:event_jMenuItem29ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ ENTRADA, AÑADIR ENTRADA
+     * @param evt 
+     */
     private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4390,6 +4454,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane9.setSelectedComponent(jPanel30);
     }//GEN-LAST:event_jMenuItem30ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ ENTRADA, MODIFICAR ENTRADA
+     * @param evt 
+     */
     private void jMenuItem31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem31ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4397,6 +4465,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane9.setSelectedComponent(jPanel31);
     }//GEN-LAST:event_jMenuItem31ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ ENTRADA, BORRAR ENTRADA
+     * @param evt 
+     */
     private void jMenuItem32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem32ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4415,6 +4487,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         c.show(this.Paneles, "CardProyecciones");
     }//GEN-LAST:event_jMenuItem34ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ PROYECCIÓN, AÑADIR PROYECCIÓN
+     * @param evt 
+     */
     private void jMenuItem35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem35ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4422,6 +4498,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane10.setSelectedComponent(jPanel34);
     }//GEN-LAST:event_jMenuItem35ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ PROYECCIÓN, MODIFICAR PROYECCIÓN
+     * @param evt 
+     */
     private void jMenuItem36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem36ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4429,6 +4509,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane10.setSelectedComponent(jPanel35);
     }//GEN-LAST:event_jMenuItem36ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ PROYECCIÓN, BORRAR PROYECCIÓN
+     * @param evt 
+     */
     private void jMenuItem37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem37ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4447,6 +4531,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         c.show(this.Paneles, "CardPeliculas");
     }//GEN-LAST:event_jMenuItem39ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ PELÍCULA, AÑADIR PELÍCULA
+     * @param evt 
+     */
     private void jMenuItem40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem40ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4454,6 +4542,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane8.setSelectedComponent(jPanel26);
     }//GEN-LAST:event_jMenuItem40ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ PELÍCULA, MODIFICAR PELÍCULA
+     * @param evt 
+     */
     private void jMenuItem41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem41ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4461,6 +4553,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane8.setSelectedComponent(jPanel27);
     }//GEN-LAST:event_jMenuItem41ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ PELÍCULA, BORRAR PELÍCULA
+     * @param evt 
+     */
     private void jMenuItem42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem42ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4479,6 +4575,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         c.show(this.Paneles, "CardProductoras");
     }//GEN-LAST:event_jMenuItem44ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ PRODUCTORA, AÑADIR PRODUCTORA
+     * @param evt 
+     */
     private void jMenuItem45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem45ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4486,6 +4586,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane7.setSelectedComponent(jPanel9);
     }//GEN-LAST:event_jMenuItem45ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ PRODUCTORA, MODIFICAR PRODUCTORA
+     * @param evt 
+     */
     private void jMenuItem46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem46ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4493,6 +4597,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane7.setSelectedComponent(jPanel23);
     }//GEN-LAST:event_jMenuItem46ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ PRODUCTORA, BORRAR PRODUCTORA
+     * @param evt 
+     */
     private void jMenuItem47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem47ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
@@ -4644,8 +4752,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.CProfecha.setValue(new Date());
         this.CProfecha1.setValue(new Date());
 
+        // LAMAMOS AL MÉTODO
         MascaraDeLosCampos();
         
+        // CARGO LA ESTADÍSTICA DE MAXFILM
         f.MaxFilmEstadisticas(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
     }//GEN-LAST:event_formWindowOpened
 
@@ -5512,12 +5622,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         f.nexoSalaId(this.CSId);
     }//GEN-LAST:event_CSIdMouseClicked
 
+    /**
+     * ACCEDE AL PANEL INICIO
+     * @param evt 
+     */
     private void jMenuItem54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem54ActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
         c.show(this.Paneles, "CardInicial");
     }//GEN-LAST:event_jMenuItem54ActionPerformed
 
+    /**
+     * EVENTO PARA CARGAR LAS ESTADÍSTICAS CUANDO SE HAGA CLICK SOBRE EL PANEL
+     * @param evt 
+     */
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
         // TODO add your handling code here:
         f.MaxFilmEstadisticas(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);

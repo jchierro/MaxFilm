@@ -34,11 +34,21 @@ public class Entrada implements Serializable, Comparable<Entrada> {
         this.Cod_cine = Cod_cine;
     }
     
+    /**
+     * COMPARETO DE LA CLASE ENTRADA
+     * @param otro
+     * @return DEVUELVE UN VALOR INT
+     */
     @Override
     public int compareTo(Entrada otro) {
         return Id_entrada.compareTo(otro.Id_entrada);
     }
     
+    /**
+     * EQUALS DE LA CLASE ENTRADA
+     * @param otro
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     @Override
     public boolean equals(Object otro) {
         return Id_entrada.equals(((Entrada)otro).Id_entrada);

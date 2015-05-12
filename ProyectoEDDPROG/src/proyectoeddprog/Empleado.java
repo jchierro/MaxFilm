@@ -31,12 +31,21 @@ public class Empleado extends Persona implements Serializable, Comparable<Emplea
         this.Sueldo = Sueldo;
     }
     
+    /**
+     * COMPARETO DE LA SUBCLASE EMPLEADO
+     * @param otro
+     * @return DEVUELVE UN VALOR INT
+     */
     @Override
     public int compareTo(Empleado otro) {
         return Dni.compareTo(otro.Dni);
     }
     
-    //@Override
+    /**
+     * EQUALS DE LA SUBCLASE EMPLEADO
+     * @param otro
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     public boolean equals(Empleado otro) {
         return Dni.equals(((Empleado)otro).Dni);
     }

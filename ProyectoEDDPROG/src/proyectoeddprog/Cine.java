@@ -48,7 +48,7 @@ public class Cine implements Serializable, Comparable<Cine> {
     /**
      * COMPARETO DE LA CLASE CINE
      * @param otro
-     * @return 
+     * @return DEVUELVE UN VALOR INT
      */
     @Override
     public int compareTo(Cine otro) {
@@ -58,7 +58,7 @@ public class Cine implements Serializable, Comparable<Cine> {
     /**
      * EQUALS DE LA CLASE CINE
      * @param otro
-     * @return 
+     * @return DEVUELVE UN VALOR BOOLEAN
      */
     @Override
     public boolean equals(Object otro) {

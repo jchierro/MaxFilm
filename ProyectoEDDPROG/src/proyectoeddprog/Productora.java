@@ -41,11 +41,21 @@ public class Productora implements Serializable, Comparable<Productora> {
         this.Peliculas = new ArrayList<>();
     }
     
+    /**
+     * COMPARETO DE LA CLASE PRODUCTORA
+     * @param otro
+     * @return DEVUELVE UN VALOR INT
+     */
     @Override
     public int compareTo(Productora otro) {
         return Id_productora.compareTo(otro.Id_productora);
     }
     
+    /**
+     * EQUALS DE LA CLASE PRODUCTORA
+     * @param otro
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     @Override
     public boolean equals(Object otro) {
         return Id_productora.equals(((Productora)otro).Id_productora);

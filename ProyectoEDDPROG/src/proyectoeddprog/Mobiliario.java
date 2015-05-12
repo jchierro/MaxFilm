@@ -37,11 +37,21 @@ public class Mobiliario implements Serializable, Comparable<Mobiliario> {
         this.Cod_sala = Cod_sala;
     }
     
+    /**
+     * COMPARETO DE LA CLASE MOBILIARIO
+     * @param otro
+     * @return DEVUELVE UN VALOR INT
+     */
     @Override
     public int compareTo(Mobiliario otro) {
         return Id_mobiliario.compareTo(otro.Id_mobiliario);
     }
     
+    /**
+     * EQUALS DE LA CLASE MOBILIARIO
+     * @param otro
+     * @return DEVUELVE EL VALOR BOOLEAN
+     */
     @Override
     public boolean equals(Object otro) {
         return Id_mobiliario.equals(((Mobiliario)otro).Id_mobiliario);

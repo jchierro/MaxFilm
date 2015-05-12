@@ -49,7 +49,7 @@ public class Funcionalidades implements Serializable {
     protected int idPe;
     protected int idEn;
 
-    // TREESET PARA COMROBAR QUE NO SE REPITEN EMPLEADOS O VIP'S
+    // TREESET PARA COMROBAR QUE NO SE REPITEN EMPLEADOS O VIP'S (DNI)
     protected TreeSet<String> VIPDni;
     protected TreeSet<String> EmpleadoDni;
 
@@ -181,98 +181,7 @@ public class Funcionalidades implements Serializable {
     //
     // FIN FLUJOS DE DATOS
     //
-    //
-    // COMIENZO VARIOS
-    //
-    public void SoloPermitirLetras(JTextField campo) {
-        campo.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                char c = e.getKeyChar();
-                if (Character.isDigit(c)) {
-                    e.consume();
-                }
-            }
-        });
-    }
 
-    public void SoloPermitirNumeros(JTextField campo) {
-        campo.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                char c = e.getKeyChar();
-                if (!Character.isDigit(c)) {
-                    e.consume();
-                }
-            }
-        });
-    }
-
-    public void limpiarCamposJTextField(JPanel jPanel) {
-        for (int i = 0; jPanel.getComponents().length > i; i++) {
-            if (jPanel.getComponents()[i] instanceof JTextField) {
-                ((JTextField) jPanel.getComponents()[i]).setText("");
-            }
-        }
-    }
-
-    public boolean comprobarCamposJTextField(JPanel jPanel) {
-        boolean result = true;
-        for (int i = 0; jPanel.getComponents().length > i; i++) {
-            if (!result) {
-                break;
-            }
-            if (jPanel.getComponents()[i] instanceof JTextField) {
-                result = !((JTextField) jPanel.getComponents()[i]).getText().equals("") ? true : false;
-            }
-        }
-        return result;
-    }
-    
-    public void MaxFilmEstadisticas(JLabel a1, JLabel a2, JLabel a3, JLabel a4,
-            JLabel a5, JLabel a6, JLabel a7, JLabel a8, JLabel a9, JLabel a10, JLabel a11) {
-        a1.setText(String.valueOf(Cines.stream().sorted().count()));
-        a2.setText(String.valueOf(Salas.stream().filter(s -> s.getTipo().equals("2D")).sorted().count()));
-        a3.setText(String.valueOf(Salas.stream().filter(s -> s.getTipo().equals("3D")).sorted().count()));
-        a4.setText(String.valueOf(Mobiliarios.stream().sorted().count()));
-        a5.setText(String.valueOf(Empleados.stream().sorted().count()));
-        a6.setText(String.valueOf(VIP.stream().sorted().count()));
-        a7.setText(String.valueOf(Proyecciones.stream().sorted().count()));
-        a8.setText(String.valueOf(Entradas.stream().sorted().count()));
-        
-        double cont€ = 0.0;
-        for (Entrada i : Entradas) {
-            cont€ = cont€ + i.getPrecio();
-        }
-        
-        a9.setText(String.valueOf(cont€));
-        a10.setText(String.valueOf(Peliculas.stream().sorted().count()));
-        a11.setText(String.valueOf(Productoras.stream().sorted().count()));
-    }
-    
-    //
-    // FIN VARIOS
-    //
-    //
-    // COMIENZO LIMPIAR MODELOS
-    //
-
-    /**
-     * MÉTODO PARA LIMPIAR TODOS LOS MODELOS EXISTENTES EN EL PROYECTO
-     *
-     * @param j
-     */
-    public void limpiarModelos(JTable j) {
-        // MIENTRAS EL TOTAL DE FILAS SEA DISTINTO DE 0
-        // VA BORRANDO TODAS LAS FILAS
-        while (j.getRowCount() != 0) {
-            ((DefaultTableModel) j.getModel()).removeRow(0);
-        }
-    }
-
-    //
-    // FIN LIMPIAR MODELOS
-    //
     //
     // COMIENZO OPERACIONES CON CINES
     //
@@ -308,7 +217,7 @@ public class Funcionalidades implements Serializable {
      * @param c
      * @param d
      * @param j
-     * @return
+     * @return DEVUELVE UN VALOR BOOLEAN
      */
     public boolean insertarCine(Cine c, DefaultTableModel d, JTable j) {
         // COMPRUEBO QUE NO ESTE CONTENIDO EL CINE PASADO COMO PARÁMETRO
@@ -470,7 +379,7 @@ public class Funcionalidades implements Serializable {
      * @param s
      * @param d
      * @param j
-     * @return
+     * @return DEVUELVE UN VALOR BOOLEAN
      */
     public boolean insertarSala(Sala s, DefaultTableModel d, JTable j) {
         // BUSCO EL CINE AL QUE PERTENECE LA SALSA PASADA COMO PARÁMETRO
@@ -677,7 +586,7 @@ public class Funcionalidades implements Serializable {
      * @param m
      * @param d
      * @param j
-     * @return
+     * @return DEVUELVE UN VALOR BOOLEAN
      */
     public boolean insertarMobiliario(Mobiliario m, DefaultTableModel d, JTable j) {
         // BUSCO LA SALA A LA QUE PERTENECE DICHO MOBILIARIO
@@ -871,17 +780,32 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO OPERACIONES CON VIPS
     //
+    
+    /**
+     * METODO NECESARIO PARA COMPROBAR QUE NO EXISTAN VIP DUPLICADOS
+     * @param Dni
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     public boolean nexoVIPCompruebaDni(String Dni) {
         return this.VIPDni.add(Dni);
     }
 
+    /**
+     * METODO PARA CREAR UN VIP
+     * @param v
+     * @param d
+     * @param j
+     * @return DEVUELVE UN VALOR BOOLEAN 
+     */
     public boolean insertarVIP(VIP v, DefaultTableModel d, JTable j) {
         boolean result = false;
         boolean dni = nexoVIPCompruebaDni(v.getDni());
         if (dni == true) {
+            // REALIZO UNA BUSQUEDA BINARIA PARA ENCONTRAR SU RESPECTIVO CINE
             Cine aux = new Cine(v.getCod_cine(), null, null, null, null, null);
             int indice = Collections.binarySearch(this.Cines, aux);
             if (indice >= 0) {
+                // COMPRUEBO QUE NO ESTE CONTENIDO, LO INSERTO Y RECARGO EL MODELOVIPS
                 aux = this.Cines.get(indice);
                 if (!aux.VIP.contains(v)) {
                     aux.VIP.add(v);
@@ -895,11 +819,20 @@ public class Funcionalidades implements Serializable {
         return result;
     }
 
+    /**
+     * METODO PARA BORRA UN VIP
+     * @param x
+     * @param y
+     * @param d
+     * @param j 
+     */
     public void borrarVIP(String x, String y, DefaultTableModel d, JTable j) {
+        // BUSCO EL CINE AL QUE PERTENECE DICHO VIP
         Cine aux = new Cine(y, null, null, null, null, null);
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
             aux = this.Cines.get(indice);
+            // BORRO EL VIP CON EL ITERADOR Y RECARGO EL MODELO
             for (Iterator<VIP> it = aux.VIP.iterator(); it.hasNext();) {
                 VIP aux2 = it.next();
                 if (aux2.getDni().equals(x)) {
@@ -911,12 +844,27 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO PARA MODIFICAR UN VIP
+     * @param x
+     * @param y
+     * @param d
+     * @param j
+     * @param nombre
+     * @param apellidos
+     * @param edad
+     * @param telefono
+     * @param cod_postal
+     * @param cod_cine 
+     */
     public void modificarVIP(String x, String y, DefaultTableModel d, JTable j,
             String nombre, String apellidos, String edad, String telefono,
             String cod_postal, String cod_cine) {
+        // BUSCO EL CINE AL QUE PERTENECE DICHO VIP
         Cine aux = new Cine(y, null, null, null, null, null);
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
+            // REALIZO LOS CAMBIOS PERTINENTES Y RECARGO EL MODELO VIPS
             aux = this.Cines.get(indice);
             for (Iterator<VIP> it = aux.VIP.iterator(); it.hasNext();) {
                 VIP aux2 = it.next();
@@ -939,11 +887,19 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO NECESARIO PARA CUANDO UN VIP CAMBIA DE CINE
+     * @param v
+     * @param d
+     * @param j 
+     */
     public void nexoModificarVIP(VIP v, DefaultTableModel d, JTable j) {
+        // BUSCO EL CINE CORRESPONDIENTE
         Cine aux = new Cine(v.getCod_cine(), null, null, null, null, null);
         //System.out.println(s.getCod_cine());
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
+            // COMPRUEBO QUE NO ESTE CONTENIDO EL VIP, LO INSERTO Y RECARGO EL MODELO VIPS
             aux = this.Cines.get(indice);
             if (!aux.VIP.contains(v)) {
                 aux.VIP.add(v);
@@ -953,6 +909,11 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO PARA CARGAR EL MODELO VIP
+     * @param d
+     * @param j 
+     */
     public void cargarModeloVIP(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel() {
             @Override
@@ -961,8 +922,10 @@ public class Funcionalidades implements Serializable {
             }
         };
 
+        // LIMPIO EL MODELO
         limpiarModelos(j);
 
+        // AGREGO LAS COLUMNAS A LA TABLA
         d.addColumn("Dni");
         d.addColumn("Nombre");
         d.addColumn("Apellidos");
@@ -972,6 +935,7 @@ public class Funcionalidades implements Serializable {
         d.addColumn("Cod_cine");
         j.setModel(d);
 
+        // BORRO LA LIST DE "APOYO" VIP
         VIP.clear();
 
         for (int i = 0; i < Cines.size(); i++) {
@@ -1010,6 +974,7 @@ public class Funcionalidades implements Serializable {
         j.setDefaultRenderer(Object.class, modelocentrar);
         j.setGridColor(new Color(0, 0, 0));
 
+        // VOY INSERTANDO FILAS AL MODELO
         Object[] filaVIP = new Object[d.getColumnCount()];
         for (int i = 0; i < VIP.size(); i++) {
             filaVIP[0] = VIP.get(i).getDni();
@@ -1029,18 +994,33 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO OPERACIONES CON EMPLEADOS
     //
+    
+    /**
+     * METODO NECESARIO PARA COMPROBAR QUE NO EXISTAN EMPLEADOS DUPLICADOS
+     * @param Dni
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     public boolean nexoEmpleadoCompruebaDni(String Dni) {
         return this.EmpleadoDni.add(Dni);
     }
 
+    /**
+     * METODO PARA CREAR UN EMPLEADO
+     * @param e
+     * @param d
+     * @param j
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     public boolean insertarEmpleado(Empleado e, DefaultTableModel d, JTable j) {
         boolean result = false;
         boolean dni = nexoEmpleadoCompruebaDni(e.getDni());
         //System.out.println(dni);
         if (dni == true) {
+            // REALIZO UNA BUSQUEDA BINARIA PARA ENCONTRAR EL CINE CORRESPONDIENTE
             Cine aux = new Cine(e.getCod_cine(), null, null, null, null, null);
             int indice = Collections.binarySearch(this.Cines, aux);
             if (indice >= 0) {
+                // COMPRUEBO QUE EL EMPLEADO NO ESTE CONTENIDO, LO INSERTO Y RECARGO EL MODELO EMPLEADOS
                 aux = this.Cines.get(indice);
                 if (!aux.Empleados.contains(e)) {
                     aux.Empleados.add(e);
@@ -1054,11 +1034,20 @@ public class Funcionalidades implements Serializable {
         return result;
     }
 
+    /**
+     * METODO PARA BORRAR UN EMPLEADO
+     * @param x
+     * @param y
+     * @param d
+     * @param j 
+     */
     public void borrarEmpleado(String x, String y, DefaultTableModel d, JTable j) {
         Cine aux = new Cine(y, null, null, null, null, null);
+        // BUSCO EL CINE AL QUE PERTENECE DICHO EMPLEADO
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
             aux = this.Cines.get(indice);
+            // BORRO EL EMPLEADO CON EL ITERADOOR Y RECARGO EL MODELO EMPLEADOS
             for (Iterator<Empleado> it = aux.Empleados.iterator(); it.hasNext();) {
                 Empleado aux2 = it.next();
                 if (aux2.getDni().equals(x)) {
@@ -1070,12 +1059,27 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO PARA MODIFICAR UN EMPLEADO
+     * @param x
+     * @param y
+     * @param d
+     * @param j
+     * @param nombre
+     * @param apellidos
+     * @param edad
+     * @param puesto
+     * @param sueldo
+     * @param cod_cine 
+     */
     public void modificarEmpleado(String x, String y, DefaultTableModel d, JTable j,
             String nombre, String apellidos, String edad, String puesto,
             Double sueldo, String cod_cine) {
+        // BUSCO EL CINE AL QUE PERTENECE DICHO EMPLEADO
         Cine aux = new Cine(y, null, null, null, null, null);
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
+            // REALIZO LOS CAMBIOS NECESARIOSY RECARGO EL MODELO EMPLEADOS
             aux = this.Cines.get(indice);
             for (Iterator<Empleado> it = aux.Empleados.iterator(); it.hasNext();) {
                 Empleado aux2 = it.next();
@@ -1098,10 +1102,18 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO NECESARIO PARA CUANDO UN EMPLEADO CAMBIE DE CINE
+     * @param e
+     * @param d
+     * @param j 
+     */
     public void nexoModificarEmpleado(Empleado e, DefaultTableModel d, JTable j) {
         Cine aux = new Cine(e.getCod_cine(), null, null, null, null, null);
+        // BUSCA EL CINE CORRESPONDIENTE
         int indice = Collections.binarySearch(this.Cines, aux);
         if (indice >= 0) {
+            // COMPRUEBO QUE NO ESTE CONTENIDO, LO INSETO Y RECARGO EL MODELO EMPLEADOS
             aux = this.Cines.get(indice);
             if (!aux.Empleados.contains(e)) {
                 aux.Empleados.add(e);
@@ -1110,6 +1122,11 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO PARA CARGAR EL MODELO EMPLEADOS
+     * @param d
+     * @param j 
+     */
     public void cargarModeloEmpleados(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel() {
             @Override
@@ -1118,8 +1135,10 @@ public class Funcionalidades implements Serializable {
             }
         };
 
+        // LIMPIO EL MODELO
         limpiarModelos(j);
 
+        // AGREGO LAS COLUMNAS A LA TABLA
         d.addColumn("Dni");
         d.addColumn("Nombre");
         d.addColumn("Apellidos");
@@ -1129,6 +1148,7 @@ public class Funcionalidades implements Serializable {
         d.addColumn("Cod_cine");
         j.setModel(d);
 
+        // BORRO LA LIST "APOYO" EMPLEADOS
         Empleados.clear();
 
         for (int i = 0; i < Cines.size(); i++) {
@@ -1167,6 +1187,7 @@ public class Funcionalidades implements Serializable {
         j.setDefaultRenderer(Object.class, modelocentrar);
         j.setGridColor(new Color(0, 0, 0));
 
+        // VOY INGRESANDO LOS DATOS AL MODELO
         Object[] filaEmpleados = new Object[d.getColumnCount()];
         for (int i = 0; i < Empleados.size(); i++) {
             filaEmpleados[0] = Empleados.get(i).getDni();
@@ -1186,21 +1207,40 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO OPERACIONES CON PRODUCTORAS
     //
+    
+    /**
+     * METODO PARA GENERAR EL ID PRODUCTORA
+     * @param ca 
+     */
     public void nexoProductoraId(JTextField ca) {
+        // CONCATENO Y AUMENTO EL ID
         String id = "MFPr-";
         String result = id.concat(Integer.toString(this.idPr));
         ca.setText(result);
         this.idPr++;
     }
 
+    /**
+     * METODO PARA CARGAR UN JCOMBOBOX CON LOS COD'S PRODUCTORAS
+     * @param co 
+     */
     public void nexoProductoraCodProductora(JComboBox co) {
+        // BORRO TODOS LOS ELEMENTOS Y LLENO
         co.removeAllItems();
         for (int i = 0; i < Productoras.size(); i++) {
             co.addItem(Productoras.get(i).getId_productora());
         }
     }
 
+    /**
+     * METODO PARA CREAR UNA PRODUCTORA
+     * @param pr
+     * @param d
+     * @param j
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     public boolean insertarProductora(Productora pr, DefaultTableModel d, JTable j) {
+        // COMPRUEBO QUE NO ESTE CONTENIDA LA NUEVA PRODUCTORA, LA INSERTO Y RECARGO EL MODELO PRODUCTORAS
         if (!this.Productoras.contains(pr)) {
             this.Productoras.add(pr);
             cargarModeloProductoras(d, j);
@@ -1210,13 +1250,32 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO PARA BORRAR UNA PRODUCTORA
+     * @param i
+     * @param d
+     * @param j 
+     */
     public void borrarProductora(int i, DefaultTableModel d, JTable j) {
+        // BORRO LA PRODUCTORA POR SU INDICE Y RECARGO EL MODELO PRODUCTORAS
         this.Productoras.remove(i);
         cargarModeloProductoras(d, j);
     }
 
+    /**
+     * METODO PARA MODIFICAR UNA PRODUCTORA
+     * @param i
+     * @param d
+     * @param j
+     * @param nombre
+     * @param telefono
+     * @param fax
+     * @param e_mail
+     * @param representante 
+     */
     public void modificarProductora(int i, DefaultTableModel d, JTable j,
             String nombre, String telefono, String fax, String e_mail, String representante) {
+        // CARGO LA PRODUCTORA POR SU INDICE, REALIZO LOS CAMBIOS PERTINENTES Y RECARGO EL MODELO PRODUCTORAS
         Productora aux = this.Productoras.get(i);
         aux.setNombre(nombre);
         aux.setTelefono(telefono);
@@ -1226,6 +1285,11 @@ public class Funcionalidades implements Serializable {
         cargarModeloProductoras(d, j);
     }
 
+    /**
+     * METODO PARA CARGAR EL MODELO PRODUCTORAS
+     * @param d
+     * @param j 
+     */
     public void cargarModeloProductoras(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel() {
             @Override
@@ -1234,8 +1298,10 @@ public class Funcionalidades implements Serializable {
             }
         };
 
+        // LIMPIO EL MODELO
         limpiarModelos(j);
 
+        // AGREGO LAS COLUMNAS A LA TABLA
         d.addColumn("Id_productora");
         d.addColumn("Nombre");
         d.addColumn("Teléfono");
@@ -1276,6 +1342,7 @@ public class Funcionalidades implements Serializable {
         j.setDefaultRenderer(Object.class, modelocentrar);
         j.setGridColor(new Color(0, 0, 0));
 
+        // VOY INSERTANDO FILAS AL MODELO
         Object[] filaProductoras = new Object[d.getColumnCount()];
         for (int i = 0; i < Productoras.size(); i++) {
             filaProductoras[0] = Productoras.get(i).getId_productora();
@@ -1294,32 +1361,57 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO OPERACIONES CON PELÍCULAS
     //
+    
+    /**
+     * METODO PARA GENERAR EL ID PELICULA
+     * @param ca 
+     */
     public void nexoPeliculaId(JTextField ca) {
+        // CONCATENO Y VOY AUMENTANDO EL ID
         String id = "MFPe-";
         String result = id.concat(Integer.toString(this.idPe));
         ca.setText(result);
         this.idPe++;
     }
 
+    /**
+     * METODO CARGAR UN JCOMBOBOX CON LOS TITULOS PELICULA
+     * @param co 
+     */
     public void nexoPeliculaTituloPelicula(JComboBox co) {
+        // LIMPIO EL JCOMBOBOX Y LLENO
         co.removeAllItems();
         for (int i = 0; i < Peliculas.size(); i++) {
             co.addItem(Peliculas.get(i).getNombre());
         }
     }
 
+    /**
+     * METODO CARGAR UN JCOMBOBOX CON LOS COD'S PELICULA
+     * @param co 
+     */
     public void nexoPeliculaCodPelicula(JComboBox co) {
+        // LIMPIO EL JCOMBOBOX Y LLENO
         co.removeAllItems();
         for (int i = 0; i < Peliculas.size(); i++) {
             co.addItem(Peliculas.get(i).getId_pelicula());
         }
     }
 
+    /**
+     * METODO PARA CREAR UNA PELICULA
+     * @param pe
+     * @param d
+     * @param j
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     public boolean insertarPelicula(Pelicula pe, DefaultTableModel d, JTable j) {
         boolean result = false;
         Productora aux = new Productora(pe.getCod_productora(), null, null, null, null, null);
+        // BUSCO LA PRODUCTORA CORRESPONDIENTE
         int indice = Collections.binarySearch(this.Productoras, aux);
         if (indice >= 0) {
+            // COMPRUEBO QUE NO ESTE CONTENIDA LA PELICULA, LA INSERTA Y RECARGO EL MODELO PELICULAS
             aux = this.Productoras.get(indice);
             if (!aux.Peliculas.contains(pe)) {
                 aux.Peliculas.add(pe);
@@ -1332,11 +1424,20 @@ public class Funcionalidades implements Serializable {
         return result;
     }
 
+    /**
+     * METODO PARA BORRAR UNA PELICULA
+     * @param x
+     * @param y
+     * @param d
+     * @param j 
+     */
     public void borrarPelicula(String x, String y, DefaultTableModel d, JTable j) {
         Productora aux = new Productora(y, null, null, null, null, null);
+        // BUSCO LA PRODUCTORA CORRESPONDIENTE
         int indice = Collections.binarySearch(this.Productoras, aux);
         if (indice >= 0) {
             aux = this.Productoras.get(indice);
+            // BORRO LA PELICULA CON EL ITERADOR Y RECARGO EL MODELO PELICULAS
             for (Iterator<Pelicula> it = aux.Peliculas.iterator(); it.hasNext();) {
                 Pelicula aux2 = it.next();
                 if (aux2.getId_pelicula().equals(x)) {
@@ -1348,13 +1449,30 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO PARA MODIFICAR UNA PELICULA
+     * @param x
+     * @param y
+     * @param d
+     * @param j
+     * @param nombre
+     * @param director
+     * @param año
+     * @param edad
+     * @param pais
+     * @param genero
+     * @param duracion
+     * @param cod_productora 
+     */
     public void modificarPelicula(String x, String y, DefaultTableModel d, JTable j,
             String nombre, String director, String año, String edad, String pais,
             String genero, String duracion, String cod_productora) {
         Productora aux = new Productora(y, null, null, null, null, null);
+        // BUSCO LA PRODUCTORA CORRESPONDIENTE
         int indice = Collections.binarySearch(this.Productoras, aux);
         if (indice >= 0) {
             aux = this.Productoras.get(indice);
+            // REALIZO LOS CAMBIOS PERTINENTES Y RECARGO EL MODELO PELICULAS
             for (Iterator<Pelicula> it = aux.Peliculas.iterator(); it.hasNext();) {
                 Pelicula aux2 = it.next();
                 if (aux2.getId_pelicula().equals(x) && aux2.getCod_productora().equals(cod_productora)) {
@@ -1378,10 +1496,18 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO NECESARIO PARA CUANDO UNA PELICULA CAMBIE DE PRODUCTORA
+     * @param pe
+     * @param d
+     * @param j 
+     */
     public void nexoModificarPelicula(Pelicula pe, DefaultTableModel d, JTable j) {
+        // BUSCO LA PRODUCTORA CORRESPONDIENTE
         Productora aux = new Productora(pe.getCod_productora(), null, null, null, null, null);
         int indice = Collections.binarySearch(this.Productoras, aux);
         if (indice >= 0) {
+            // COMPRUEBO QUE NO ESTE CONTENIDA LA PELICULA, INSERTO LA PELICULA Y RECARGO EL MODELO PELICULAS
             aux = this.Productoras.get(indice);
             if (!aux.Peliculas.contains(pe)) {
                 aux.Peliculas.add(pe);
@@ -1390,6 +1516,11 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO PARA CARGAR EL MODELO PELICULAS
+     * @param d
+     * @param j 
+     */
     public void cargarModeloPeliculas(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel() {
             @Override
@@ -1398,8 +1529,10 @@ public class Funcionalidades implements Serializable {
             }
         };
 
+        // LIMPIO EL MODELO
         limpiarModelos(j);
 
+        // AGREGO LAS COLUMNAS A LA TABLA
         d.addColumn("Id_película");
         d.addColumn("Nombre");
         d.addColumn("Director");
@@ -1411,6 +1544,7 @@ public class Funcionalidades implements Serializable {
         d.addColumn("Cod_producotra");
         j.setModel(d);
 
+        // LIMPIO LA LIST "APOYO" PELICULAS
         Peliculas.clear();
 
         for (int i = 0; i < Productoras.size(); i++) {
@@ -1449,6 +1583,7 @@ public class Funcionalidades implements Serializable {
         j.setDefaultRenderer(Object.class, modelocentrar);
         j.setGridColor(new Color(0, 0, 0));
 
+        // VOY INSERTANDO FILAS AL MODELO
         Object[] filaPeliculas = new Object[d.getColumnCount()];
         for (int i = 0; i < Peliculas.size(); i++) {
             filaPeliculas[0] = Peliculas.get(i).getId_pelicula();
@@ -1470,21 +1605,40 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO OPERACIONES CON ENTRADAS
     //
+    
+    /**
+     * METODO PARA GENERAR ID ENTRADA
+     * @param ca 
+     */
     public void nexoEntradaId(JTextField ca) {
+        // CONCATENO Y AUMENTO EL ID
         String id = "MFEn-";
         String result = id.concat(Integer.toString(this.idEn));
         ca.setText(result);
         this.idEn++;
     }
 
+    /**
+     * METODO PARA CARGAR UN JCOMBOBOX CON LOS COD'S ENTRADAS
+     * @param co 
+     */
     public void nexoEntradaCodEntrada(JComboBox co) {
+        // LIMPIO EL JCOMBOBOX Y LLENO
         co.removeAllItems();
         for (int i = 0; i < Entradas.size(); i++) {
             co.addItem(Entradas.get(i).getId_entrada());
         }
     }
 
+    /**
+     * METODO PARA CREAR UNA ENTRADA
+     * @param en
+     * @param d
+     * @param j
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     public boolean insertarEntrada(Entrada en, DefaultTableModel d, JTable j) {
+        // COMPRUEBO QUE NO ESTE CONTENIDA LA ENTRADA, LA INSERTO Y RECARGO EL MODELO ENTRADAS
         if (!this.Entradas.contains(en)) {
             this.Entradas.add(en);
             cargarModeloEntradas(d, j);
@@ -1494,15 +1648,33 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO PARA BORRAR UNA ENTRADA
+     * @param i
+     * @param d
+     * @param j 
+     */
     public void borrarEntrada(int i, DefaultTableModel d, JTable j) {
+        // CARGO EL OBJETO POR SU INDICE, BORRO LA ENTRADA POR SU INDICE Y RECARGO EL MODELO ENTRADAS
         Entrada aux = Entradas.get(i);
         nexoBorrarProyeccion(aux.getId_entrada());
         this.Entradas.remove(i);
         cargarModeloEntradas(d, j);
     }
 
+    /**
+     * METODO PARA MODIFICAR UNA ENTRADA
+     * @param i
+     * @param d
+     * @param j
+     * @param precio
+     * @param titulo
+     * @param cod_sala
+     * @param cod_cine 
+     */
     public void modificarEntrada(int i, DefaultTableModel d, JTable j,
             Double precio, String titulo, String cod_sala, String cod_cine) {
+        // CARGO EL OBJETO POR SU INDICE, REALIZO LOS CAMBIOS PERTINENTES Y RECARGO EL MODELO ENTRADAS
         Entrada aux = this.Entradas.get(i);
         aux.setPrecio(precio);
         aux.setTitulo_pelicula(titulo);
@@ -1511,6 +1683,11 @@ public class Funcionalidades implements Serializable {
         cargarModeloEntradas(d, j);
     }
 
+    /**
+     * METODO PARA CARGAR EL MODELO ENTRADAS
+     * @param d
+     * @param j 
+     */
     public void cargarModeloEntradas(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel() {
             @Override
@@ -1519,8 +1696,10 @@ public class Funcionalidades implements Serializable {
             }
         };
 
+        // LIMPIO EL MODELO
         limpiarModelos(j);
 
+        // AGREGO LAS COLUMNAS A LA TABLA
         d.addColumn("Id_entradas");
         d.addColumn("Precio");
         d.addColumn("Título_película");
@@ -1560,6 +1739,7 @@ public class Funcionalidades implements Serializable {
         j.setDefaultRenderer(Object.class, modelocentrar);
         j.setGridColor(new Color(0, 0, 0));
 
+        // VOY INSERTANDO FILAS AL MODELO
         Object[] filaEntradas = new Object[d.getColumnCount()];
         for (int i = 0; i < Entradas.size(); i++) {
             filaEntradas[0] = Entradas.get(i).getId_entrada();
@@ -1577,7 +1757,14 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO OPERACIONES CON PROYECCIONES
     //
+    
+    /**
+     * METODO CON EFECTO DOMINO BORRA UNA PROYECCION EN EL CASO QUE SE BORRE
+     * UNA ENTRADA, SALA O PELICULA
+     * @param id 
+     */
     public void nexoBorrarProyeccion(String id) {
+        // BORRA LA PROYECCION CON UN ITERADOR
         for (Iterator<Proyeccion> it = Proyecciones.iterator(); it.hasNext();) {
             Proyeccion aux = it.next();
             if (aux.getId_entrada().equals(id) | aux.getId_pelicula().equals(id)
@@ -1587,6 +1774,15 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO PARA CREAR UNA PROYECCION DE FORMA AUTOMATICA CUANDO CREAMOS UNA ENTRADA
+     * @param idsala
+     * @param identrada
+     * @param titulo_pelicula
+     * @param fecha_proyeccion
+     * @param d
+     * @param j 
+     */
     public void nexoCrearProyeccion_Entrada(String idsala, String identrada,
             String titulo_pelicula, Date fecha_proyeccion, DefaultTableModel d,
             JTable j) {
@@ -1603,7 +1799,15 @@ public class Funcionalidades implements Serializable {
         insertarProyeccion(pro, d, j);
     }
 
+    /**
+     * METODO PARA CREAR UNA PROYECCION
+     * @param pro
+     * @param d
+     * @param j
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     public boolean insertarProyeccion(Proyeccion pro, DefaultTableModel d, JTable j) {
+        // COMPRUEBA QUE NO ESTA CONTENIDA LA PROYECCION, LA INSERTRA YCARGO EL MODELO PROYECCIONES
         if (!this.Proyecciones.contains(pro)) {
             this.Proyecciones.add(pro);
             cargarModeloProyecciones(d, j);
@@ -1613,13 +1817,31 @@ public class Funcionalidades implements Serializable {
         }
     }
 
+    /**
+     * METODO PARA BORRAR UNA PROYECCION
+     * @param i
+     * @param d
+     * @param j 
+     */
     public void borrarProyeccion(int i, DefaultTableModel d, JTable j) {
+        // BORRA LA PROYECCION POR SU INDICE
         this.Proyecciones.remove(i);
         cargarModeloProyecciones(d, j);
     }
 
+    /**
+     * METODO PARA MODIFICAR UNA PROYECCION
+     * @param i
+     * @param d
+     * @param j
+     * @param idsala
+     * @param idpelicula
+     * @param identrada
+     * @param fecha 
+     */
     public void modificarProyeccion(int i, DefaultTableModel d, JTable j,
             String idsala, String idpelicula, String identrada, Date fecha) {
+        // CARGA EL OBJETO POR SU INDICE, REALIZO LOS CAMBIOS PERTIENENTES Y RECARGO EL MODELO PROYECCIONES
         Proyeccion aux = this.Proyecciones.get(i);
         aux.setId_sala(idsala);
         aux.setId_pelicula(idpelicula);
@@ -1628,6 +1850,11 @@ public class Funcionalidades implements Serializable {
         cargarModeloProyecciones(d, j);
     }
 
+    /**
+     * METODO PARA CARGAR EL MODELO PROYECCIONES
+     * @param d
+     * @param j 
+     */
     public void cargarModeloProyecciones(DefaultTableModel d, JTable j) {
         d = new DefaultTableModel() {
             @Override
@@ -1636,8 +1863,10 @@ public class Funcionalidades implements Serializable {
             }
         };
 
+        // LIMPIO EL MODELO
         limpiarModelos(j);
 
+        // AGREGO LAS COLUMNAS A LA TABLA
         d.addColumn("Id_sala");
         d.addColumn("Id_película");
         d.addColumn("Id_entrada");
@@ -1676,6 +1905,7 @@ public class Funcionalidades implements Serializable {
         j.setDefaultRenderer(Object.class, modelocentrar);
         j.setGridColor(new Color(0, 0, 0));
 
+        // VOY INSERTANDO FILAS AL MODELO
         Object[] filaProyecciones = new Object[d.getColumnCount()];
         for (int i = 0; i < Proyecciones.size(); i++) {
             filaProyecciones[0] = Proyecciones.get(i).getId_sala();
@@ -1688,5 +1918,124 @@ public class Funcionalidades implements Serializable {
 
     //
     // FIN OPERACIONES CON PROYECCIONES
+    //
+    
+    //
+    // COMIENZO VARIOS
+    //
+    
+    /**
+     * MÉTODO PARA LIMPIAR TODOS LOS MODELOS EXISTENTES EN EL PROYECTO
+     *
+     * @param j
+     */
+    public void limpiarModelos(JTable j) {
+        // MIENTRAS EL TOTAL DE FILAS SEA DISTINTO DE 0
+        // VA BORRANDO TODAS LAS FILAS
+        while (j.getRowCount() != 0) {
+            ((DefaultTableModel) j.getModel()).removeRow(0);
+        }
+    }
+    
+    /**
+     * METODO PARA PERMITIR EN UN JTEXTFIELD SOLO LETRAS
+     * @param campo 
+     */
+    public void SoloPermitirLetras(JTextField campo) {
+        campo.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c)) {
+                    e.consume();
+                }
+            }
+        });
+    }
+
+    /**
+     * METODO PARA PERMITIR EN UN JTEXTFIELD SOLO NUMEROS
+     * @param campo 
+     */
+    public void SoloPermitirNumeros(JTextField campo) {
+        campo.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (!Character.isDigit(c)) {
+                    e.consume();
+                }
+            }
+        });
+    }
+
+    /**
+     * METODO PARA LIMPIAR TODOS LOS CAMPOS JTEXTFIELD
+     * @param jPanel 
+     */
+    public void limpiarCamposJTextField(JPanel jPanel) {
+        for (int i = 0; jPanel.getComponents().length > i; i++) {
+            if (jPanel.getComponents()[i] instanceof JTextField) {
+                ((JTextField) jPanel.getComponents()[i]).setText("");
+            }
+        }
+    }
+
+    /**
+     * METODO PARA VALIDAR SI TODOS LOS JTEXTFIELD HAN SIDO RELLENADOS
+     * @param jPanel
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
+    public boolean comprobarCamposJTextField(JPanel jPanel) {
+        boolean result = true;
+        for (int i = 0; jPanel.getComponents().length > i; i++) {
+            if (!result) {
+                break;
+            }
+            if (jPanel.getComponents()[i] instanceof JTextField) {
+                result = !((JTextField) jPanel.getComponents()[i]).getText().equals("") ? true : false;
+            }
+        }
+        return result;
+    }
+    
+    /**
+     * METODO PARA MOSTRAR EN UNA ESTADISTICAS EN EL PROYECTO
+     * TRABAJO CON LOS STREAM
+     * @param a1
+     * @param a2
+     * @param a3
+     * @param a4
+     * @param a5
+     * @param a6
+     * @param a7
+     * @param a8
+     * @param a9
+     * @param a10
+     * @param a11 
+     */
+    public void MaxFilmEstadisticas(JLabel a1, JLabel a2, JLabel a3, JLabel a4,
+            JLabel a5, JLabel a6, JLabel a7, JLabel a8, JLabel a9, JLabel a10, JLabel a11) {
+        a1.setText(String.valueOf(Cines.stream().sorted().count()));
+        a2.setText(String.valueOf(Salas.stream().filter(s -> s.getTipo().equals("2D")).sorted().count()));
+        a3.setText(String.valueOf(Salas.stream().filter(s -> s.getTipo().equals("3D")).sorted().count()));
+        a4.setText(String.valueOf(Mobiliarios.stream().sorted().count()));
+        a5.setText(String.valueOf(Empleados.stream().sorted().count()));
+        a6.setText(String.valueOf(VIP.stream().sorted().count()));
+        a7.setText(String.valueOf(Proyecciones.stream().sorted().count()));
+        a8.setText(String.valueOf(Entradas.stream().sorted().count()));
+        
+        double cont€ = 0.0;
+        for (Entrada i : Entradas) {
+            cont€ = cont€ + i.getPrecio();
+        }
+        
+        a9.setText(String.valueOf(cont€));
+        a10.setText(String.valueOf(Peliculas.stream().sorted().count()));
+        a11.setText(String.valueOf(Productoras.stream().sorted().count()));
+    }
+    
+    //
+    // FIN VARIOS
     //
 }

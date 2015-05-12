@@ -32,11 +32,21 @@ public class Proyeccion implements Serializable, Comparable<Proyeccion> {
         this.Fecha_proyeccion = Fecha_proyeccion;
     }
 
+    /**
+     * COMPARETO DE LA CLASE PROYECCION
+     * @param otro
+     * @return DEVUELVE UN VALOR INT
+     */
     @Override
     public int compareTo(Proyeccion otro) {
         return Id_entrada.compareTo(otro.Id_entrada);
     }
     
+    /**
+     * EQUALS DE LA CLASE PROYECCION
+     * @param otro
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     @Override
     public boolean equals(Object otro) {
         return Id_entrada.equals(((Proyeccion)otro).Id_entrada);

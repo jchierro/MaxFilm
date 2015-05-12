@@ -46,11 +46,21 @@ public class Pelicula implements Serializable, Comparable<Pelicula> {
         this.Cod_productora = Cod_productora;
     }
     
+    /**
+     * COMPARETO DE CLASE PELICULA
+     * @param otro
+     * @return DEVUELVE UN VALOR INT
+     */
     @Override
     public int compareTo(Pelicula otro) {
         return Id_pelicula.compareTo(otro.Id_pelicula);
     }
     
+    /**
+     * EQUALS DE LA CLASE PELICULA
+     * @param otro
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
     @Override
     public boolean equals(Object otro) {
         return Id_pelicula.equals(((Pelicula)otro).Id_pelicula);
