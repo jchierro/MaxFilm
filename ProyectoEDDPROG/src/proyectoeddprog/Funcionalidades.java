@@ -1607,6 +1607,30 @@ public class Funcionalidades implements Serializable {
     //
     
     /**
+     * METODO ENCARGARDO DE LIMITAR EL NUMERO DE ENTRADAS PARA UNA MISMA PROYECCION 
+     * LIMITE: 30 ENTRADAS PARA UNA MISMA PROYECCION
+     * @param idsala
+     * @param fecha_proyeccion
+     * @return DEVUELVE UN VALOR BOOLEAN
+     */
+    public boolean nexoLimitarNumEntradas(String idsala, Date fecha_proyeccion) {
+        boolean result = false;
+        int cont = 0;
+        
+        for (Proyeccion i : Proyecciones) {
+            if (i.getId_sala().equals(idsala) && i.getFecha_proyeccion().equals(fecha_proyeccion)) {
+                cont++;
+            }
+        }
+        
+        if (cont < 30) {
+            result = true;
+        }
+        
+        return result;
+    }
+    
+    /**
      * METODO PARA GENERAR ID ENTRADA
      * @param ca 
      */

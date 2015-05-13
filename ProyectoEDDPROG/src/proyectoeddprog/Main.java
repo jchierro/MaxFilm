@@ -27,8 +27,8 @@ public class Main {
             System.out.println(ex);
         }  
         
-        VentanaPrincipal x = new VentanaPrincipal();
-        x.setVisible(true);
+        // LLAMA AL SPLASH CREADO
+        new Thread (new VSplash()).start();
     }
     
 }

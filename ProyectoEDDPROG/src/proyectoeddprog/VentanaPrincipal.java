@@ -105,7 +105,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel180 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         PanelCines = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jSplitPane1 = new javax.swing.JSplitPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -142,6 +141,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        jLabel115 = new javax.swing.JLabel();
         PanelSalas = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jSplitPane3 = new javax.swing.JSplitPane();
@@ -178,7 +179,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         PanelVIP = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
         jSplitPane4 = new javax.swing.JSplitPane();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
@@ -219,8 +219,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel15 = new javax.swing.JPanel();
         jButton11 = new javax.swing.JButton();
         jLabel44 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
         PanelEmpleados = new javax.swing.JPanel();
-        jLabel50 = new javax.swing.JLabel();
         jSplitPane5 = new javax.swing.JSplitPane();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTable5 = new javax.swing.JTable();
@@ -261,8 +262,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel18 = new javax.swing.JPanel();
         jButton15 = new javax.swing.JButton();
         jLabel66 = new javax.swing.JLabel();
+        jLabel143 = new javax.swing.JLabel();
+        jLabel153 = new javax.swing.JLabel();
         PanelMobiliarios = new javax.swing.JPanel();
-        jLabel68 = new javax.swing.JLabel();
         jSplitPane6 = new javax.swing.JSplitPane();
         jScrollPane10 = new javax.swing.JScrollPane();
         jTable6 = new javax.swing.JTable();
@@ -299,8 +301,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel21 = new javax.swing.JPanel();
         jButton19 = new javax.swing.JButton();
         jLabel84 = new javax.swing.JLabel();
+        jLabel169 = new javax.swing.JLabel();
+        jLabel170 = new javax.swing.JLabel();
         PanelProductoras = new javax.swing.JPanel();
-        jLabel74 = new javax.swing.JLabel();
         jSplitPane7 = new javax.swing.JSplitPane();
         jScrollPane12 = new javax.swing.JScrollPane();
         jTable7 = new javax.swing.JTable();
@@ -337,8 +340,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel24 = new javax.swing.JPanel();
         jButton23 = new javax.swing.JButton();
         jLabel98 = new javax.swing.JLabel();
+        jLabel171 = new javax.swing.JLabel();
+        jLabel172 = new javax.swing.JLabel();
         PanelPeliculas = new javax.swing.JPanel();
-        jLabel92 = new javax.swing.JLabel();
         jSplitPane8 = new javax.swing.JSplitPane();
         jScrollPane14 = new javax.swing.JScrollPane();
         jTable8 = new javax.swing.JTable();
@@ -387,8 +391,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel28 = new javax.swing.JPanel();
         jButton27 = new javax.swing.JButton();
         jLabel114 = new javax.swing.JLabel();
+        jLabel173 = new javax.swing.JLabel();
+        jLabel174 = new javax.swing.JLabel();
         PanelEntradas = new javax.swing.JPanel();
-        jLabel97 = new javax.swing.JLabel();
         jSplitPane9 = new javax.swing.JSplitPane();
         jScrollPane16 = new javax.swing.JScrollPane();
         jTable9 = new javax.swing.JTable();
@@ -425,8 +430,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel32 = new javax.swing.JPanel();
         jButton31 = new javax.swing.JButton();
         jLabel142 = new javax.swing.JLabel();
+        jLabel175 = new javax.swing.JLabel();
+        jLabel176 = new javax.swing.JLabel();
         PanelProyecciones = new javax.swing.JPanel();
-        jLabel113 = new javax.swing.JLabel();
         jSplitPane10 = new javax.swing.JSplitPane();
         jScrollPane18 = new javax.swing.JScrollPane();
         jTable10 = new javax.swing.JTable();
@@ -455,6 +461,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel36 = new javax.swing.JPanel();
         jButton35 = new javax.swing.JButton();
         jLabel152 = new javax.swing.JLabel();
+        jLabel177 = new javax.swing.JLabel();
+        jLabel178 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem54 = new javax.swing.JMenuItem();
@@ -521,9 +529,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenuItem49 = new javax.swing.JMenuItem();
         jSeparator11 = new javax.swing.JPopupMenu.Separator();
         jMenuItem50 = new javax.swing.JMenuItem();
-        jMenuItem51 = new javax.swing.JMenuItem();
-        jMenuItem52 = new javax.swing.JMenuItem();
-        jMenuItem53 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -828,11 +833,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         Paneles.add(PanelInicial, "CardInicial");
 
-        jLabel3.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Cines");
-        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
         jSplitPane1.setDividerLocation(250);
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
@@ -1110,23 +1110,41 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jSplitPane1.setRightComponent(jTabbedPane1);
 
+        jLabel99.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel99.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/path160.png"))); // NOI18N
+        jLabel99.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel99.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel99.setPreferredSize(new java.awt.Dimension(173, 15));
+
+        jLabel115.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel115.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel115.setText("Cines");
+        jLabel115.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel115.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel115.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel115.setPreferredSize(new java.awt.Dimension(173, 15));
+
         javax.swing.GroupLayout PanelCinesLayout = new javax.swing.GroupLayout(PanelCines);
         PanelCines.setLayout(PanelCinesLayout);
         PanelCinesLayout.setHorizontalGroup(
             PanelCinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
-            .addGroup(PanelCinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jSplitPane1))
+            .addComponent(jSplitPane1)
+            .addGroup(PanelCinesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel99, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PanelCinesLayout.setVerticalGroup(
             PanelCinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelCinesLayout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 486, Short.MAX_VALUE))
-            .addGroup(PanelCinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCinesLayout.createSequentialGroup()
-                    .addGap(0, 43, Short.MAX_VALUE)
-                    .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCinesLayout.createSequentialGroup()
+                .addGroup(PanelCinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         Paneles.add(PanelCines, "CardCines");
@@ -1430,11 +1448,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         Paneles.add(PanelSalas, "CardSalas");
 
-        jLabel25.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel25.setText("VIP'S");
-        jLabel25.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
         jSplitPane4.setDividerLocation(250);
         jSplitPane4.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
@@ -1735,31 +1748,44 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jSplitPane4.setRightComponent(jTabbedPane4);
 
+        jLabel67.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel67.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/path160.png"))); // NOI18N
+        jLabel67.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel67.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel67.setPreferredSize(new java.awt.Dimension(173, 15));
+
+        jLabel85.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel85.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel85.setText("VIP's");
+        jLabel85.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel85.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel85.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel85.setPreferredSize(new java.awt.Dimension(173, 15));
+
         javax.swing.GroupLayout PanelVIPLayout = new javax.swing.GroupLayout(PanelVIP);
         PanelVIP.setLayout(PanelVIPLayout);
         PanelVIPLayout.setHorizontalGroup(
             PanelVIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
-            .addGroup(PanelVIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jSplitPane4))
+            .addComponent(jSplitPane4)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelVIPLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel67, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PanelVIPLayout.setVerticalGroup(
             PanelVIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelVIPLayout.createSequentialGroup()
-                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 486, Short.MAX_VALUE))
-            .addGroup(PanelVIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelVIPLayout.createSequentialGroup()
-                    .addGap(0, 43, Short.MAX_VALUE)
-                    .addComponent(jSplitPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelVIPLayout.createSequentialGroup()
+                .addGroup(PanelVIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jSplitPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         Paneles.add(PanelVIP, "CardVIP");
-
-        jLabel50.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
-        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel50.setText("Empleados");
-        jLabel50.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jSplitPane5.setDividerLocation(250);
         jSplitPane5.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
@@ -2063,31 +2089,44 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jSplitPane5.setRightComponent(jTabbedPane5);
 
+        jLabel143.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel143.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/path160.png"))); // NOI18N
+        jLabel143.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel143.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel143.setPreferredSize(new java.awt.Dimension(173, 15));
+
+        jLabel153.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel153.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel153.setText("Empleados");
+        jLabel153.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel153.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel153.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel153.setPreferredSize(new java.awt.Dimension(173, 15));
+
         javax.swing.GroupLayout PanelEmpleadosLayout = new javax.swing.GroupLayout(PanelEmpleados);
         PanelEmpleados.setLayout(PanelEmpleadosLayout);
         PanelEmpleadosLayout.setHorizontalGroup(
             PanelEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
-            .addGroup(PanelEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jSplitPane5))
+            .addComponent(jSplitPane5)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEmpleadosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel143, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel153, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PanelEmpleadosLayout.setVerticalGroup(
             PanelEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelEmpleadosLayout.createSequentialGroup()
-                .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 486, Short.MAX_VALUE))
-            .addGroup(PanelEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEmpleadosLayout.createSequentialGroup()
-                    .addGap(0, 43, Short.MAX_VALUE)
-                    .addComponent(jSplitPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEmpleadosLayout.createSequentialGroup()
+                .addGroup(PanelEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel143, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel153, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jSplitPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         Paneles.add(PanelEmpleados, "CardEmpleados");
-
-        jLabel68.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
-        jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel68.setText("Mobiliarios");
-        jLabel68.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jSplitPane6.setDividerLocation(250);
         jSplitPane6.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
@@ -2372,31 +2411,44 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jSplitPane6.setRightComponent(jTabbedPane6);
 
+        jLabel169.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel169.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel169.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/path160.png"))); // NOI18N
+        jLabel169.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel169.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel169.setPreferredSize(new java.awt.Dimension(173, 15));
+
+        jLabel170.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel170.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel170.setText("Mobiliarios");
+        jLabel170.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel170.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel170.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel170.setPreferredSize(new java.awt.Dimension(173, 15));
+
         javax.swing.GroupLayout PanelMobiliariosLayout = new javax.swing.GroupLayout(PanelMobiliarios);
         PanelMobiliarios.setLayout(PanelMobiliariosLayout);
         PanelMobiliariosLayout.setHorizontalGroup(
             PanelMobiliariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
-            .addGroup(PanelMobiliariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jSplitPane6))
+            .addComponent(jSplitPane6)
+            .addGroup(PanelMobiliariosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel169, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel170, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PanelMobiliariosLayout.setVerticalGroup(
             PanelMobiliariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelMobiliariosLayout.createSequentialGroup()
-                .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 486, Short.MAX_VALUE))
-            .addGroup(PanelMobiliariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMobiliariosLayout.createSequentialGroup()
-                    .addGap(0, 43, Short.MAX_VALUE)
-                    .addComponent(jSplitPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMobiliariosLayout.createSequentialGroup()
+                .addGroup(PanelMobiliariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel169, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel170, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jSplitPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         Paneles.add(PanelMobiliarios, "CardMobiliarios");
-
-        jLabel74.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
-        jLabel74.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel74.setText("Productoras");
-        jLabel74.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jSplitPane7.setDividerLocation(250);
         jSplitPane7.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
@@ -2695,31 +2747,44 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jSplitPane7.setRightComponent(jTabbedPane7);
 
+        jLabel171.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel171.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel171.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/path160.png"))); // NOI18N
+        jLabel171.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel171.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel171.setPreferredSize(new java.awt.Dimension(173, 15));
+
+        jLabel172.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel172.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel172.setText("Productoras");
+        jLabel172.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel172.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel172.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel172.setPreferredSize(new java.awt.Dimension(173, 15));
+
         javax.swing.GroupLayout PanelProductorasLayout = new javax.swing.GroupLayout(PanelProductoras);
         PanelProductoras.setLayout(PanelProductorasLayout);
         PanelProductorasLayout.setHorizontalGroup(
             PanelProductorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel74, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
-            .addGroup(PanelProductorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jSplitPane7))
+            .addComponent(jSplitPane7)
+            .addGroup(PanelProductorasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel171, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel172, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PanelProductorasLayout.setVerticalGroup(
             PanelProductorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelProductorasLayout.createSequentialGroup()
-                .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 486, Short.MAX_VALUE))
-            .addGroup(PanelProductorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelProductorasLayout.createSequentialGroup()
-                    .addGap(0, 43, Short.MAX_VALUE)
-                    .addComponent(jSplitPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelProductorasLayout.createSequentialGroup()
+                .addGroup(PanelProductorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel171, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel172, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jSplitPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         Paneles.add(PanelProductoras, "CardProductoras");
-
-        jLabel92.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
-        jLabel92.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel92.setText("Películas");
-        jLabel92.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jSplitPane8.setDividerLocation(250);
         jSplitPane8.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
@@ -3079,31 +3144,44 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jSplitPane8.setRightComponent(jTabbedPane8);
 
+        jLabel173.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel173.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel173.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/path160.png"))); // NOI18N
+        jLabel173.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel173.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel173.setPreferredSize(new java.awt.Dimension(173, 15));
+
+        jLabel174.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel174.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel174.setText("Películas");
+        jLabel174.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel174.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel174.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel174.setPreferredSize(new java.awt.Dimension(173, 15));
+
         javax.swing.GroupLayout PanelPeliculasLayout = new javax.swing.GroupLayout(PanelPeliculas);
         PanelPeliculas.setLayout(PanelPeliculasLayout);
         PanelPeliculasLayout.setHorizontalGroup(
             PanelPeliculasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel92, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
-            .addGroup(PanelPeliculasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jSplitPane8))
+            .addComponent(jSplitPane8)
+            .addGroup(PanelPeliculasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel173, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel174, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PanelPeliculasLayout.setVerticalGroup(
             PanelPeliculasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelPeliculasLayout.createSequentialGroup()
-                .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 486, Short.MAX_VALUE))
-            .addGroup(PanelPeliculasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPeliculasLayout.createSequentialGroup()
-                    .addGap(0, 43, Short.MAX_VALUE)
-                    .addComponent(jSplitPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPeliculasLayout.createSequentialGroup()
+                .addGroup(PanelPeliculasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel173, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel174, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jSplitPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         Paneles.add(PanelPeliculas, "CardPeliculas");
-
-        jLabel97.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
-        jLabel97.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel97.setText("Entradas");
-        jLabel97.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jSplitPane9.setDividerLocation(250);
         jSplitPane9.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
@@ -3378,31 +3456,44 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jSplitPane9.setRightComponent(jTabbedPane9);
 
+        jLabel175.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel175.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel175.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/path160.png"))); // NOI18N
+        jLabel175.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel175.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel175.setPreferredSize(new java.awt.Dimension(173, 15));
+
+        jLabel176.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel176.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel176.setText("Entradas");
+        jLabel176.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel176.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel176.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel176.setPreferredSize(new java.awt.Dimension(173, 15));
+
         javax.swing.GroupLayout PanelEntradasLayout = new javax.swing.GroupLayout(PanelEntradas);
         PanelEntradas.setLayout(PanelEntradasLayout);
         PanelEntradasLayout.setHorizontalGroup(
             PanelEntradasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel97, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
-            .addGroup(PanelEntradasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jSplitPane9))
+            .addComponent(jSplitPane9)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEntradasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel175, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel176, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PanelEntradasLayout.setVerticalGroup(
             PanelEntradasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelEntradasLayout.createSequentialGroup()
-                .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 486, Short.MAX_VALUE))
-            .addGroup(PanelEntradasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEntradasLayout.createSequentialGroup()
-                    .addGap(0, 43, Short.MAX_VALUE)
-                    .addComponent(jSplitPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEntradasLayout.createSequentialGroup()
+                .addGroup(PanelEntradasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel175, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel176, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jSplitPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         Paneles.add(PanelEntradas, "CardEntradas");
-
-        jLabel113.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
-        jLabel113.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel113.setText("Proyecciones");
-        jLabel113.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jSplitPane10.setDividerLocation(250);
         jSplitPane10.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
@@ -3619,23 +3710,41 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jSplitPane10.setRightComponent(jTabbedPane10);
 
+        jLabel177.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel177.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel177.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/path160.png"))); // NOI18N
+        jLabel177.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel177.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel177.setPreferredSize(new java.awt.Dimension(173, 15));
+
+        jLabel178.setFont(new java.awt.Font("Expansiva", 0, 24)); // NOI18N
+        jLabel178.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel178.setText("Proyecciones");
+        jLabel178.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel178.setMaximumSize(new java.awt.Dimension(173, 15));
+        jLabel178.setMinimumSize(new java.awt.Dimension(173, 10));
+        jLabel178.setPreferredSize(new java.awt.Dimension(173, 15));
+
         javax.swing.GroupLayout PanelProyeccionesLayout = new javax.swing.GroupLayout(PanelProyecciones);
         PanelProyecciones.setLayout(PanelProyeccionesLayout);
         PanelProyeccionesLayout.setHorizontalGroup(
             PanelProyeccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel113, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
-            .addGroup(PanelProyeccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jSplitPane10))
+            .addComponent(jSplitPane10)
+            .addGroup(PanelProyeccionesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel177, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel178, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PanelProyeccionesLayout.setVerticalGroup(
             PanelProyeccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelProyeccionesLayout.createSequentialGroup()
-                .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 486, Short.MAX_VALUE))
-            .addGroup(PanelProyeccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelProyeccionesLayout.createSequentialGroup()
-                    .addGap(0, 43, Short.MAX_VALUE)
-                    .addComponent(jSplitPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelProyeccionesLayout.createSequentialGroup()
+                .addGroup(PanelProyeccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel177, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel178, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jSplitPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         Paneles.add(PanelProyecciones, "CardProyecciones");
@@ -4064,7 +4173,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/help.png"))); // NOI18N
         jMenu11.setText("Ayuda");
 
-        jMenuItem49.setText("Mostrar Cines");
+        jMenuItem49.setText("Manual");
         jMenuItem49.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem49ActionPerformed(evt);
@@ -4073,37 +4182,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu11.add(jMenuItem49);
         jMenu11.add(jSeparator11);
 
-        jMenuItem50.setText("Añadir Cine");
+        jMenuItem50.setText("Acerca de");
         jMenuItem50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem50ActionPerformed(evt);
             }
         });
         jMenu11.add(jMenuItem50);
-
-        jMenuItem51.setText("Modificar Cine");
-        jMenuItem51.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem51ActionPerformed(evt);
-            }
-        });
-        jMenu11.add(jMenuItem51);
-
-        jMenuItem52.setText("Borrar Cine");
-        jMenuItem52.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem52ActionPerformed(evt);
-            }
-        });
-        jMenu11.add(jMenuItem52);
-
-        jMenuItem53.setText("Añadir Cine");
-        jMenuItem53.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem53ActionPerformed(evt);
-            }
-        });
-        jMenu11.add(jMenuItem53);
 
         jMenuBar1.add(jMenu11);
 
@@ -4130,7 +4215,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * METODO PARA APLICAR A LOS JTEXTFIELD'S UNA MASCARA DE SOLO NUMEROS O LETRAS
+     * METODO PARA APLICAR A LOS JTEXTFIELD'S UNA MASCARA DE SOLO NUMEROS O
+     * LETRAS
      */
     private void MascaraDeLosCampos() {
         f.SoloPermitirLetras(CCNombre);
@@ -4221,11 +4307,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         } catch (IOException ex) {
             System.out.println(ex);
         }
+        
+        // CARGAMOS LOS MODELOS NECESARIOS PARA EL PROYEXTO
+        f.cargarModeloCines(modeloCines, jTable1);
+        f.cargarModeloSalas(modeloSalas, jTable3);
+        f.cargarModeloVIP(modeloVIPs, jTable4);
+        f.cargarModeloEmpleados(modeloEmpleados, jTable5);
+        f.cargarModeloMobiliarios(modeloMobiliarios, jTable6);
+        f.cargarModeloProductoras(modeloProductoras, jTable7);
+        f.cargarModeloPeliculas(modeloPeliculas, jTable8);
+        f.cargarModeloEntradas(modeloEntradas, jTable9);
+        f.cargarModeloProyecciones(modeloProyecciones, jTable10);
+
+        // CARGO LA ESTADÍSTICA DE MAXFILM
+        f.MaxFilmEstadisticas(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * ELEMENTO DEL MENÚ CINE, AÑADIR CINE
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
@@ -4236,7 +4337,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ CINE, MODIFICAR CINE
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
@@ -4247,7 +4349,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ CINE, BORRAR CINE
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
@@ -4269,7 +4372,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ SALA, AÑADIR SALA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
         // TODO add your handling code here:
@@ -4280,7 +4384,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ SALA, MODIFICAR SALA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
         // TODO add your handling code here:
@@ -4291,7 +4396,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ SALA, BORRAR SALA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
         // TODO add your handling code here:
@@ -4313,7 +4419,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ MOBILIARIO, AÑADIR MOBILIARIO
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
         // TODO add your handling code here:
@@ -4324,7 +4431,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ MOBILIARIO, MODIFICAR MOBILIARIO
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
         // TODO add your handling code here:
@@ -4335,7 +4443,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ MOBILIARIO, BORRAR MOBILIARIO
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
         // TODO add your handling code here:
@@ -4357,7 +4466,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ EMPLEADO, AÑADIR EMPLEADO
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
         // TODO add your handling code here:
@@ -4368,7 +4478,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ EMPLEADO, MODIFICAR EMPLEADO
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
         // TODO add your handling code here:
@@ -4379,7 +4490,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ EMPLEADO, BORRAR EMPLEADO
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
         // TODO add your handling code here:
@@ -4401,7 +4513,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ VIP, AÑADIR VIP
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem25ActionPerformed
         // TODO add your handling code here:
@@ -4412,7 +4525,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ VIP, MODIFICAR VIP
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem26ActionPerformed
         // TODO add your handling code here:
@@ -4423,7 +4537,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ VIP, BORRAR VIP
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
         // TODO add your handling code here:
@@ -4445,7 +4560,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ ENTRADA, AÑADIR ENTRADA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
         // TODO add your handling code here:
@@ -4456,7 +4572,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ ENTRADA, MODIFICAR ENTRADA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem31ActionPerformed
         // TODO add your handling code here:
@@ -4467,7 +4584,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ ENTRADA, BORRAR ENTRADA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem32ActionPerformed
         // TODO add your handling code here:
@@ -4489,7 +4607,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ PROYECCIÓN, AÑADIR PROYECCIÓN
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem35ActionPerformed
         // TODO add your handling code here:
@@ -4500,7 +4619,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ PROYECCIÓN, MODIFICAR PROYECCIÓN
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem36ActionPerformed
         // TODO add your handling code here:
@@ -4511,7 +4631,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ PROYECCIÓN, BORRAR PROYECCIÓN
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem37ActionPerformed
         // TODO add your handling code here:
@@ -4533,7 +4654,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ PELÍCULA, AÑADIR PELÍCULA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem40ActionPerformed
         // TODO add your handling code here:
@@ -4544,7 +4666,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ PELÍCULA, MODIFICAR PELÍCULA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem41ActionPerformed
         // TODO add your handling code here:
@@ -4555,7 +4678,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ PELÍCULA, BORRAR PELÍCULA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem42ActionPerformed
         // TODO add your handling code here:
@@ -4577,7 +4701,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ PRODUCTORA, AÑADIR PRODUCTORA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem45ActionPerformed
         // TODO add your handling code here:
@@ -4588,7 +4713,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ PRODUCTORA, MODIFICAR PRODUCTORA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem46ActionPerformed
         // TODO add your handling code here:
@@ -4599,7 +4725,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ELEMENTO DEL MENÚ PRODUCTORA, BORRAR PRODUCTORA
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem47ActionPerformed
         // TODO add your handling code here:
@@ -4615,18 +4742,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void jMenuItem50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem50ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem50ActionPerformed
-
-    private void jMenuItem51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem51ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem51ActionPerformed
-
-    private void jMenuItem52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem52ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem52ActionPerformed
-
-    private void jMenuItem53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem53ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem53ActionPerformed
 
     /**
      * ELMENTO DEL MENÚ INICIO, NOS SIRVE PARA CERRAR LA VENTANA
@@ -4754,7 +4869,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         // LAMAMOS AL MÉTODO
         MascaraDeLosCampos();
-        
+
         // CARGO LA ESTADÍSTICA DE MAXFILM
         f.MaxFilmEstadisticas(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
     }//GEN-LAST:event_formWindowOpened
@@ -5387,7 +5502,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             // COD_PRODUCTORA
             String y = (String) this.jTable8.getValueAt(this.jTable8.getSelectedRow(), 8);
             f.borrarPelicula(x, y, modeloPeliculas, jTable8);
-            
+
             // LLAMO AL MODELO AFECTADO
             f.cargarModeloProyecciones(modeloProyecciones, jTable10);
 
@@ -5449,24 +5564,28 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         if (f.comprobarCamposJTextField(jPanel30) == false) {
             NotificationManager.showNotification("Debes rellenar todos los campos!", NotificationIcon.warning.getIcon());
         } else {
-            // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO INSERTARENTRADA
-            en = new Entrada(this.CEnId.getText(), Double.parseDouble(this.CEnPrecio.getText()), this.CEnTitulo.getSelectedItem().toString(),
-                    this.CEnCodsala.getSelectedItem().toString(), this.CEnCodCine.getSelectedItem().toString());
-            Boolean aux = f.insertarEntrada(en, this.modeloEntradas, this.jTable9);
-            // SALTA UNA ALERTA EN EL CASO QUE SEA FALSE
-            if (aux == false) {
-                NotificationManager.showNotification("La Entrada introducida ya existe en MaxFilm!", NotificationIcon.error.getIcon());
+            if (f.nexoLimitarNumEntradas(CEnCodsala.getSelectedItem().toString(), (Date) CEnFecha.getValue()) == true) {
+                // RECOGEMOS LOS VALORES DE LOS CAMPOS Y LLAMAMOS AL MÉTODO INSERTARENTRADA
+                en = new Entrada(this.CEnId.getText(), Double.parseDouble(this.CEnPrecio.getText()), this.CEnTitulo.getSelectedItem().toString(),
+                        this.CEnCodsala.getSelectedItem().toString(), this.CEnCodCine.getSelectedItem().toString());
+                Boolean aux = f.insertarEntrada(en, this.modeloEntradas, this.jTable9);
+                // SALTA UNA ALERTA EN EL CASO QUE SEA FALSE
+                if (aux == false) {
+                    NotificationManager.showNotification("La Entrada introducida ya existe en MaxFilm!", NotificationIcon.error.getIcon());
+                } else {
+                    f.nexoCrearProyeccion_Entrada(CEnCodsala.getSelectedItem().toString(),
+                            CEnId.getText(), CEnTitulo.getSelectedItem().toString(),
+                            (Date) CEnFecha.getValue(), modeloProyecciones, jTable10);
+                }
+
+                // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
+                f.nexoEntradaCodEntrada(this.CProidentrada);
+                f.nexoEntradaCodEntrada(this.CProidentrada1);
+
+                f.limpiarCamposJTextField(jPanel30);
             } else {
-                f.nexoCrearProyeccion_Entrada(CEnCodsala.getSelectedItem().toString(), 
-                        CEnId.getText(), CEnTitulo.getSelectedItem().toString(), 
-                        (Date)CEnFecha.getValue(), modeloProyecciones, jTable10);
+                NotificationManager.showNotification("No se permiten más de 30 entradas para una misma proyección!", NotificationIcon.error.getIcon());
             }
-
-            // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
-            f.nexoEntradaCodEntrada(this.CProidentrada);
-            f.nexoEntradaCodEntrada(this.CProidentrada1);
-
-            f.limpiarCamposJTextField(jPanel30);
         }
     }//GEN-LAST:event_jButton29ActionPerformed
 
@@ -5504,7 +5623,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             NotificationManager.showNotification("Debes seleccionar una Entrada de la tabla!", NotificationIcon.information.getIcon());
         } else {
             f.borrarEntrada(this.jTable9.getSelectedRow(), modeloEntradas, jTable9);
-            
+
             // LLAMO AL MODELO AFECTADO
             f.cargarModeloProyecciones(modeloProyecciones, jTable10);
             // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
@@ -5624,7 +5743,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * ACCEDE AL PANEL INICIO
-     * @param evt 
+     *
+     * @param evt
      */
     private void jMenuItem54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem54ActionPerformed
         // TODO add your handling code here:
@@ -5634,7 +5754,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
      * EVENTO PARA CARGAR LAS ESTADÍSTICAS CUANDO SE HAGA CLICK SOBRE EL PANEL
-     * @param evt 
+     *
+     * @param evt
      */
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
         // TODO add your handling code here:
@@ -5854,8 +5975,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel111;
     private javax.swing.JLabel jLabel112;
-    private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel114;
+    private javax.swing.JLabel jLabel115;
     private javax.swing.JLabel jLabel116;
     private javax.swing.JLabel jLabel117;
     private javax.swing.JLabel jLabel118;
@@ -5886,6 +6007,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel140;
     private javax.swing.JLabel jLabel141;
     private javax.swing.JLabel jLabel142;
+    private javax.swing.JLabel jLabel143;
     private javax.swing.JLabel jLabel144;
     private javax.swing.JLabel jLabel145;
     private javax.swing.JLabel jLabel146;
@@ -5896,6 +6018,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel150;
     private javax.swing.JLabel jLabel151;
     private javax.swing.JLabel jLabel152;
+    private javax.swing.JLabel jLabel153;
     private javax.swing.JLabel jLabel154;
     private javax.swing.JLabel jLabel155;
     private javax.swing.JLabel jLabel156;
@@ -5912,7 +6035,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel166;
     private javax.swing.JLabel jLabel167;
     private javax.swing.JLabel jLabel168;
+    private javax.swing.JLabel jLabel169;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel170;
+    private javax.swing.JLabel jLabel171;
+    private javax.swing.JLabel jLabel172;
+    private javax.swing.JLabel jLabel173;
+    private javax.swing.JLabel jLabel174;
+    private javax.swing.JLabel jLabel175;
+    private javax.swing.JLabel jLabel176;
+    private javax.swing.JLabel jLabel177;
+    private javax.swing.JLabel jLabel178;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel180;
     private javax.swing.JLabel jLabel19;
@@ -5922,12 +6055,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -5950,7 +6081,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
@@ -5968,14 +6098,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
-    private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
@@ -5987,6 +6116,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
     private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
@@ -5994,13 +6124,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
     private javax.swing.JLabel jLabel95;
     private javax.swing.JLabel jLabel96;
-    private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
@@ -6051,9 +6180,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem49;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem50;
-    private javax.swing.JMenuItem jMenuItem51;
-    private javax.swing.JMenuItem jMenuItem52;
-    private javax.swing.JMenuItem jMenuItem53;
     private javax.swing.JMenuItem jMenuItem54;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
