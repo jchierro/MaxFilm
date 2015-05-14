@@ -4907,6 +4907,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             f.cargarModeloVIP(modeloVIPs, jTable4);
             f.cargarModeloEmpleados(modeloEmpleados, jTable5);
             f.cargarModeloMobiliarios(modeloMobiliarios, jTable6);
+            f.cargarModeloProyecciones(modeloProyecciones, jTable10);
 
             // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
             f.nexoCineCodCine(this.CSCod);
@@ -5375,8 +5376,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         } else {
             f.borrarProductora(this.jTable7.getSelectedRow(), modeloProductoras, jTable7);
 
-            // CARGAMOS EL MODELO AFECTADO AL BORRAR UNA PRODUCTORA
+            // CARGAMOS LOS MODELOS AFECTADOS AL BORRAR UNA PRODUCTORA
             f.cargarModeloPeliculas(modeloPeliculas, jTable8);
+            f.cargarModeloProyecciones(modeloProyecciones, jTable10);
 
             // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
             f.nexoProductoraCodProductora(CPeCod);

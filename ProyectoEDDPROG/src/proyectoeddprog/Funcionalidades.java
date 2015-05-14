@@ -239,6 +239,8 @@ public class Funcionalidades implements Serializable {
      * @param j
      */
     public void borrarCine(int i, DefaultTableModel d, JTable j) {
+        Cine c = this.Cines.get(i);
+        nexoBorrarProyeccionCascadaCine(c);
         // BORRA EL CINE POR SU ÍNDICE Y RECARGA EL MODELOCINES
         this.Cines.remove(i);
         cargarModeloCines(d, j);
@@ -1257,6 +1259,8 @@ public class Funcionalidades implements Serializable {
      * @param j 
      */
     public void borrarProductora(int i, DefaultTableModel d, JTable j) {
+        Productora pr = this.Productoras.get(i);
+        nexoBorrarProyeccionCascadaProductora(pr);
         // BORRO LA PRODUCTORA POR SU INDICE Y RECARGO EL MODELO PRODUCTORAS
         this.Productoras.remove(i);
         cargarModeloProductoras(d, j);
@@ -1781,6 +1785,38 @@ public class Funcionalidades implements Serializable {
     //
     // COMIENZO OPERACIONES CON PROYECCIONES
     //
+    
+    /**
+     * METODO CON EFECTO CASCADA, BORRA UNA PROYECCION CUANDO SE BORRA UN CINE
+     * @param c 
+     */
+    public void nexoBorrarProyeccionCascadaCine(Cine c) {
+        for (Iterator<Sala> i = c.Salas.iterator(); i.hasNext();) {
+            Sala s = i.next();
+            for (Iterator<Proyeccion> it = Proyecciones.iterator(); it.hasNext();) {
+                Proyeccion aux = it.next();
+                if (s.getId_Sala().equals(aux.getId_sala())) {
+                    it.remove();
+                }
+            }
+        }
+    }
+    
+    /**
+     * METODO CON EFECTO CASCADA, BORRA UNA PROYECCION CUANDO SE BORRA UNA PRODUCTORA
+     * @param pr 
+     */
+    public void nexoBorrarProyeccionCascadaProductora(Productora pr) {
+        for (Iterator<Pelicula> i = pr.Peliculas.iterator(); i.hasNext();) {
+            Pelicula p = i.next();
+            for (Iterator<Proyeccion> it = Proyecciones.iterator(); it.hasNext();) {
+                Proyeccion aux = it.next();
+                if (p.getId_pelicula().equals(aux.getId_pelicula())) {
+                    it.remove();
+                }
+            }
+        }
+    }
     
     /**
      * METODO CON EFECTO DOMINO BORRA UNA PROYECCION EN EL CASO QUE SE BORRE
