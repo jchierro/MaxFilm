@@ -4918,6 +4918,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             f.nexoCineCodCine(this.CEcod_cine1);
             f.nexoCineCodCine(this.CEnCodCine);
             f.nexoCineCodCine(this.CEnCodCine1);
+            f.nexoSalaCodSala(this.CProidsala);
+            f.nexoSalaCodSala(this.CProidsala1);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -5383,6 +5385,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             // CARGAMOS LOS JCOMBOBOX CON LOS COD'S
             f.nexoProductoraCodProductora(CPeCod);
             f.nexoProductoraCodProductora(CPeCod1);
+            f.nexoPeliculaCodPelicula(this.CProidpelicula);
+            f.nexoPeliculaCodPelicula(this.CProidpelicula1);
         }
     }//GEN-LAST:event_jButton23ActionPerformed
 
@@ -5752,6 +5756,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         CardLayout c = (CardLayout) this.Paneles.getLayout();
         c.show(this.Paneles, "CardInicial");
+        
+        f.MaxFilmEstadisticas(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
     }//GEN-LAST:event_jMenuItem54ActionPerformed
 
     /**
