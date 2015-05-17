@@ -1047,7 +1047,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 251, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel10)
@@ -1576,7 +1576,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CVcod_cine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel47))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton9)
                 .addContainerGap())
         );
@@ -1916,7 +1916,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CEcod_cine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel57))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton13)
                 .addContainerGap())
         );
@@ -4173,6 +4173,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/help.png"))); // NOI18N
         jMenu11.setText("Ayuda");
 
+        jMenuItem49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/pdf.png"))); // NOI18N
         jMenuItem49.setText("Manual");
         jMenuItem49.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4182,6 +4183,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu11.add(jMenuItem49);
         jMenu11.add(jSeparator11);
 
+        jMenuItem50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoeddprog/imagenes/github.png"))); // NOI18N
         jMenuItem50.setText("Acerca de");
         jMenuItem50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4735,12 +4737,32 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane7.setSelectedComponent(jPanel24);
     }//GEN-LAST:event_jMenuItem47ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ AYUDA, ABRE EL MANUAL DE LA APLICACIÓN
+     * @param evt 
+     */
     private void jMenuItem49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem49ActionPerformed
         // TODO add your handling code here:
+        // ABRE EL NAVEGADOR FIREFOX Y ABRE EL MANUAL DE LA APLICACIÓN
+        try {
+            Process p = Runtime.getRuntime().exec("firefox https://goo.gl/3ykCwS");
+        } catch (Exception ex) {
+            //System.out.println(ex);
+        }
     }//GEN-LAST:event_jMenuItem49ActionPerformed
 
+    /**
+     * ELEMENTO DEL MENÚ AYUDA, ABRE EL REPOSITORIO DE LA APLICACIÓN
+     * @param evt 
+     */
     private void jMenuItem50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem50ActionPerformed
         // TODO add your handling code here:
+        // ABRE EL NAVEGADOR FIREFOX Y ABRE EL REPOSITOTIO GITHUB DE LA APLICACIÓN
+        try {
+            Process p = Runtime.getRuntime().exec("firefox https://goo.gl/zEQWvV");
+        } catch (Exception ex) {
+            //System.out.println(ex);
+        }
     }//GEN-LAST:event_jMenuItem50ActionPerformed
 
     /**
